@@ -10,6 +10,7 @@ import Foundation
 
 enum RoundStages {
     case roundStart
+    case answerIsBeingCheked
     case rightAnswer
     case wrongAnswer
     case timeIsOver
