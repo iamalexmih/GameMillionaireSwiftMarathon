@@ -9,5 +9,5 @@ import Foundation
 
 
 protocol ServiceCheckQuestionProtocol {
-    static func checkQuestion(question: Question, titleSelectedButton: String) -> Bool
+    static func checkQuestion(question: Question, titleSelectedButton: String, timer: ServiceTimerProtocol) -> Bool
 }
