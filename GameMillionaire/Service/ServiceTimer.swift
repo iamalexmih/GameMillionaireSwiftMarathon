@@ -10,7 +10,7 @@ import Foundation
 
 protocol ServiceTimerProtocol {
     var serviceMusic: ServiceMusicProtocol? { get }
-    func startTimer(roundStages: RoundStages, serviceMusic: ServiceMusicProtocol)
+    func startTimer(roundStages: RoundStages)
     func timeIsOver() -> Bool
     func stopTimer()
     

@@ -11,4 +11,10 @@ import Foundation
 class UserModel {
     let login: String? = ""
     static let round: Int = 1
+    var score = 0
+    
+    func  updateScore() {
+        
+    }
 }
+
