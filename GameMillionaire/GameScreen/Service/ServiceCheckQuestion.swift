@@ -20,7 +20,7 @@ class ServiceCheckQuestion: ServiceCheckQuestionProtocol {
         //сделать кастомную кнопку для изменения шрифта, мб добавить границы
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            music.playMusic(roundStages: .answerIsBeingCheked)
+           // music.playMusic(roundStages: .answerIsBeingCheked)
         }
         if selectedButton.currentTitle == question.rightAnswer {
             music.playMusic(roundStages: .rightAnswer)

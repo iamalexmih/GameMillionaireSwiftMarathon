@@ -16,9 +16,58 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rSv-wP-rna">
+                                <rect key="frame" x="178.66666666666666" y="345.33333333333331" width="36" height="161.33333333333331"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lO-XL-j96">
+                                        <rect key="frame" x="0.0" y="0.0" width="35.333333333333336" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="A"/>
+                                        <connections>
+                                            <action selector="buttonApress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nPt-WL-cfA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JwB-d2-6uy">
+                                        <rect key="frame" x="0.0" y="42.333333333333371" width="35" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="B"/>
+                                        <connections>
+                                            <action selector="buttonBpress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f8Z-0V-Jz5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63M-DY-qbb">
+                                        <rect key="frame" x="0.0" y="84.666666666666686" width="36" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="C"/>
+                                        <connections>
+                                            <action selector="buttonCpress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ykZ-Lv-UMY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFv-GA-ztE">
+                                        <rect key="frame" x="0.0" y="126.99999999999999" width="36" height="34.333333333333329"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="D"/>
+                                        <connections>
+                                            <action selector="buttonDpress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hdj-ft-6OM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                        <constraints>
+                            <constraint firstItem="rSv-wP-rna" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aGF-vj-hs1"/>
+                            <constraint firstItem="rSv-wP-rna" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nvS-9E-H0J"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonA" destination="6lO-XL-j96" id="O0T-Cf-eu5"/>
+                        <outlet property="buttonB" destination="JwB-d2-6uy" id="Jqu-yU-R0u"/>
+                        <outlet property="buttonC" destination="63M-DY-qbb" id="fTu-c1-MjZ"/>
+                        <outlet property="buttonD" destination="MFv-GA-ztE" id="dMt-pY-zan"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -26,8 +75,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -50,7 +50,7 @@ enum DifficultyIssue {
 
 class QuestionData {
     static var questionList: [Question] = [
-        Question(textQuestion: "сам вопрос", difficultyIssue: .lite, variantsAnswer: ["4 варианта ответа"], rightAnswer: "текст ответа")
+        Question(textQuestion: "сам вопрос", difficultyIssue: .lite, variantsAnswer: ["варианта 1", "варианта 2", "варианта 3", "варианта 4"], rightAnswer: "текст ответа")
     ]
     func nextQuestion() {
         
