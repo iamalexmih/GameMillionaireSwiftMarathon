@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5F4948182991172F00692685 /* winnerMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F4948132991172F00692685 /* winnerMusic.mp3 */; };
-		5F4948192991172F00692685 /* clockSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F4948142991172F00692685 /* clockSound.mp3 */; };
-		5F49481A2991172F00692685 /* answerRight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F4948152991172F00692685 /* answerRight.mp3 */; };
-		5F49481B2991172F00692685 /* waitingMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F4948162991172F00692685 /* waitingMusic.mp3 */; };
-		5F49481C2991172F00692685 /* answerWrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F4948172991172F00692685 /* answerWrong.mp3 */; };
+		5FC081B6299167BF00F76CE8 /* winnerMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5FC081B1299167BE00F76CE8 /* winnerMusic.mp3 */; };
+		5FC081B7299167BF00F76CE8 /* clockSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5FC081B2299167BE00F76CE8 /* clockSound.mp3 */; };
+		5FC081B8299167BF00F76CE8 /* answerRight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5FC081B3299167BE00F76CE8 /* answerRight.mp3 */; };
+		5FC081B9299167BF00F76CE8 /* waitingMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5FC081B4299167BE00F76CE8 /* waitingMusic.mp3 */; };
+		5FC081BA299167BF00F76CE8 /* answerWrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5FC081B5299167BE00F76CE8 /* answerWrong.mp3 */; };
 		B5839668298FD2690046C484 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5839667298FD2690046C484 /* AppDelegate.swift */; };
 		B583966A298FD2690046C484 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5839669298FD2690046C484 /* SceneDelegate.swift */; };
 		B583966C298FD2690046C484 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B583966B298FD2690046C484 /* GameViewController.swift */; };
@@ -31,11 +31,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5F4948132991172F00692685 /* winnerMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = winnerMusic.mp3; sourceTree = "<group>"; };
-		5F4948142991172F00692685 /* clockSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = clockSound.mp3; sourceTree = "<group>"; };
-		5F4948152991172F00692685 /* answerRight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = answerRight.mp3; sourceTree = "<group>"; };
-		5F4948162991172F00692685 /* waitingMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = waitingMusic.mp3; sourceTree = "<group>"; };
-		5F4948172991172F00692685 /* answerWrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = answerWrong.mp3; sourceTree = "<group>"; };
+		5FC081B1299167BE00F76CE8 /* winnerMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = winnerMusic.mp3; sourceTree = "<group>"; };
+		5FC081B2299167BE00F76CE8 /* clockSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = clockSound.mp3; sourceTree = "<group>"; };
+		5FC081B3299167BE00F76CE8 /* answerRight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = answerRight.mp3; sourceTree = "<group>"; };
+		5FC081B4299167BE00F76CE8 /* waitingMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = waitingMusic.mp3; sourceTree = "<group>"; };
+		5FC081B5299167BE00F76CE8 /* answerWrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = answerWrong.mp3; sourceTree = "<group>"; };
 		B5839664298FD2690046C484 /* GameMillionaire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameMillionaire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5839667298FD2690046C484 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5839669298FD2690046C484 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,14 +67,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5F4948122991172F00692685 /* sounds */ = {
+		5FC081B0299167BE00F76CE8 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
-				5F4948132991172F00692685 /* winnerMusic.mp3 */,
-				5F4948142991172F00692685 /* clockSound.mp3 */,
-				5F4948152991172F00692685 /* answerRight.mp3 */,
-				5F4948162991172F00692685 /* waitingMusic.mp3 */,
-				5F4948172991172F00692685 /* answerWrong.mp3 */,
+				5FC081B1299167BE00F76CE8 /* winnerMusic.mp3 */,
+				5FC081B2299167BE00F76CE8 /* clockSound.mp3 */,
+				5FC081B3299167BE00F76CE8 /* answerRight.mp3 */,
+				5FC081B4299167BE00F76CE8 /* waitingMusic.mp3 */,
+				5FC081B5299167BE00F76CE8 /* answerWrong.mp3 */,
 			);
 			path = sounds;
 			sourceTree = "<group>";
@@ -163,7 +163,7 @@
 		B5839681298FD3B20046C484 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5F4948122991172F00692685 /* sounds */,
+				5FC081B0299167BE00F76CE8 /* sounds */,
 				B5839670298FD26A0046C484 /* Assets.xcassets */,
 				B5839672298FD26A0046C484 /* LaunchScreen.storyboard */,
 				B5839675298FD26A0046C484 /* Info.plist */,
@@ -259,11 +259,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5839674298FD26A0046C484 /* LaunchScreen.storyboard in Resources */,
-				5F49481A2991172F00692685 /* answerRight.mp3 in Resources */,
-				5F49481C2991172F00692685 /* answerWrong.mp3 in Resources */,
-				5F4948192991172F00692685 /* clockSound.mp3 in Resources */,
-				5F49481B2991172F00692685 /* waitingMusic.mp3 in Resources */,
-				5F4948182991172F00692685 /* winnerMusic.mp3 in Resources */,
+				5FC081B8299167BF00F76CE8 /* answerRight.mp3 in Resources */,
+				5FC081BA299167BF00F76CE8 /* answerWrong.mp3 in Resources */,
+				5FC081B7299167BF00F76CE8 /* clockSound.mp3 in Resources */,
+				5FC081B9299167BF00F76CE8 /* waitingMusic.mp3 in Resources */,
+				5FC081B6299167BF00F76CE8 /* winnerMusic.mp3 in Resources */,
 				B5839671298FD26A0046C484 /* Assets.xcassets in Resources */,
 				B583966F298FD2690046C484 /* GameMain.storyboard in Resources */,
 			);
