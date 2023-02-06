@@ -17,11 +17,14 @@ protocol GameViewControllerProtocol {
     var buttonD: UIButton! { get }
     
     var timer: ServiceTimerProtocol! { get }
-    var serviceGetQuestionProtocol: ServiceGetQuestionProtocol!  { get }
     var currentQuestion: Question! { get }
+
+    var serviceCheckQuestion: ServiceCheckQuestionProtocol { get }
+    var serviceGetQuestionProtocol: ServiceGetQuestionProtocol!  { get }
+    
     func setupTitileButton(button: [UIButton], currentQuestion: Question)
-    func setupLabelTextQuestion(button: UILabel, text: String)
-    func setupLabelRoundInfo(button: UILabel, currentQuestion: PyramidQuestionModel)
+    func setupLabelTextQuestion(label: UILabel, text: String)
+    func setupLabelRoundInfo(label: UILabel, currentQuestion: PyramidQuestionModel)
 }
 
 
@@ -32,7 +35,5 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
 }
 

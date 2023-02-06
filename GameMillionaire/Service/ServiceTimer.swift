@@ -11,6 +11,7 @@ import Foundation
 protocol ServiceTimerProtocol {
     var serviceMusic: ServiceMusicProtocol? { get }
     func startTimer(roundStages: RoundStages, serviceMusic: ServiceMusicProtocol)
+    func timeIsOver() -> Bool
     func stopTimer()
     
     init(serviceMusic: ServiceMusicProtocol)
