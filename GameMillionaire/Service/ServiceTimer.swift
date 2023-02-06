@@ -13,7 +13,7 @@ protocol ServiceTimerProtocol {
     func startTimer(roundStages: RoundStages)
     func timeIsOver() -> Bool
     func stopTimer()
-    
+    var callBack: (() -> Void)? { get set }
     
     init(serviceMusic: ServiceMusicProtocol)
 }
@@ -23,6 +23,7 @@ class ServiceTimer: ServiceTimerProtocol {
     var serviceMusic: ServiceMusicProtocol?
     var timer = Timer()
     var totalTime = 0
+    var callBack: (() -> Void)?
 
     func startTimer(roundStages: RoundStages) {
         switch roundStages {
@@ -42,6 +43,10 @@ class ServiceTimer: ServiceTimerProtocol {
             serviceMusic?.playMusic(roundStages: .timeIsOver)
             totalTime = 5
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        case .answerIsBeingCheked:
+            serviceMusic?.playMusic(roundStages: .answerIsBeingCheked)
+            totalTime = 88
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
         }
     }
     
@@ -50,6 +55,7 @@ class ServiceTimer: ServiceTimerProtocol {
         if totalTime == 0 {
             timer.invalidate()
             serviceMusic?.stopMusic()
+            callBack?()
         } 
     }
     

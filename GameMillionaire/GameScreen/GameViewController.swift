@@ -32,8 +32,9 @@ class GameViewController: UIViewController {
     
     var timer: ServiceTimerProtocol?
     var currentQuestion: Question?
-    var serviceCheckQuestion: ServiceCheckQuestionProtocol?
+//    var serviceCheckQuestion: ServiceCheckQuestionProtocol?
     var serviceGetQuestionProtocol: ServiceGetQuestionProtocol?
+    var serviceCheckQuestion: ServiceCheckQuestion?
     var music = serviceMusic()
     
     @IBOutlet weak var buttonA: UIButton!
@@ -48,16 +49,13 @@ class GameViewController: UIViewController {
         currentQuestion = QuestionData.questionList[0]
         timer = ServiceTimer(serviceMusic: music)
         setupTitileButton(button: [buttonA, buttonB, buttonC, buttonD], currentQuestion: currentQuestion!)
-        timer?.startTimer(roundStages: .roundStart)
+        timer?.startTimer(roundStages: .rightAnswer)
+        serviceCheckQuestion = ServiceCheckQuestion(timer: timer)
     }
     
     
-    @IBAction func buttonApress(_ sender: Any) {
-//        ServiceCheckQuestion.checkQuestion(question: <#T##Question#>,
-//                                           selectedButton: <#T##UIButton#>,
-//                                           timer: <#T##ServiceTimerProtocol#>,
-//                                           music: <#T##ServiceMusicProtocol#>,
-//                                           user: <#T##UserModel#>)
+    @IBAction func buttonApress(_ sender: UIButton) {
+        serviceCheckQuestion?.checkQuestion(question: currentQuestion!, selectedButton: sender)
     }
     
     @IBAction func buttonBpress(_ sender: Any) {
@@ -80,7 +78,7 @@ class GameViewController: UIViewController {
 }
 
 
-extension GameViewController: GameViewControllerProtocol {
+extension GameViewController {
 
     
     

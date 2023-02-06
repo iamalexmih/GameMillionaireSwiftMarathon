@@ -33,6 +33,8 @@ class serviceMusic: ServiceMusicProtocol {
             url = Bundle.main.url(forResource: "answerWrong", withExtension: "mp3")
         case .timeIsOver:
             url = Bundle.main.url(forResource: "answerWrong", withExtension: "mp3")
+        case .answerIsBeingCheked:
+            url = Bundle.main.url(forResource: "waitingMusic", withExtension: "mp3")
         }
         
         player = try! AVAudioPlayer(contentsOf: url!)
