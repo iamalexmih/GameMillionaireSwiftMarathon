@@ -33,10 +33,17 @@ class serviceMusic: ServiceMusicProtocol {
         case .timeIsOver:
             url = Bundle.main.url(forResource: "answerWrong", withExtension: "mp3")
         case .answerIsBeingCheked:
-            url = Bundle.main.url(forResource: "answerWrong", withExtension: "mp3")
+            url = Bundle.main.url(forResource: "waitingMusic", withExtension: "mp3")
         }
         
-        player = try! AVAudioPlayer(contentsOf: url!)
+        guard let url = url else { return }
+        
+        do {
+            try player = AVAudioPlayer(contentsOf: url)
+        } catch {
+            print("Error ", error.localizedDescription)
+        }
+        
         player.play()
         
     }

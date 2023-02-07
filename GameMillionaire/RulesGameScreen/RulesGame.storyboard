@@ -17,27 +17,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RulesGame" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Grv-Rn-ZkD">
-                                <rect key="frame" x="153" y="415.66666666666669" width="87" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Frame 2" translatesAutoresizingMaskIntoConstraints="NO" id="724-QL-0Sl">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HuE-2s-qxM">
+                                <rect key="frame" x="16" y="59" width="361" height="744"/>
+                                <string key="text">Игра "Кто хочет стать миллионером?"- это конкурс викторина, в котором участники должны правильно ответить на ряд вопросов с несколькими вариантами ответов, чтобы перейти на следующий уровень. Всего 15 вопросов, каждый вопрос стоит определенной суммы денег, у участников есть 30 секунд для предоставления ответа. Участники также получают три вида подсказок, чтобы помочь себе, если они застряли на конкретном вопросе.
+
+Вопросы “Кто хочет стать миллионером?” структурированы в соответствии с тремя различными уровнями, причем уровень сложности постепенно увеличивается. Каждый уровень содержит пять вопросов.
+
+Вопросы, сгруппированные на одном уровне, будут иметь одинаковую сложность. Например: вопросы 1-5 составляют первый уровень и будут содержать самые простые вопросы. Второй уровень (вопросы 6–10) будет несколько сложнее, за ним следует третий самый сложный уровень (вопросы 11–15).
+
+Важно помнить, что вопросы, составляющие каждый уровень, не обязательно будут относиться к одним и тем же или даже сходным темам, но их общий уровень сложности будет одинаковым. Немаловажно, что уровни вопросов не следует путать с «несгораемыми суммами» или структурой ценностей вопросов, что они собой являют объясняется ниже.
+
+Всего три несгораемых суммы:
+
+- 1000 рублей.
+- 32,000 рублей.
+- 1,000,000 рублей.
+
+Участникам разрешается применить три подсказки, которые они могут использовать в любой момент викторины. Каждая из подсказок может быть использована только один раз.
+
+50/50 - исключает два неправильных ответа из множественного выбора, оставляя участнику только один правильный и один неправильный вариант. Это означает, что у него есть шанс 50/50.
+
+Задать вопрос аудитории - залу задают тот же вопрос, что и участнику, и проводится быстрый опрос, чтобы показать их ответы. На диаграмме показывается явное преимущество определенного варианта, эта подсказка может быть чрезвычайно полезной. Участнику дается возможность согласиться с результатами, полученными от аудитории.
+
+Позвоните другу - участникам разрешается сделать 30-секундный звонок другу или члену семьи и спросить, знают ли они ответ на вопрос.</string>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Grv-Rn-ZkD" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="3UJ-0U-IcN"/>
-                            <constraint firstItem="Grv-Rn-ZkD" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="MTO-ly-43E"/>
+                            <constraint firstItem="724-QL-0Sl" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="2xw-8V-wVQ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="HuE-2s-qxM" secondAttribute="trailing" constant="16" id="ImN-9i-J7M"/>
+                            <constraint firstItem="HuE-2s-qxM" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" constant="-15" id="KFo-Du-5Lb"/>
+                            <constraint firstAttribute="bottom" secondItem="724-QL-0Sl" secondAttribute="bottom" id="RmM-xr-L7R"/>
+                            <constraint firstItem="HuE-2s-qxM" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Z40-1J-fEw"/>
+                            <constraint firstItem="724-QL-0Sl" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="cDS-jF-esv"/>
+                            <constraint firstAttribute="trailing" secondItem="724-QL-0Sl" secondAttribute="trailing" id="fxh-nO-vLw"/>
+                            <constraint firstItem="HuE-2s-qxM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="qPK-NQ-FqW"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="47" y="-2"/>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Frame 2" width="414" height="736"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

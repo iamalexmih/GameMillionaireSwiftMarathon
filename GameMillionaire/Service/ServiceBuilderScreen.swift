@@ -10,7 +10,7 @@ import UIKit
 protocol ServiceBuilderScreenProtocol {
     static func createStartScreen() -> UIViewController
     static func createRulesGameScreen() -> UIViewController
-//    static func createGameScreen(serviceTimer: ServiceTimerProtocol) -> UIViewController
+    static func createGameScreen(serviceTimer: ServiceTimerProtocol) -> UIViewController
     static func createGameScreen() -> UIViewController
     static func createPyramidQuestionScreen() -> UIViewController
     static func createLoseScreen() -> UIViewController
@@ -18,6 +18,10 @@ protocol ServiceBuilderScreenProtocol {
 
 
 class ServiceBuilderScreen: ServiceBuilderScreenProtocol {
+    static func createGameScreen(serviceTimer: ServiceTimerProtocol) -> UIViewController {
+        return UIViewController()
+    }
+    
     static func createStartScreen() -> UIViewController {
         let storyboard = UIStoryboard(name: "StartScreen", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "StartScreen") as! StartScreenViewController
