@@ -52,6 +52,7 @@ class ServiceTimer: ServiceTimerProtocol {
     
     @objc func updateTimer() {
         totalTime -= 1
+        print("Timer: \(totalTime)")
         if totalTime == 0 {
             timer.invalidate()
             serviceMusic?.stopMusic()
@@ -68,9 +69,9 @@ class ServiceTimer: ServiceTimerProtocol {
     }
     
     func stopTimer() {
-        totalTime = 0
         timer.invalidate()
         serviceMusic?.stopMusic()
+        totalTime = 0
     }
     
     required init(serviceMusic: ServiceMusicProtocol) {
