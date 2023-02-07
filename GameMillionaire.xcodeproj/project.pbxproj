@@ -26,7 +26,15 @@
 		B5839693298FDF4D0046C484 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5839692298FDF4D0046C484 /* UserModel.swift */; };
 		B5839695298FE11C0046C484 /* ServiceGetQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5839694298FE11C0046C484 /* ServiceGetQuestion.swift */; };
 		B5839697298FE1F90046C484 /* PyramidQuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5839696298FE1F90046C484 /* PyramidQuestionModel.swift */; };
-		B583969C298FE7A30046C484 /* ServiceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B583969B298FE7A30046C484 /* ServiceBuilder.swift */; };
+		B5F85D8A2992394F005E829D /* StartScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5F85D892992394F005E829D /* StartScreen.storyboard */; };
+		B5F85D8D2992396B005E829D /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F85D8C2992396B005E829D /* StartScreenViewController.swift */; };
+		B5F85D9229923C15005E829D /* RulesGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5F85D9129923C15005E829D /* RulesGame.storyboard */; };
+		B5F85D9429923C38005E829D /* RulesGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F85D9329923C38005E829D /* RulesGameViewController.swift */; };
+		B5F85D9629923C94005E829D /* PyramidQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F85D9529923C94005E829D /* PyramidQuestionViewController.swift */; };
+		B5F85D9829923CA6005E829D /* PyramidQuestion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5F85D9729923CA6005E829D /* PyramidQuestion.storyboard */; };
+		B5F85D9A29923CBE005E829D /* LoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F85D9929923CBE005E829D /* LoseViewController.swift */; };
+		B5F85D9C29923CCC005E829D /* Lose.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5F85D9B29923CCC005E829D /* Lose.storyboard */; };
+		B5F85D9E29923DE7005E829D /* ServiceBuilderScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F85D9D29923DE7005E829D /* ServiceBuilderScreen.swift */; };
 		C54AFC3E2991259A00DCD6B5 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54AFC3D2991259A00DCD6B5 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,7 +60,15 @@
 		B5839692298FDF4D0046C484 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		B5839694298FE11C0046C484 /* ServiceGetQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceGetQuestion.swift; sourceTree = "<group>"; };
 		B5839696298FE1F90046C484 /* PyramidQuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PyramidQuestionModel.swift; sourceTree = "<group>"; };
-		B583969B298FE7A30046C484 /* ServiceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBuilder.swift; sourceTree = "<group>"; };
+		B5F85D892992394F005E829D /* StartScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartScreen.storyboard; sourceTree = "<group>"; };
+		B5F85D8C2992396B005E829D /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
+		B5F85D9129923C15005E829D /* RulesGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RulesGame.storyboard; sourceTree = "<group>"; };
+		B5F85D9329923C38005E829D /* RulesGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesGameViewController.swift; sourceTree = "<group>"; };
+		B5F85D9529923C94005E829D /* PyramidQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PyramidQuestionViewController.swift; sourceTree = "<group>"; };
+		B5F85D9729923CA6005E829D /* PyramidQuestion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PyramidQuestion.storyboard; sourceTree = "<group>"; };
+		B5F85D9929923CBE005E829D /* LoseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoseViewController.swift; sourceTree = "<group>"; };
+		B5F85D9B29923CCC005E829D /* Lose.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lose.storyboard; sourceTree = "<group>"; };
+		B5F85D9D29923DE7005E829D /* ServiceBuilderScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBuilderScreen.swift; sourceTree = "<group>"; };
 		C54AFC3D2991259A00DCD6B5 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -99,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				B583967B298FD3210046C484 /* StartScreen */,
+				B5F85D9029923BF0005E829D /* RulesGameScreen */,
 				B583967C298FD3370046C484 /* RegisterScreen */,
 				B583967D298FD3470046C484 /* GameScreen */,
 				B583967F298FD3600046C484 /* PyramidQuestionScreen */,
@@ -114,6 +131,8 @@
 		B583967B298FD3210046C484 /* StartScreen */ = {
 			isa = PBXGroup;
 			children = (
+				B5F85D892992394F005E829D /* StartScreen.storyboard */,
+				B5F85D8C2992396B005E829D /* StartScreenViewController.swift */,
 			);
 			path = StartScreen;
 			sourceTree = "<group>";
@@ -139,6 +158,8 @@
 		B583967E298FD3500046C484 /* LoseScreen */ = {
 			isa = PBXGroup;
 			children = (
+				B5F85D9929923CBE005E829D /* LoseViewController.swift */,
+				B5F85D9B29923CCC005E829D /* Lose.storyboard */,
 			);
 			path = LoseScreen;
 			sourceTree = "<group>";
@@ -147,6 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				B5839696298FE1F90046C484 /* PyramidQuestionModel.swift */,
+				B5F85D9529923C94005E829D /* PyramidQuestionViewController.swift */,
+				B5F85D9729923CA6005E829D /* PyramidQuestion.storyboard */,
 			);
 			path = PyramidQuestionScreen;
 			sourceTree = "<group>";
@@ -174,9 +197,9 @@
 		B5839684298FD8210046C484 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				B583969B298FE7A30046C484 /* ServiceBuilder.swift */,
 				B5839682298FD8180046C484 /* ServiceMusic.swift */,
 				B5839685298FD86F0046C484 /* ServiceTimer.swift */,
+				B5F85D9D29923DE7005E829D /* ServiceBuilderScreen.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -198,6 +221,15 @@
 				B5839694298FE11C0046C484 /* ServiceGetQuestion.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		B5F85D9029923BF0005E829D /* RulesGameScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B5F85D9129923C15005E829D /* RulesGame.storyboard */,
+				B5F85D9329923C38005E829D /* RulesGameViewController.swift */,
+			);
+			path = RulesGameScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,9 +295,13 @@
 				5FC081BA299167BF00F76CE8 /* answerWrong.mp3 in Resources */,
 				5FC081B7299167BF00F76CE8 /* clockSound.mp3 in Resources */,
 				5FC081B9299167BF00F76CE8 /* waitingMusic.mp3 in Resources */,
+				B5F85D9C29923CCC005E829D /* Lose.storyboard in Resources */,
+				B5F85D8A2992394F005E829D /* StartScreen.storyboard in Resources */,
 				5FC081B6299167BF00F76CE8 /* winnerMusic.mp3 in Resources */,
 				B5839671298FD26A0046C484 /* Assets.xcassets in Resources */,
+				B5F85D9829923CA6005E829D /* PyramidQuestion.storyboard in Resources */,
 				B583966F298FD2690046C484 /* GameMain.storyboard in Resources */,
+				B5F85D9229923C15005E829D /* RulesGame.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,19 +312,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5F85D9A29923CBE005E829D /* LoseViewController.swift in Sources */,
 				C54AFC3E2991259A00DCD6B5 /* ResultViewController.swift in Sources */,
 				B5839688298FD8DB0046C484 /* ServiceCheckQuestion.swift in Sources */,
+				B5F85D9E29923DE7005E829D /* ServiceBuilderScreen.swift in Sources */,
 				B5839695298FE11C0046C484 /* ServiceGetQuestion.swift in Sources */,
+				B5F85D9629923C94005E829D /* PyramidQuestionViewController.swift in Sources */,
 				B583968D298FDD070046C484 /* Question.swift in Sources */,
 				B583966C298FD2690046C484 /* GameViewController.swift in Sources */,
+				B5F85D9429923C38005E829D /* RulesGameViewController.swift in Sources */,
 				B583968B298FD9B40046C484 /* RoundStages.swift in Sources */,
 				B5839668298FD2690046C484 /* AppDelegate.swift in Sources */,
+				B5F85D8D2992396B005E829D /* StartScreenViewController.swift in Sources */,
 				B583966A298FD2690046C484 /* SceneDelegate.swift in Sources */,
 				B5839697298FE1F90046C484 /* PyramidQuestionModel.swift in Sources */,
 				B5839683298FD8190046C484 /* ServiceMusic.swift in Sources */,
 				B5839693298FDF4D0046C484 /* UserModel.swift in Sources */,
 				B5839686298FD86F0046C484 /* ServiceTimer.swift in Sources */,
-				B583969C298FE7A30046C484 /* ServiceBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,7 +480,7 @@
 				INFOPLIST_FILE = GameMillionaire/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = GameMain;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -472,7 +512,7 @@
 				INFOPLIST_FILE = GameMillionaire/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = GameMain;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
