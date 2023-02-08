@@ -45,4 +45,9 @@ class PyramidQuestionViewController: UIViewController {
         self.questionButton15.layer.cornerRadius = 20
         // Do any additional setup after loading the view.
     }
+    
+    
+    @IBAction func questionButton1Press(sender: UIButton) {
+        print("questionButton1")
+    }
 }

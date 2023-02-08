@@ -504,6 +504,9 @@
                                                 <color key="backgroundColor" name="colorPyramidaQuestion"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="questionButton1PressWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7b4-bm-oVS"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fa3-FA-dwS" userLabel="Вопрос 1">
                                                 <rect key="frame" x="15" y="12.333333333333256" width="71.333333333333329" height="20.333333333333329"/>
