@@ -9,8 +9,12 @@ import Foundation
 
 
 class UserModel {
+    
+    static let shared = UserModel()
+    private init() { }
+    
     let login: String? = ""
-    static let round: Int = 1
+    let round: Int = 1
     var score = 0
     
     func  updateScore() {
