@@ -28,6 +28,7 @@
 		B5839697298FE1F90046C484 /* PyramidQuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5839696298FE1F90046C484 /* PyramidQuestionModel.swift */; };
 		B583969C298FE7A30046C484 /* ServiceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B583969B298FE7A30046C484 /* ServiceBuilder.swift */; };
 		C523AC7B2993A65200B46555 /* LoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523AC7A2993A65200B46555 /* LoseViewController.swift */; };
+		C53C31882993CC6A00653D8F /* ServiceHints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53C31872993CC6A00653D8F /* ServiceHints.swift */; };
 		C54AFC3E2991259A00DCD6B5 /* PyramidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54AFC3D2991259A00DCD6B5 /* PyramidViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		B5839696298FE1F90046C484 /* PyramidQuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PyramidQuestionModel.swift; sourceTree = "<group>"; };
 		B583969B298FE7A30046C484 /* ServiceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBuilder.swift; sourceTree = "<group>"; };
 		C523AC7A2993A65200B46555 /* LoseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoseViewController.swift; path = GameMillionaire/GameScreen/LoseViewController.swift; sourceTree = SOURCE_ROOT; };
+		C53C31872993CC6A00653D8F /* ServiceHints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHints.swift; sourceTree = "<group>"; };
 		C54AFC3D2991259A00DCD6B5 /* PyramidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PyramidViewController.swift; path = GameMillionaire/PyramidQuestionScreen/PyramidViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				B5839687298FD8DB0046C484 /* ServiceCheckQuestion.swift */,
+				C53C31872993CC6A00653D8F /* ServiceHints.swift */,
 				B5839694298FE11C0046C484 /* ServiceGetQuestion.swift */,
 			);
 			path = Service;
@@ -293,6 +296,7 @@
 				B5839693298FDF4D0046C484 /* UserModel.swift in Sources */,
 				B5839686298FD86F0046C484 /* ServiceTimer.swift in Sources */,
 				B583969C298FE7A30046C484 /* ServiceBuilder.swift in Sources */,
+				C53C31882993CC6A00653D8F /* ServiceHints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

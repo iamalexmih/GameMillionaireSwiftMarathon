@@ -69,14 +69,11 @@ class GameViewController: UIViewController {
     @IBAction func buttonBpress(_ sender: UIButton) {
         
         if serviceCheckQuestion?.checkQuestion(question: currentQuestion!, selectedButton: sender) == true {
-            print(1)
             Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(goToNextScreen), userInfo: nil, repeats: false)
         } else {
             DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-                print(2)
                 self.performSegue(withIdentifier: "segueToLose", sender: nil)
             }
-            print(3)
         }
     }
     
