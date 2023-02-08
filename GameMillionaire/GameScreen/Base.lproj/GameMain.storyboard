@@ -67,16 +67,54 @@
                         <outlet property="buttonB" destination="JwB-d2-6uy" id="Jqu-yU-R0u"/>
                         <outlet property="buttonC" destination="63M-DY-qbb" id="fTu-c1-MjZ"/>
                         <outlet property="buttonD" destination="MFv-GA-ztE" id="dMt-pY-zan"/>
+                        <segue destination="YdG-hA-dOU" kind="presentation" identifier="segueToPyramid" modalPresentationStyle="fullScreen" id="4bi-gv-m6m"/>
+                        <segue destination="6Z4-uE-kaR" kind="presentation" identifier="segueToLose" modalPresentationStyle="fullScreen" id="1ZT-DW-ySW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="138" y="4"/>
         </scene>
+        <!--Pyramid View Controller-->
+        <scene sceneID="29m-iy-h0d">
+            <objects>
+                <viewController id="YdG-hA-dOU" customClass="PyramidViewController" customModule="GameMillionaire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hYo-KQ-6tF">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="sxb-qC-3Tt"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iN1-5p-aZC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1153" y="-343"/>
+        </scene>
+        <!--Lose View Controller-->
+        <scene sceneID="tfs-Hg-rQl">
+            <objects>
+                <viewController id="6Z4-uE-kaR" customClass="LoseViewController" customModule="GameMillionaire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ErE-Jx-p5R">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="slM-UO-IlM"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="feO-4T-3zb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1152" y="331"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemCyanColor">
             <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

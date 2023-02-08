@@ -1,16 +1,14 @@
 //
-//  ResultViewController.swift
+//  LoseViewController.swift
 //  GameMillionaire
 //
-//  Created by Даниил Петров on 06.02.2023.
+//  Created by Даниил Петров on 08.02.2023.
 //
 
 import UIKit
 
-class ResultViewController: UIViewController {
-    
-    let user = UserModel()
-    
+class LoseViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

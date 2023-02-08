@@ -27,7 +27,8 @@
 		B5839695298FE11C0046C484 /* ServiceGetQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5839694298FE11C0046C484 /* ServiceGetQuestion.swift */; };
 		B5839697298FE1F90046C484 /* PyramidQuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5839696298FE1F90046C484 /* PyramidQuestionModel.swift */; };
 		B583969C298FE7A30046C484 /* ServiceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B583969B298FE7A30046C484 /* ServiceBuilder.swift */; };
-		C54AFC3E2991259A00DCD6B5 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54AFC3D2991259A00DCD6B5 /* ResultViewController.swift */; };
+		C523AC7B2993A65200B46555 /* LoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523AC7A2993A65200B46555 /* LoseViewController.swift */; };
+		C54AFC3E2991259A00DCD6B5 /* PyramidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54AFC3D2991259A00DCD6B5 /* PyramidViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +54,8 @@
 		B5839694298FE11C0046C484 /* ServiceGetQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceGetQuestion.swift; sourceTree = "<group>"; };
 		B5839696298FE1F90046C484 /* PyramidQuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PyramidQuestionModel.swift; sourceTree = "<group>"; };
 		B583969B298FE7A30046C484 /* ServiceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBuilder.swift; sourceTree = "<group>"; };
-		C54AFC3D2991259A00DCD6B5 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = SOURCE_ROOT; };
+		C523AC7A2993A65200B46555 /* LoseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoseViewController.swift; path = GameMillionaire/GameScreen/LoseViewController.swift; sourceTree = SOURCE_ROOT; };
+		C54AFC3D2991259A00DCD6B5 /* PyramidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PyramidViewController.swift; path = GameMillionaire/PyramidQuestionScreen/PyramidViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +132,6 @@
 			children = (
 				B583966D298FD2690046C484 /* GameMain.storyboard */,
 				B583966B298FD2690046C484 /* GameViewController.swift */,
-				C54AFC3D2991259A00DCD6B5 /* ResultViewController.swift */,
 				B5839698298FE4C60046C484 /* Service */,
 			);
 			path = GameScreen;
@@ -139,6 +140,7 @@
 		B583967E298FD3500046C484 /* LoseScreen */ = {
 			isa = PBXGroup;
 			children = (
+				C523AC7A2993A65200B46555 /* LoseViewController.swift */,
 			);
 			path = LoseScreen;
 			sourceTree = "<group>";
@@ -146,6 +148,7 @@
 		B583967F298FD3600046C484 /* PyramidQuestionScreen */ = {
 			isa = PBXGroup;
 			children = (
+				C54AFC3D2991259A00DCD6B5 /* PyramidViewController.swift */,
 				B5839696298FE1F90046C484 /* PyramidQuestionModel.swift */,
 			);
 			path = PyramidQuestionScreen;
@@ -276,9 +279,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C54AFC3E2991259A00DCD6B5 /* ResultViewController.swift in Sources */,
+				C54AFC3E2991259A00DCD6B5 /* PyramidViewController.swift in Sources */,
 				B5839688298FD8DB0046C484 /* ServiceCheckQuestion.swift in Sources */,
 				B5839695298FE11C0046C484 /* ServiceGetQuestion.swift in Sources */,
+				C523AC7B2993A65200B46555 /* LoseViewController.swift in Sources */,
 				B583968D298FDD070046C484 /* Question.swift in Sources */,
 				B583966C298FD2690046C484 /* GameViewController.swift in Sources */,
 				B583968B298FD9B40046C484 /* RoundStages.swift in Sources */,

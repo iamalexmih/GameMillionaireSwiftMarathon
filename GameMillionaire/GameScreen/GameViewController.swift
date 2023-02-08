@@ -55,11 +55,29 @@ class GameViewController: UIViewController {
     
     
     @IBAction func buttonApress(_ sender: UIButton) {
-        serviceCheckQuestion?.checkQuestion(question: currentQuestion!, selectedButton: sender)
+        
+        if serviceCheckQuestion?.checkQuestion(question: currentQuestion!, selectedButton: sender) == true {
+            Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(goToNextScreen), userInfo: nil, repeats: false)
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                self.performSegue(withIdentifier: "segueToLose", sender: nil)
+            }
+        }
+        
     }
     
-    @IBAction func buttonBpress(_ sender: Any) {
+    @IBAction func buttonBpress(_ sender: UIButton) {
         
+        if serviceCheckQuestion?.checkQuestion(question: currentQuestion!, selectedButton: sender) == true {
+            print(1)
+            Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(goToNextScreen), userInfo: nil, repeats: false)
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                print(2)
+                self.performSegue(withIdentifier: "segueToLose", sender: nil)
+            }
+            print(3)
+        }
     }
     
     
@@ -68,7 +86,6 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func buttonDpress(_ sender: Any) {
-        
     }
     
     
@@ -98,5 +115,12 @@ extension GameViewController {
     
     func setupLabelRoundInfo(label: UILabel, currentQuestion: PyramidQuestionModel) {
         
+    }
+    
+    @objc func goToNextScreen() {
+        
+        
+        performSegue(withIdentifier: "segueToPyramid", sender: nil)
+        print(1.1)
     }
 }
