@@ -68,6 +68,9 @@
                                             <attributedString key="attributedSubtitle"/>
                                             <color key="baseForegroundColor" name="colorStartScreenButtons"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="getToRules:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qtH-Nn-27w"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Hf-bH-27p">
                                         <rect key="frame" x="26.666666666666671" y="77.333333333333258" width="175" height="52.333333333333343"/>
@@ -84,6 +87,9 @@
                                             </attributedString>
                                             <color key="baseForegroundColor" name="colorStartScreenButtons"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="getToStart:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mMx-5O-ASi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
