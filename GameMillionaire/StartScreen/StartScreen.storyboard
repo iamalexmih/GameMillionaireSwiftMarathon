@@ -17,27 +17,102 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="START SCREEN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXw-Sk-P18">
-                                <rect key="frame" x="136" y="415.66666666666669" width="121" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Frame 2" translatesAutoresizingMaskIntoConstraints="NO" id="TnF-Gs-0zB" userLabel="background">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="CUX-XW-Y0p">
+                                <rect key="frame" x="61" y="69" width="271" height="340.66666666666669"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image 1" translatesAutoresizingMaskIntoConstraints="NO" id="CMU-VN-Dpe" userLabel="logo">
+                                        <rect key="frame" x="35" y="0.0" width="201" height="201"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="201" id="8xI-8s-Faf"/>
+                                            <constraint firstAttribute="height" constant="201" id="gCb-aD-6GQ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXw-Sk-P18">
+                                        <rect key="frame" x="87.333333333333343" y="213" width="96.666666666666657" height="28.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to Who Wants to be a Millionaire" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="e3Q-IM-LNh">
+                                        <rect key="frame" x="0.0" y="253.66666666666669" width="271" height="87"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="87" id="MwV-Vj-lcu"/>
+                                            <constraint firstAttribute="width" constant="271" id="cwA-X8-UcK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="mOg-0z-QEd">
+                                <rect key="frame" x="82.333333333333329" y="618.33333333333337" width="228.66666666666669" height="129.66666666666663"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXd-eh-SqA">
+                                        <rect key="frame" x="0.0" y="0.0" width="228.66666666666666" height="52.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Правила игры">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.49019610879999997" green="0.87058818339999999" blue="0.66274511810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" metaFont="system" size="32"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        <integer key="NSUnderline" value="1"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <attributedString key="attributedSubtitle"/>
+                                            <color key="baseForegroundColor" name="colorStartScreenButtons"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Hf-bH-27p">
+                                        <rect key="frame" x="26.666666666666671" y="77.333333333333258" width="175" height="52.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Start game">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.49019610879999997" green="0.87058818339999999" blue="0.66274511810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" metaFont="system" size="32"/>
+                                                        <integer key="NSUnderline" value="1"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseForegroundColor" name="colorStartScreenButtons"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="MXw-Sk-P18" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="9Lr-FT-HM3"/>
-                            <constraint firstItem="MXw-Sk-P18" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="ILj-si-qlT"/>
+                            <constraint firstAttribute="trailing" secondItem="TnF-Gs-0zB" secondAttribute="trailing" id="3eh-eK-gjw"/>
+                            <constraint firstItem="TnF-Gs-0zB" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="6c6-Aa-zpd"/>
+                            <constraint firstItem="TnF-Gs-0zB" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="9ji-US-fQl"/>
+                            <constraint firstItem="CUX-XW-Y0p" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="BPO-5f-3mb"/>
+                            <constraint firstItem="CUX-XW-Y0p" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="IIm-jh-nHA"/>
+                            <constraint firstItem="mOg-0z-QEd" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="RBg-V7-UB3"/>
+                            <constraint firstAttribute="bottom" secondItem="TnF-Gs-0zB" secondAttribute="bottom" id="a2j-Jn-c7k"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="mOg-0z-QEd" secondAttribute="bottom" constant="70" id="fVC-NG-CrL"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="111" y="-2"/>
+            <point key="canvasLocation" x="110.68702290076335" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Frame 2" width="414" height="736"/>
+        <image name="image 1" width="201" height="201"/>
+        <namedColor name="colorStartScreenButtons">
+            <color red="0.32549019607843138" green="0.88235294117647056" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
