@@ -9,7 +9,7 @@ import UIKit
 
 class ResultViewController: UIViewController {
     
-    let user = UserModel()
+    let user = UserModel.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
