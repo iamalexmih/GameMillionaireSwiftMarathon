@@ -39,29 +39,46 @@ class GameViewController: UIViewController {
     @IBOutlet weak var labelC: UILabel!
     @IBOutlet weak var labelD: UILabel!
     
+    @IBOutlet weak var buttonA: UIButton!
+    @IBOutlet weak var buttonB: UIButton!
+    @IBOutlet weak var buttonC: UIButton!
+    @IBOutlet weak var buttonD: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        
+        
+        setButtonCornerRadius()
     }
     
     
-    @IBAction func butttonA(_ sender: Any) {
+    @IBAction func buttonPressA(_ sender: UIButton) {
         
     }
     
-    @IBAction func buttonB(_ sender: Any) {
+    @IBAction func buttonPressB(_ sender: UIButton) {
         
     }
     
-    @IBAction func buttonC(_ sender: Any) {
+    @IBAction func buttonPressC(_ sender: UIButton) {
         
     }
     
-    @IBAction func buttonD(_ sender: Any) {
+    @IBAction func buttonPressD(_ sender: UIButton) {
         
     }
+    
     func goToResultViewController() {
         
+    }
+    
+    func setButtonCornerRadius() {
+        buttonA.layer.cornerRadius = 20
+        buttonB.layer.cornerRadius = 20
+        buttonC.layer.cornerRadius = 20
+        buttonD.layer.cornerRadius = 20
     }
 }
 
