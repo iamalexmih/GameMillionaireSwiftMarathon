@@ -21,38 +21,26 @@ class ServiceCheckQuestion {
     }
     
     func checkQuestion(question: Question, selectedButton: UIButton) -> Bool {
-    
+        
         timer?.stopTimer()
-        selectedButton.backgroundColor = .yellow
-
         timer?.startTimer(roundStages: .answerIsBeingCheked)
-        print(timer?.timeIsOver() as Any)
+        selectedButton.backgroundColor = .yellow
         
-        
-        
-            if selectedButton.currentTitle == question.rightAnswer {
-
-                self.timer?.startTimer(roundStages: .rightAnswer)
-                
-                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                    self.timer?.stopTimer()
-                    selectedButton.backgroundColor = .green
-
-                    print("Ответ верный. Переход на экран c полным списком вопросов")
-                }
-                
-
-                return true
-            } else {
-                self.timer?.startTimer(roundStages: .wrongAnswer)
-
-                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                    self.timer?.stopTimer()
-                    selectedButton.backgroundColor = .red
-                    print("Не верный ответ. Переход на экран c полным списком вопросов")
-                }
-                return false
+        if selectedButton.currentTitle == question.rightAnswer {
+            
+            self.timer?.startTimer(roundStages: .rightAnswer)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                self.timer?.stopTimer()
+                selectedButton.backgroundColor = .green
             }
+            return true
+        } else {
+            self.timer?.startTimer(roundStages: .wrongAnswer)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                self.timer?.stopTimer()
+                selectedButton.backgroundColor = .red
+            }
+            return false
+        }
     }
-
 }

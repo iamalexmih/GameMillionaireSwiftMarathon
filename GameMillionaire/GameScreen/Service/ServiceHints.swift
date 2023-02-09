@@ -9,52 +9,56 @@ import Foundation
 import UIKit
 
 protocol ServiceHintsProtocol {
-    static func askTheAudience(question: Question, selectedButton: UIButton, timer: ServiceTimerProtocol)
+    static func askTheAudience(question: Question)
     
-    static func fiftyFifty(question: Question, selectedButton: UIButton, timer: ServiceTimerProtocol)
+    static func fiftyFifty(question: Question, selectedButton: UIButton)
     
-    static func phoneAFriend(question: Question, selectedButton: UIButton, timer: ServiceTimerProtocol)
+    static func phoneAFriend(question: Question, selectedButton: UIButton)
 }
 
 class ServiceHints {
-    
-    var timer: ServiceTimerProtocol?
-    
-    init(timer: ServiceTimerProtocol?) {
-        self.timer = timer
-    }
-    
-    func askTheAudience(question: Question, selectedButton: UIButton) {
+ 
+    func askTheAudience(question: Question) -> UIAlertController {
+        let firstPos: String
+        let secPos: String
+        let thirdPos: String
+        let fourthPos: String
         let answers = question.variantsAnswer
-        /*
-        процентаж = 100%
-         райт ансвер = Инт рандом ин 65...75
-         процентаж - райт ансвер
-         вторая вероятность = процентаж - инт рандом ин 10...15
-         третья вероятность = вторая вероятность - инт рандом ин
-         ...
-         */
         
-        /*
-         иф
-         */
-        
-        
+        if answers[0] == question.rightAnswer {
+            firstPos = answers[0]
+            secPos = answers[1]
+            thirdPos = answers[2]
+            fourthPos = answers[3]
+        } else if answers[1] == question.rightAnswer {
+            firstPos = answers[1]
+            secPos = answers[2]
+            thirdPos = answers[3]
+            fourthPos = answers[0]
+        } else if answers[2] == question.rightAnswer {
+            firstPos = answers[2]
+            secPos = answers[0]
+            thirdPos = answers[1]
+            fourthPos = answers[3]
+        } else {
+            firstPos = answers[3]
+            secPos = answers[0]
+            thirdPos = answers[1]
+            fourthPos = answers[2]
+        }
         
         let message = """
-Вариант А:
-
-
+\(firstPos) - 70%
+\(secPos) - 19%
+\(thirdPos) - 6%
+\(fourthPos) - 5%
 """
-        
-        
-        let alert = UIAlertController(title: "title", message: "message", preferredStyle: .alert)
-        
+
+        let alertAskTheAudience = UIAlertController(title: "Результаты зрительского голосования:", message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-//            self.password.text = ""
         }
-        alert.addAction(okAction)
-//        present(alert, animated: true)
+        
+        alertAskTheAudience.addAction(okAction)
+        return alertAskTheAudience
     }
-    
 }

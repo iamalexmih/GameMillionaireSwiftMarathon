@@ -21,6 +21,7 @@ protocol GameViewControllerProtocol {
 
     var serviceCheckQuestion: ServiceCheckQuestionProtocol? { get set }
     var serviceGetQuestionProtocol: ServiceGetQuestionProtocol?  { get set }
+    var serviceHints: ServiceHintsProtocol? { get set }
     
     func setupTitileButton(button: [UIButton], currentQuestion: Question)
     func setupLabelTextQuestion(label: UILabel, text: String)
@@ -35,6 +36,7 @@ class GameViewController: UIViewController {
 //    var serviceCheckQuestion: ServiceCheckQuestionProtocol?
     var serviceGetQuestionProtocol: ServiceGetQuestionProtocol?
     var serviceCheckQuestion: ServiceCheckQuestion?
+    var serviceHints: ServiceHints?
     var music = serviceMusic()
     
     @IBOutlet weak var buttonA: UIButton!
@@ -51,38 +53,25 @@ class GameViewController: UIViewController {
         setupTitileButton(button: [buttonA, buttonB, buttonC, buttonD], currentQuestion: currentQuestion!)
         timer?.startTimer(roundStages: .rightAnswer)
         serviceCheckQuestion = ServiceCheckQuestion(timer: timer)
+        serviceHints = ServiceHints()
     }
     
     
     @IBAction func buttonApress(_ sender: UIButton) {
-        
-        if serviceCheckQuestion?.checkQuestion(question: currentQuestion!, selectedButton: sender) == true {
-            Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(goToNextScreen), userInfo: nil, repeats: false)
-        } else {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-                self.performSegue(withIdentifier: "segueToLose", sender: nil)
-            }
-        }
-        
+        answerProcessing(sender)
     }
     
     @IBAction func buttonBpress(_ sender: UIButton) {
-        
-        if serviceCheckQuestion?.checkQuestion(question: currentQuestion!, selectedButton: sender) == true {
-            Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(goToNextScreen), userInfo: nil, repeats: false)
-        } else {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-                self.performSegue(withIdentifier: "segueToLose", sender: nil)
-            }
-        }
+        answerProcessing(sender)
     }
     
-    
-    @IBAction func buttonCpress(_ sender: Any) {
-        
+    @IBAction func buttonCpress(_ sender: UIButton) {
+        answerProcessing(sender)
     }
     
-    @IBAction func buttonDpress(_ sender: Any) {
+    @IBAction func buttonDpress(_ sender: UIButton) {
+//        answerProcessing(sender)
+        presentAskTheAudience()
     }
     
     
@@ -114,10 +103,22 @@ extension GameViewController {
         
     }
     
-    @objc func goToNextScreen() {
+    func answerProcessing(_ sender: UIButton) {
+        if serviceCheckQuestion?.checkQuestion(question: currentQuestion!, selectedButton: sender) == true {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                self.performSegue(withIdentifier: "segueToPyramid", sender: nil)
+            }
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                self.performSegue(withIdentifier: "segueToLose", sender: nil)
+            }
+        }
+    }
+    
+    func presentAskTheAudience() {
+        guard let currentQuestion else { return }
+        guard let serviceHints else { return }
         
-        
-        performSegue(withIdentifier: "segueToPyramid", sender: nil)
-        print(1.1)
+        present(serviceHints.askTheAudience(question: currentQuestion), animated: true)
     }
 }
