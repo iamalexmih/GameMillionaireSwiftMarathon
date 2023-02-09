@@ -18,8 +18,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        let viewController = ServiceBuilderScreen.createLoseScreen()
-        window?.rootViewController = viewController
+        let navigationController = UINavigationController()
+        let router = ServiceRouter(navigationController: navigationController)
+        router.initialStartScreen()
+//        let viewController = ServiceBuilderScreen.createGameScreen()
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
 }

@@ -14,7 +14,7 @@ protocol ServiceMusicProtocol {
     func stopMusic()
 }
 
-class serviceMusic: ServiceMusicProtocol {
+class ServiceMusic: ServiceMusicProtocol {
     
     private var player: AVAudioPlayer!
     private var url: URL?

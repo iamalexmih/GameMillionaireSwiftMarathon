@@ -8,14 +8,6 @@
 import UIKit
 
 protocol GameViewControllerProtocol {
-    
-    var labelQuestion: UILabel! { get }
-    var labelRoundInfo: UILabel! { get }
-    var buttonA: UIButton! { get }
-    var buttonB: UIButton! { get }
-    var buttonC: UIButton! { get }
-    var buttonD: UIButton! { get }
-    
     var timer: ServiceTimerProtocol! { get }
     var currentQuestion: Question! { get }
 
@@ -30,13 +22,87 @@ protocol GameViewControllerProtocol {
 
 class GameViewController: UIViewController {
     
+    var timer: ServiceTimerProtocol!
+    var music: ServiceMusicProtocol!
+    var router: RouterProtocol!
+    
+    var currentQuestion: Question?
+    
+    @IBOutlet weak var labelQuestion: UILabel!
+    @IBOutlet weak var labelCostQuestion: UILabel!
+    @IBOutlet weak var labelCurrentRound: UILabel!
+    
+    @IBOutlet weak var labelA: UILabel!
+    @IBOutlet weak var labelB: UILabel!
+    @IBOutlet weak var labelC: UILabel!
+    @IBOutlet weak var labelD: UILabel!
+    
+    @IBOutlet weak var buttonA: UIButton!
+    @IBOutlet weak var buttonB: UIButton!
+    @IBOutlet weak var buttonC: UIButton!
+    @IBOutlet weak var buttonD: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setButtonCornerRadius()
+ 
+        currentQuestion = QuestionData.nextQuestion(round: UserModel.shared.round)
+        setupTitileButton(button: [buttonA, buttonB, buttonC, buttonD], currentQuestion: currentQuestion!)
+//        timer?.startTimer(roundStages: .rightAnswer)
+//        serviceCheckQuestion = ServiceCheckQuestion(timer: timer)
+        setLabelCurrentQuestion()
+        setInfoAboutCurrentRound()
+    
+    }
+    
+    
+    @IBAction func buttonPressA(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func buttonPressB(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func buttonPressC(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func buttonPressD(_ sender: UIButton) {
+        
     }
     
     func goToResultViewController() {
         
+    }
+    
+    
+    func setupTitileButton(button: [UIButton], currentQuestion: Question) {
+        var answer = "N/A"
+        var answersArray = currentQuestion.variantsAnswer
+        button.forEach { btn in
+            answer = answersArray.removeFirst()
+            btn.setTitle(answer, for: .normal)
+            
+        }
+    }
+    
+    func setLabelCurrentQuestion() {
+        labelQuestion.text = currentQuestion?.textQuestion
+    }
+    
+    func setInfoAboutCurrentRound() {
+        labelCostQuestion.text = "1 000 000 Р"
+        labelCurrentRound.text = "Вопрос № \(UserModel.shared.round)"
+    }
+    
+    
+    func setButtonCornerRadius() {
+        buttonA.layer.cornerRadius = 20
+        buttonB.layer.cornerRadius = 20
+        buttonC.layer.cornerRadius = 20
+        buttonD.layer.cornerRadius = 20
     }
 }
 

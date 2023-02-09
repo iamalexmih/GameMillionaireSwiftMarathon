@@ -53,10 +53,6 @@ class QuestionData {
     var questionNumber = 0
     var score = 0
     
-    func nextQuestion() {
-        
-    }
-    
     static var questionList: [Question] = [
         Question(textQuestion: "Какая кошка самая большая на планете?",
                  difficultyIssue: .lite,
@@ -138,4 +134,26 @@ class QuestionData {
                  variantsAnswer: ["282", "693", "141", "241"],
                  rightAnswer: "141"),
     ]
+    
+    
+    static func nextQuestion(round: Int) -> Question {
+
+                switch round {
+                    
+                case 1...5:
+                    let randomIndex = Int.random(in: 0...4)
+                    let randomEasyQuestion = questionList.remove(at: randomIndex)
+                    return randomEasyQuestion
+                case 6...10:
+                    let randomIndex = Int.random(in: 5...9)
+                    let randomMediumQuestion = questionList.remove(at: randomIndex)
+                    return randomMediumQuestion
+                default:
+                    let randomIndex = Int.random(in: 10...14)
+                    let randomHardQuestion = questionList.remove(at: randomIndex)
+                    return randomHardQuestion
+                }
+    }
+    
+    
 }
