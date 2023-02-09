@@ -11,9 +11,9 @@ import UIKit
 protocol ServiceHintsProtocol {
     static func askTheAudience(question: Question)
     
-    static func fiftyFifty(question: Question, selectedButton: UIButton)
+    static func fiftyFifty(question: Question)
     
-    static func phoneAFriend(question: Question, selectedButton: UIButton)
+    static func phoneAFriend(question: Question)
 }
 
 class ServiceHints {
@@ -60,5 +60,30 @@ class ServiceHints {
         
         alertAskTheAudience.addAction(okAction)
         return alertAskTheAudience
+    }
+    
+    func callAFriend(question: Question) -> UIAlertController {
+        
+        var options = question.variantsAnswer
+        
+        func chooseAnswer() -> String {
+            let randomNumber = Double.random(in: 0...1)
+            if randomNumber <= 0.8 {
+                return question.rightAnswer
+            } else {
+                let valueToRemove = question.rightAnswer
+                let updatedOptions = options.filter { $0 != valueToRemove }
+                
+                return updatedOptions.randomElement() ?? ""
+            }
+        }
+
+        let alertCallAFriend = UIAlertController(title: "Ваш друг считает, что правильный ответ:", message: chooseAnswer(), preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+        }
+        
+        alertCallAFriend.addAction(okAction)
+        return alertCallAFriend
+
     }
 }

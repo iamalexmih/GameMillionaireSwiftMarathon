@@ -79,7 +79,7 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func callAFriendHint(_ sender: UIButton) {
-        
+        presentCallAFriend()
     }
     
     @IBAction func askTheAudienceHint(_ sender: UIButton) {
@@ -87,6 +87,7 @@ class GameViewController: UIViewController {
     }
     
     func goToResultViewController() {
+        
     }
 }
 
@@ -127,5 +128,12 @@ extension GameViewController {
         guard let serviceHints else { return }
         
         present(serviceHints.askTheAudience(question: currentQuestion), animated: true)
+    }
+    
+    func presentCallAFriend() {
+        guard let currentQuestion else { return }
+        guard let serviceHints else { return }
+        
+        present(serviceHints.callAFriend(question: currentQuestion), animated: true)
     }
 }

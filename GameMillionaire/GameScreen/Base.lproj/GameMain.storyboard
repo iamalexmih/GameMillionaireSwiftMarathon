@@ -28,7 +28,7 @@
                                             <action selector="buttonApress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nPt-WL-cfA"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JwB-d2-6uy">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JwB-d2-6uy">
                                         <rect key="frame" x="0.0" y="42.333333333333371" width="35" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="B"/>
@@ -36,7 +36,7 @@
                                             <action selector="buttonBpress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f8Z-0V-Jz5"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63M-DY-qbb">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63M-DY-qbb">
                                         <rect key="frame" x="0.0" y="84.666666666666686" width="36" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="C"/>
@@ -44,7 +44,7 @@
                                             <action selector="buttonCpress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ykZ-Lv-UMY"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFv-GA-ztE">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFv-GA-ztE">
                                         <rect key="frame" x="0.0" y="126.99999999999999" width="36" height="34.333333333333329"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="D"/>
@@ -62,7 +62,6 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="50/50"/>
                                         <connections>
-                                            <action selector="buttonDpress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jgB-EA-mfh"/>
                                             <action selector="fiftyFiftyHint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XBX-Qs-fQQ"/>
                                         </connections>
                                     </button>
@@ -71,7 +70,6 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="звонок"/>
                                         <connections>
-                                            <action selector="buttonDpress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Xt-pw-ife"/>
                                             <action selector="callAFriendHint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mxs-n2-gVg"/>
                                         </connections>
                                     </button>
@@ -81,7 +79,6 @@
                                         <buttonConfiguration key="configuration" style="plain" title="зал"/>
                                         <connections>
                                             <action selector="askTheAudienceHint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cMn-wA-bk8"/>
-                                            <action selector="buttonDpress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uoz-ML-c21"/>
                                         </connections>
                                     </button>
                                 </subviews>
