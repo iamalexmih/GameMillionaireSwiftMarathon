@@ -26,10 +26,11 @@ class GameViewController: UIViewController {
     var music: ServiceMusicProtocol!
     var router: RouterProtocol!
     
+    var currentQuestion: Question?
     
     @IBOutlet weak var labelQuestion: UILabel!
-    @IBOutlet weak var labelRoundInfo: UILabel!
-    @IBOutlet weak var questionNumber: UILabel!
+    @IBOutlet weak var labelCostQuestion: UILabel!
+    @IBOutlet weak var labelCurrentRound: UILabel!
     
     @IBOutlet weak var labelA: UILabel!
     @IBOutlet weak var labelB: UILabel!
@@ -44,10 +45,17 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
+//        buttonA.titleLabel?.font = UIFont.systemFont(ofSize: 33, weight: .bold)
         setButtonCornerRadius()
+ 
+        currentQuestion = QuestionData.nextQuestion(round: UserModel.shared.round)
+//        timer = ServiceTimer(serviceMusic: music)
+        setupTitileButton(button: [buttonA, buttonB, buttonC, buttonD], currentQuestion: currentQuestion!)
+//        timer?.startTimer(roundStages: .rightAnswer)
+//        serviceCheckQuestion = ServiceCheckQuestion(timer: timer)
+        setLabelCurrentQuestion()
+        setInfoAboutCurrentRound()
+    
     }
     
     
@@ -70,6 +78,26 @@ class GameViewController: UIViewController {
     func goToResultViewController() {
         
     }
+    
+    func setupTitileButton(button: [UIButton], currentQuestion: Question) {
+        var answer = "N/A"
+        var answersArray = currentQuestion.variantsAnswer
+        button.forEach { btn in
+            answer = answersArray.removeFirst()
+            btn.setTitle(answer, for: .normal)
+            
+        }
+    }
+    
+    func setLabelCurrentQuestion() {
+        labelQuestion.text = currentQuestion?.textQuestion
+    }
+    
+    func setInfoAboutCurrentRound() {
+        labelCostQuestion.text = "1 000 000 Р"
+        labelCurrentRound.text = "Вопрос № \(UserModel.shared.round)"
+    }
+    
     
     func setButtonCornerRadius() {
         buttonA.layer.cornerRadius = 20
