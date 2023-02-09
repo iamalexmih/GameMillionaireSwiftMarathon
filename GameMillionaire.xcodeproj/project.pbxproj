@@ -26,6 +26,7 @@
 		B5839693298FDF4D0046C484 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5839692298FDF4D0046C484 /* UserModel.swift */; };
 		B5839695298FE11C0046C484 /* ServiceGetQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5839694298FE11C0046C484 /* ServiceGetQuestion.swift */; };
 		B5839697298FE1F90046C484 /* PyramidQuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5839696298FE1F90046C484 /* PyramidQuestionModel.swift */; };
+		B5F402792995714200B93057 /* ServiceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F402782995714200B93057 /* ServiceRouter.swift */; };
 		B5F85D8A2992394F005E829D /* StartScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5F85D892992394F005E829D /* StartScreen.storyboard */; };
 		B5F85D8D2992396B005E829D /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F85D8C2992396B005E829D /* StartScreenViewController.swift */; };
 		B5F85D9229923C15005E829D /* RulesGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5F85D9129923C15005E829D /* RulesGame.storyboard */; };
@@ -60,6 +61,7 @@
 		B5839692298FDF4D0046C484 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		B5839694298FE11C0046C484 /* ServiceGetQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceGetQuestion.swift; sourceTree = "<group>"; };
 		B5839696298FE1F90046C484 /* PyramidQuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PyramidQuestionModel.swift; sourceTree = "<group>"; };
+		B5F402782995714200B93057 /* ServiceRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRouter.swift; sourceTree = "<group>"; };
 		B5F85D892992394F005E829D /* StartScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartScreen.storyboard; sourceTree = "<group>"; };
 		B5F85D8C2992396B005E829D /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		B5F85D9129923C15005E829D /* RulesGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RulesGame.storyboard; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				B5839682298FD8180046C484 /* ServiceMusic.swift */,
 				B5839685298FD86F0046C484 /* ServiceTimer.swift */,
 				B5F85D9D29923DE7005E829D /* ServiceBuilderScreen.swift */,
+				B5F402782995714200B93057 /* ServiceRouter.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				C54AFC3E2991259A00DCD6B5 /* ResultViewController.swift in Sources */,
 				B5839688298FD8DB0046C484 /* ServiceCheckQuestion.swift in Sources */,
 				B5F85D9E29923DE7005E829D /* ServiceBuilderScreen.swift in Sources */,
+				B5F402792995714200B93057 /* ServiceRouter.swift in Sources */,
 				B5839695298FE11C0046C484 /* ServiceGetQuestion.swift in Sources */,
 				B5F85D9629923C94005E829D /* PyramidQuestionViewController.swift in Sources */,
 				B583968D298FDD070046C484 /* Question.swift in Sources */,

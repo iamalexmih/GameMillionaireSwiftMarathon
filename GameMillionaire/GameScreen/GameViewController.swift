@@ -8,14 +8,6 @@
 import UIKit
 
 protocol GameViewControllerProtocol {
-    
-    var labelQuestion: UILabel! { get }
-    var labelRoundInfo: UILabel! { get }
-    var buttonA: UIButton! { get }
-    var buttonB: UIButton! { get }
-    var buttonC: UIButton! { get }
-    var buttonD: UIButton! { get }
-    
     var timer: ServiceTimerProtocol! { get }
     var currentQuestion: Question! { get }
 
@@ -29,6 +21,11 @@ protocol GameViewControllerProtocol {
 
 
 class GameViewController: UIViewController {
+    
+    var timer: ServiceTimerProtocol!
+    var music: ServiceMusicProtocol!
+    var router: RouterProtocol!
+    
     
     @IBOutlet weak var labelQuestion: UILabel!
     @IBOutlet weak var labelRoundInfo: UILabel!
