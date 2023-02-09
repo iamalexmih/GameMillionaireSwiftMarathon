@@ -79,11 +79,11 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func callAFriendHint(_ sender: UIButton) {
-        presentCallAFriend()
+        presentCallAFriend(sender)
     }
     
     @IBAction func askTheAudienceHint(_ sender: UIButton) {
-        presentAskTheAudience()
+        presentAskTheAudience(sender)
     }
     
     func goToResultViewController() {
@@ -123,17 +123,19 @@ extension GameViewController {
         }
     }
     
-    func presentAskTheAudience() {
+    func presentAskTheAudience(_ sender: UIButton) {
         guard let currentQuestion else { return }
         guard let serviceHints else { return }
         
-        present(serviceHints.askTheAudience(question: currentQuestion), animated: true)
+        present(serviceHints.askTheAudience(question: currentQuestion,
+                                            sender: sender), animated: true)
     }
     
-    func presentCallAFriend() {
+    func presentCallAFriend(_ sender: UIButton) {
         guard let currentQuestion else { return }
         guard let serviceHints else { return }
         
-        present(serviceHints.callAFriend(question: currentQuestion), animated: true)
+        present(serviceHints.callAFriend(question: currentQuestion,
+                                         sender: sender), animated: true)
     }
 }

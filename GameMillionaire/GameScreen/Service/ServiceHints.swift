@@ -18,7 +18,7 @@ protocol ServiceHintsProtocol {
 
 class ServiceHints {
  
-    func askTheAudience(question: Question) -> UIAlertController {
+    func askTheAudience(question: Question, sender: UIButton) -> UIAlertController {
         let firstPos: String
         let secPos: String
         let thirdPos: String
@@ -59,10 +59,11 @@ class ServiceHints {
         }
         
         alertAskTheAudience.addAction(okAction)
+        sender.isEnabled = false
         return alertAskTheAudience
     }
     
-    func callAFriend(question: Question) -> UIAlertController {
+    func callAFriend(question: Question, sender: UIButton) -> UIAlertController {
         
         var options = question.variantsAnswer
         
@@ -83,6 +84,9 @@ class ServiceHints {
         }
         
         alertCallAFriend.addAction(okAction)
+        sender.isEnabled = false
+        //sender.setImage(<#T##image: UIImage?##UIImage?#>, for: .disabled)
+        //Поменять изображение кнопки на использованную подсказку
         return alertCallAFriend
 
     }
