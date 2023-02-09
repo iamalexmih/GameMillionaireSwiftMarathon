@@ -63,6 +63,9 @@
                                     <color key="baseForegroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="baseBackgroundColor" name="colorPlayAgain"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="getPlayAgain:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="FMs-oW-BRx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>

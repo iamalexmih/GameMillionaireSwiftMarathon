@@ -16,6 +16,8 @@ class LoseViewController: UIViewController {
     }
     
 
+    @IBAction func getPlayAgain(_ sender: UIButton) {
+    }
     /*
     // MARK: - Navigation
 
