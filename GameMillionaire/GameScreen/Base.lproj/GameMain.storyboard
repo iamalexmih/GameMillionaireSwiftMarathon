@@ -130,6 +130,9 @@
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="31"/>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="butttonA:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uJo-bj-cVJ"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPn-vw-HLI">
                                                 <rect key="frame" x="64" y="0.0" width="260" height="51"/>
@@ -156,6 +159,9 @@
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="31"/>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonB:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zJi-zv-88r"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLq-rb-L8V">
                                                 <rect key="frame" x="64" y="0.0" width="260" height="51"/>
@@ -182,6 +188,9 @@
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="31"/>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h5W-Yx-dNg"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6NX-cx-1Gc">
                                                 <rect key="frame" x="255.33333333333329" y="0.0" width="68.666666666666657" height="34.666666666666664"/>
@@ -208,6 +217,9 @@
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="31"/>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonD:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Qt-0C-BWn"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htl-Cz-nQM">
                                                 <rect key="frame" x="64" y="0.0" width="260" height="51"/>
@@ -318,6 +330,15 @@
                             <constraint firstAttribute="bottom" secondItem="Yje-hH-4mB" secondAttribute="bottom" id="zOn-4T-bNM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelA" destination="PPn-vw-HLI" id="OCh-Pz-xbC"/>
+                        <outlet property="labelB" destination="mLq-rb-L8V" id="Mfg-oo-9y1"/>
+                        <outlet property="labelC" destination="6NX-cx-1Gc" id="3nG-Pb-tDs"/>
+                        <outlet property="labelD" destination="htl-Cz-nQM" id="xK9-rC-MKg"/>
+                        <outlet property="labelQuestion" destination="DL1-eA-EDt" id="OCr-NF-aef"/>
+                        <outlet property="labelRoundInfo" destination="x3P-NC-kdU" id="18G-SV-u7J"/>
+                        <outlet property="questionNumber" destination="3RO-JH-SH8" id="hAu-PY-gch"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
