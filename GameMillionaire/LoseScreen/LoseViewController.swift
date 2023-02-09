@@ -2,7 +2,7 @@
 //  LoseViewController.swift
 //  GameMillionaire
 //
-//  Created by Алексей Попроцкий on 07.02.2023.
+//  Created by Эдгар Исаев on 07.02.2023.
 //
 
 import UIKit
