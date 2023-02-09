@@ -45,11 +45,9 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        buttonA.titleLabel?.font = UIFont.systemFont(ofSize: 33, weight: .bold)
         setButtonCornerRadius()
  
         currentQuestion = QuestionData.nextQuestion(round: UserModel.shared.round)
-//        timer = ServiceTimer(serviceMusic: music)
         setupTitileButton(button: [buttonA, buttonB, buttonC, buttonD], currentQuestion: currentQuestion!)
 //        timer?.startTimer(roundStages: .rightAnswer)
 //        serviceCheckQuestion = ServiceCheckQuestion(timer: timer)
@@ -78,6 +76,7 @@ class GameViewController: UIViewController {
     func goToResultViewController() {
         
     }
+    
     
     func setupTitileButton(button: [UIButton], currentQuestion: Question) {
         var answer = "N/A"
