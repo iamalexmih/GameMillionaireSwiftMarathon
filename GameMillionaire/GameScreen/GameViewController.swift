@@ -70,22 +70,29 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func buttonDpress(_ sender: UIButton) {
-//        answerProcessing(sender)
+        answerProcessing(sender)
+        
+    }
+    
+    @IBAction func fiftyFiftyHint(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func callAFriendHint(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func askTheAudienceHint(_ sender: UIButton) {
         presentAskTheAudience()
     }
     
-    
     func goToResultViewController() {
-        
     }
 }
 
 
 extension GameViewController {
 
-    
-    
-    
     func setupTitileButton(button: [UIButton], currentQuestion: Question) {
         var answer = "N/A"
         var answersArray = currentQuestion.variantsAnswer

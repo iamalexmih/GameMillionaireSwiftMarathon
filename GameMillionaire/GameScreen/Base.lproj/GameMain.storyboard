@@ -54,11 +54,45 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="-8" translatesAutoresizingMaskIntoConstraints="NO" id="H4f-KH-iwo">
+                                <rect key="frame" x="85" y="707" width="223" height="34.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBQ-lu-ftn">
+                                        <rect key="frame" x="0.0" y="0.0" width="79.666666666666671" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="50/50"/>
+                                        <connections>
+                                            <action selector="buttonDpress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jgB-EA-mfh"/>
+                                            <action selector="fiftyFiftyHint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XBX-Qs-fQQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dx-ov-L5D">
+                                        <rect key="frame" x="71.666666666666657" y="0.0" width="79.666666666666657" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="звонок"/>
+                                        <connections>
+                                            <action selector="buttonDpress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Xt-pw-ife"/>
+                                            <action selector="callAFriendHint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mxs-n2-gVg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACI-VH-piw">
+                                        <rect key="frame" x="143.33333333333334" y="0.0" width="79.666666666666657" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="зал"/>
+                                        <connections>
+                                            <action selector="askTheAudienceHint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cMn-wA-bk8"/>
+                                            <action selector="buttonDpress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uoz-ML-c21"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemCyanColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="H4f-KH-iwo" secondAttribute="bottom" multiplier="0.95" constant="113.66666666666663" id="4vG-OK-x28"/>
                             <constraint firstItem="rSv-wP-rna" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aGF-vj-hs1"/>
+                            <constraint firstItem="H4f-KH-iwo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hz9-FN-a7V"/>
                             <constraint firstItem="rSv-wP-rna" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nvS-9E-H0J"/>
                         </constraints>
                     </view>
