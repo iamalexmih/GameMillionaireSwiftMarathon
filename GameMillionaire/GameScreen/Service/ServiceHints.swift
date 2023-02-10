@@ -59,6 +59,8 @@ class ServiceHints {
         let okAction = UIAlertAction(title: "OK", style: .default)
         alertAskTheAudience.addAction(okAction)
         sender.isEnabled = false
+        let btnImage = UIImage(named: "askAudienceFalse")
+        sender.setImage(btnImage, for: .disabled)
         return alertAskTheAudience
     }
     
@@ -86,15 +88,15 @@ class ServiceHints {
         let okAction = UIAlertAction(title: "OK", style: .default)
         alertCallAFriend.addAction(okAction)
         sender.isEnabled = false
-        //sender.setImage(<#T##image: UIImage?##UIImage?#>, for: .disabled)
-        //Поменять изображение кнопки на использованную подсказку
+        let btnImage = UIImage(named: "helpFriendFalse")
+        sender.setImage(btnImage, for: .disabled)
         return alertCallAFriend
     }
     
     
     
     
-    func getFiftyFifty(buttons: [UIButton], currentQuestion: Question, fiftyFiftyHint: UIButton) {
+    func getFiftyFifty(buttons: [UIButton], currentQuestion: Question, sender: UIButton) {
         var arrayWrong: [String] = []
         var random = ""
         for button in buttons {
@@ -111,6 +113,8 @@ class ServiceHints {
             }
         }
         
-        fiftyFiftyHint.isEnabled = false
+        sender.isEnabled = false
+        let btnImage = UIImage(named: "fiftyFiftyFalse")
+        sender.setImage(btnImage, for: .disabled)
     }
 }

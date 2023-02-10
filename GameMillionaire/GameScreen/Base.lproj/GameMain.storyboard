@@ -45,15 +45,21 @@
                                 <rect key="frame" x="16" y="168" width="382" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QuestionNumber" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3RO-JH-SH8">
-                                        <rect key="frame" x="0.0" y="15" width="182.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="15" width="140" height="20.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5eb-7B-dz2">
+                                        <rect key="frame" x="163" y="10.5" width="66" height="29"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QuestionCost" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3P-NC-kdU">
-                                        <rect key="frame" x="205.5" y="13" width="176.5" height="24"/>
+                                        <rect key="frame" x="252" y="13" width="130" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.59822537251655628" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -275,13 +281,10 @@
                         <outlet property="buttonB" destination="VSa-Cp-aXZ" id="YyP-iR-ixI"/>
                         <outlet property="buttonC" destination="wav-Wj-u2i" id="d90-sf-3Yk"/>
                         <outlet property="buttonD" destination="MWt-bf-aTS" id="NEx-y0-EPh"/>
-                        <outlet property="labelA" destination="PPn-vw-HLI" id="OCh-Pz-xbC"/>
-                        <outlet property="labelB" destination="mLq-rb-L8V" id="Mfg-oo-9y1"/>
-                        <outlet property="labelC" destination="6NX-cx-1Gc" id="3nG-Pb-tDs"/>
                         <outlet property="labelCostQuestion" destination="x3P-NC-kdU" id="18G-SV-u7J"/>
                         <outlet property="labelCurrentRound" destination="3RO-JH-SH8" id="hAu-PY-gch"/>
-                        <outlet property="labelD" destination="htl-Cz-nQM" id="xK9-rC-MKg"/>
                         <outlet property="labelQuestion" destination="DL1-eA-EDt" id="OCr-NF-aef"/>
+                        <outlet property="labelTimer" destination="5eb-7B-dz2" id="DFP-7w-bbJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

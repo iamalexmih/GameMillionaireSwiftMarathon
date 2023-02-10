@@ -24,11 +24,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var labelQuestion: UILabel!
     @IBOutlet weak var labelCostQuestion: UILabel!
     @IBOutlet weak var labelCurrentRound: UILabel!
-    
-    @IBOutlet weak var labelA: UILabel!
-    @IBOutlet weak var labelB: UILabel!
-    @IBOutlet weak var labelC: UILabel!
-    @IBOutlet weak var labelD: UILabel!
+    @IBOutlet weak var labelTimer: UILabel!
     
     @IBOutlet weak var buttonA: UIButton!
     @IBOutlet weak var buttonB: UIButton!
@@ -39,12 +35,11 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setButtonCornerRadius()
- 
+        
         currentQuestion = QuestionData.nextQuestion(round: UserModel.shared.round)
         setupTitileButton(button: [buttonA, buttonB, buttonC, buttonD], currentQuestion: currentQuestion!)
-        timer?.startTimer(roundStages: .rightAnswer)
+        timer?.startTimer(roundStages: .roundStart)
         serviceCheckQuestion = ServiceCheckQuestion(timer: timer)
-//        serviceHints = ServiceHints()
         setLabelCurrentQuestion()
         setInfoAboutCurrentRound()
     }
@@ -70,8 +65,8 @@ class GameViewController: UIViewController {
     
     @IBAction func fiftyFiftyHint(_ sender: UIButton) {
         serviceHints.getFiftyFifty(buttons: [buttonA, buttonB, buttonC, buttonD],
-                                    currentQuestion: currentQuestion!,
-                                    fiftyFiftyHint: sender)
+                                   currentQuestion: currentQuestion!,
+                                   sender: sender)
     }
     
     @IBAction func callAFriendHint(_ sender: UIButton) {
@@ -110,7 +105,7 @@ class GameViewController: UIViewController {
 
 
 extension GameViewController {
-
+    
     func setupTitileButton(button: [UIButton], currentQuestion: Question) {
         var answer = "N/A"
         var answersArray = currentQuestion.variantsAnswer
@@ -119,18 +114,18 @@ extension GameViewController {
             btn.setTitle(answer, for: .normal)
         }
     }
-
+    
     
     func answerProcessing(_ sender: UIButton) {
         if serviceCheckQuestion?.checkQuestion(question: currentQuestion!, selectedButton: sender) == true {
             DispatchQueue.main.asyncAfter(deadline: .now() + 4) { [weak self] in
-//                self.performSegue(withIdentifier: "segueToPyramid", sender: nil)
+                //                self.performSegue(withIdentifier: "segueToPyramid", sender: nil)
                 guard let self = self else { return }
                 self.router.showPyramidQuestionScreen()
             }
         } else {
             DispatchQueue.main.asyncAfter(deadline: .now() + 4) { [weak self] in
-//                self.performSegue(withIdentifier: "segueToLose", sender: nil)
+                //                self.performSegue(withIdentifier: "segueToLose", sender: nil)
                 guard let self = self else { return }
                 self.router.showLoseScreen()
             }
