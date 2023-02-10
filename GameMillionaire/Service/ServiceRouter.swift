@@ -10,7 +10,7 @@ import UIKit
 
 protocol RouterMainProtocol: AnyObject {
     var navigationController: UINavigationController? { get }
-    init(navigationController: UINavigationController)
+    init(navigationController: UINavigationController, builder: ServiceBuilderScreenProtocol)
 }
 
 
@@ -24,15 +24,17 @@ protocol RouterProtocol: RouterMainProtocol {
 class ServiceRouter: RouterProtocol {
     
     var navigationController: UINavigationController?
+    var builder: ServiceBuilderScreenProtocol?
     
-    required init(navigationController: UINavigationController) {
+    required init(navigationController: UINavigationController, builder: ServiceBuilderScreenProtocol) {
         self.navigationController = navigationController
+        self.builder = builder
     }
     
     
     func initialStartScreen() {
         if let navigationController = navigationController {
-            let screenStartGameVC = ServiceBuilderScreen.createStartScreen(router: self)
+            guard let screenStartGameVC = builder?.createStartScreen(router: self) else { return }
             navigationController.viewControllers = [screenStartGameVC]
         }
     }
@@ -40,7 +42,7 @@ class ServiceRouter: RouterProtocol {
     
     func showsGameScreen() {
         if let navigationController = navigationController {
-            let screenGameScreen = ServiceBuilderScreen.createGameScreen(router: self)
+            guard let screenGameScreen = builder?.createGameScreen(router: self) else { return }
             navigationController.pushViewController(screenGameScreen, animated: true)
         }
     }

@@ -8,17 +8,27 @@
 import UIKit
 
 protocol ServiceBuilderScreenProtocol {
-    static func createStartScreen(router: RouterProtocol) -> UIViewController
-    static func createRulesGameScreen() -> UIViewController
-    static func createGameScreen(router: RouterProtocol) -> UIViewController
-    static func createPyramidQuestionScreen() -> UIViewController
-    static func createLoseScreen() -> UIViewController
+    func createStartScreen(router: RouterProtocol) -> UIViewController
+    func createRulesGameScreen() -> UIViewController
+    func createGameScreen(router: RouterProtocol) -> UIViewController
+    func createPyramidQuestionScreen() -> UIViewController
+    func createLoseScreen() -> UIViewController
 }
 
 
 class ServiceBuilderScreen: ServiceBuilderScreenProtocol {
     
-    static func createStartScreen(router: RouterProtocol) -> UIViewController {
+    var timer: ServiceTimerProtocol
+    var music: ServiceMusicProtocol
+    
+    
+    init(timer: ServiceTimerProtocol, music: ServiceMusicProtocol) {
+        self.timer = timer
+        self.music = music
+    }
+    
+    
+    func createStartScreen(router: RouterProtocol) -> UIViewController {
         let storyboard = UIStoryboard(name: "StartScreen", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "StartScreen") as! StartScreenViewController
         viewController.router = router
@@ -27,21 +37,19 @@ class ServiceBuilderScreen: ServiceBuilderScreenProtocol {
     
     
     
-    static func createRulesGameScreen() -> UIViewController {
+    func createRulesGameScreen() -> UIViewController {
         let storyboard = UIStoryboard(name: "RulesGame", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "RulesGame") as! RulesGameViewController
         
         return viewController
     }
     
+
     
-    
-    static func createGameScreen(router: RouterProtocol) -> UIViewController {
+    func createGameScreen(router: RouterProtocol) -> UIViewController {
         let storyboard = UIStoryboard(name: "GameMain", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "GameMain") as! GameViewController
-        let music = ServiceMusic()
-        let timer = ServiceTimer(serviceMusic: music)
-        
+
         viewController.router = router
         viewController.music = music
         viewController.timer = timer
@@ -51,7 +59,7 @@ class ServiceBuilderScreen: ServiceBuilderScreenProtocol {
     
     
     
-    static func createPyramidQuestionScreen() -> UIViewController {
+    func createPyramidQuestionScreen() -> UIViewController {
         let storyboard = UIStoryboard(name: "PyramidQuestion", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "PyramidQuestion") as! PyramidQuestionViewController
         
@@ -60,7 +68,7 @@ class ServiceBuilderScreen: ServiceBuilderScreenProtocol {
     
     
     
-    static func createLoseScreen() -> UIViewController {
+    func createLoseScreen() -> UIViewController {
         let storyboard = UIStoryboard(name: "Lose", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "Lose") as! LoseViewController
         
