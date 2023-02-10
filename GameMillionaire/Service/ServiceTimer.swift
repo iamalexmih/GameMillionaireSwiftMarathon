@@ -11,10 +11,10 @@ import Foundation
 protocol ServiceTimerProtocol {
     var serviceMusic: ServiceMusicProtocol? { get }
     var totalTime: Int { get }
-    func startTimer(roundStages: RoundStages)
-    func timeIsOver() -> Bool
-    func stopTimer()
+    var callBack: (() -> Void)? { get set }
     
+    func startTimer(roundStages: RoundStages)
+    func stopTimer()
     
     init(serviceMusic: ServiceMusicProtocol)
 }
@@ -24,7 +24,9 @@ class ServiceTimer: ServiceTimerProtocol {
     var serviceMusic: ServiceMusicProtocol?
     var timer = Timer()
     var totalTime = 0
-
+    var callBack: (() -> Void)?
+    
+    
     func startTimer(roundStages: RoundStages) {
         switch roundStages {
         case .roundStart:
@@ -55,16 +57,10 @@ class ServiceTimer: ServiceTimerProtocol {
         if totalTime == 0 {
             timer.invalidate()
             serviceMusic?.stopMusic()
+            callBack
         } 
     }
-    
-    func timeIsOver() -> Bool {
-        if totalTime == 0 {
-            return true
-        } else {
-            return false
-        }
-    }
+
     
     func stopTimer() {
         totalTime = 0
