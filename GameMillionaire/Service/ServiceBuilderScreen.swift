@@ -8,61 +8,60 @@
 import UIKit
 
 protocol ServiceBuilderScreenProtocol {
-    static func createStartScreen() -> UIViewController
-    static func createRulesGameScreen() -> UIViewController
-    static func createGameScreen(serviceTimer: ServiceTimerProtocol) -> UIViewController
-    static func createGameScreen() -> UIViewController
-    static func createPyramidQuestionScreen() -> UIViewController
-    static func createLoseScreen() -> UIViewController
+    func createStartScreen(router: RouterProtocol) -> UIViewController
+     func createRulesGameScreen(router: RouterProtocol) -> UIViewController
+     func createGameScreen(serviceTimer: ServiceTimerProtocol) -> UIViewController
+     func createGameScreen(router: RouterProtocol) -> UIViewController
+     func createPyramidQuestionScreen(router: RouterProtocol) -> UIViewController
+     func createLoseScreen(router: RouterProtocol) -> UIViewController
 }
 
 
 class ServiceBuilderScreen: ServiceBuilderScreenProtocol {
-    static func createGameScreen(serviceTimer: ServiceTimerProtocol) -> UIViewController {
-        return UIViewController()
+    func createGameScreen(serviceTimer: ServiceTimerProtocol) -> UIViewController {
+        let storyboard = UIStoryboard(name: "GameScreen", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "GameScreen") as! GameViewController
+        
+        return viewController
+        
     }
     
-    static func createStartScreen() -> UIViewController {
+    func createStartScreen(router: RouterProtocol) -> UIViewController {
         let storyboard = UIStoryboard(name: "StartScreen", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "StartScreen") as! StartScreenViewController
+        router.
         
         return viewController
     }
     
-    
-    
-    static func createRulesGameScreen() -> UIViewController {
+    func createRulesGameScreen(router: RouterProtocol) -> UIViewController {
         let storyboard = UIStoryboard(name: "RulesGame", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "RulesGame") as! RulesGameViewController
         
         return viewController
     }
     
-    
-    
-    static func createGameScreen() -> UIViewController {
+    func createGameScreen(router: RouterProtocol) -> UIViewController {
         let storyboard = UIStoryboard(name: "GameMain", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "GameMain") as! GameViewController
         
         return viewController
     }
     
-    
-    
-    static func createPyramidQuestionScreen() -> UIViewController {
+    func createPyramidQuestionScreen(router: RouterProtocol) -> UIViewController {
         let storyboard = UIStoryboard(name: "PyramidQuestion", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "PyramidQuestion") as! PyramidQuestionViewController
         
         return viewController
     }
     
-    
-    
-    static func createLoseScreen() -> UIViewController {
+    func createLoseScreen(router: RouterProtocol) -> UIViewController {
         let storyboard = UIStoryboard(name: "Lose", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "Lose") as! LoseViewController
         
         return viewController
     }
+    
+
 }
 
