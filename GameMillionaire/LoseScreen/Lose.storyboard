@@ -40,8 +40,9 @@
                                 <color key="textColor" name="colorLose"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8T-b1-UjJ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u8T-b1-UjJ">
                                 <rect key="frame" x="46.666666666666657" y="648" width="300" height="100"/>
+                                <color key="backgroundColor" name="colorPlayAgain"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="sz0-Vf-yWk"/>
                                     <constraint firstAttribute="width" constant="300" id="wew-C4-RrF"/>
@@ -49,10 +50,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="PLAY AGAIN">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" name="colorPlayAgain"/>
-                                </state>
-                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
                                     <attributedString key="attributedTitle">
                                         <fragment content="PLAY AGAIN">
                                             <attributes>
@@ -60,9 +57,9 @@
                                             </attributes>
                                         </fragment>
                                     </attributedString>
-                                    <color key="baseForegroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="baseBackgroundColor" name="colorPlayAgain"/>
-                                </buttonConfiguration>
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" name="colorPlayAgain"/>
+                                </state>
                                 <connections>
                                     <action selector="getPlayAgain:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="FMs-oW-BRx"/>
                                 </connections>
@@ -85,6 +82,9 @@
                             <constraint firstItem="BCR-kQ-sdy" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="z77-Yz-OrN"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="playAgain" destination="u8T-b1-UjJ" id="fGU-Kp-KKW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

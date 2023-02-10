@@ -9,15 +9,21 @@ import UIKit
 
 class LoseViewController: UIViewController {
 
+    
+    @IBOutlet weak var playAgain: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.playAgain.layer.cornerRadius = 20
         // Do any additional setup after loading the view.
     }
     
-
+    
     @IBAction func getPlayAgain(_ sender: UIButton) {
     }
+    
+    
     /*
     // MARK: - Navigation
 
