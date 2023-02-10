@@ -90,4 +90,26 @@ class ServiceHints {
         return alertCallAFriend
 
     }
+    
+    func getFiftyFifty(buttons: [UIButton], currentQuestion: Question, fiftyFiftyHint: UIButton) {
+        _ = buttons
+        var arrayWrong: [String] = []
+        var random = ""
+        for button in buttons {
+            if button.currentTitle != currentQuestion.rightAnswer {
+                arrayWrong.append(button.currentTitle ?? "")
+                random = arrayWrong.randomElement() ?? ""
+            }
+        }
+        
+        for button in buttons {
+            if button.currentTitle != currentQuestion.rightAnswer || button.currentTitle != random {
+                button.isEnabled = false
+                button.setTitle("", for: .normal)
+            }
+        }
+        
+        fiftyFiftyHint.isEnabled = false
+    }
+    
 }

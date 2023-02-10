@@ -75,6 +75,7 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func fiftyFiftyHint(_ sender: UIButton) {
+        serviceHints?.getFiftyFifty(buttons: [buttonA, buttonB, buttonC, buttonD], currentQuestion: currentQuestion!, fiftyFiftyHint: <#T##UIButton#>)
         
     }
     
