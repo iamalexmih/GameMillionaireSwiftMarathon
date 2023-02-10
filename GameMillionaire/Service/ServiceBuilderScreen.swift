@@ -37,7 +37,7 @@ class ServiceBuilderScreen: ServiceBuilderScreenProtocol {
     
     
     
-    func createRulesGameScreen() -> UIViewController {
+    func createRulesGameScreen(router: RouterProtocol) -> UIViewController {
         let storyboard = UIStoryboard(name: "RulesGame", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "RulesGame") as! RulesGameViewController
         viewController.router = router
