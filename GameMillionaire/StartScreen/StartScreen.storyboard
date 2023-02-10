@@ -49,12 +49,12 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="mOg-0z-QEd">
-                                <rect key="frame" x="82.333333333333329" y="618.33333333333337" width="228.66666666666669" height="129.66666666666663"/>
+                                <rect key="frame" x="94" y="622.33333333333337" width="205" height="125.66666666666663"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXd-eh-SqA">
-                                        <rect key="frame" x="0.0" y="0.0" width="228.66666666666666" height="52.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CXd-eh-SqA">
+                                        <rect key="frame" x="0.0" y="0.0" width="205" height="50.333333333333336"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Правила игры">
                                                     <attributes>
@@ -65,14 +65,16 @@
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
-                                            <attributedString key="attributedSubtitle"/>
-                                            <color key="baseForegroundColor" name="colorStartScreenButtons"/>
-                                        </buttonConfiguration>
+                                            <color key="titleColor" name="colorStartScreenButtons"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="getToRules:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qtH-Nn-27w"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Hf-bH-27p">
-                                        <rect key="frame" x="26.666666666666671" y="77.333333333333258" width="175" height="52.333333333333343"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Hf-bH-27p">
+                                        <rect key="frame" x="27" y="75.333333333333258" width="151" height="50.333333333333343"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Start game">
                                                     <attributes>
@@ -82,8 +84,11 @@
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
-                                            <color key="baseForegroundColor" name="colorStartScreenButtons"/>
-                                        </buttonConfiguration>
+                                            <color key="titleColor" name="colorStartScreenButtons"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="getToStart:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mMx-5O-ASi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

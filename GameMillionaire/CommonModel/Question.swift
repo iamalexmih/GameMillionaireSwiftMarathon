@@ -53,11 +53,7 @@ class QuestionData {
     var questionNumber = 0
     var score = 0
     
-    func nextQuestion() {
-        
-    }
-    
-    static var questionList: [Question] = [
+static var questionList: [Question] = [
         Question(textQuestion: "Какая кошка самая большая на планете?",
                  difficultyIssue: .lite,
                  variantsAnswer: ["Лев", "Тигр", "Гепард", "Барс"],
@@ -103,6 +99,7 @@ class QuestionData {
                  difficultyIssue: .medium,
                  variantsAnswer: ["Диаметр", "Радиус", "Окружность", "Площадь"],
                  rightAnswer: "Окружность"),
+
         
         Question(textQuestion: "Где самая быстрая мышца в теле?",
                  difficultyIssue: .medium,
@@ -139,21 +136,23 @@ class QuestionData {
                  rightAnswer: "141"),
     ]
     
+    
     static func nextQuestion(round: Int) -> Question {
-            switch round {
-                
-            case 1...5:
-                let randomIndex = Int.random(in: 0...4)
-                let randomEasyQuestion = questionList.remove(at: randomIndex)
-                return randomEasyQuestion
-            case 6...10:
-                let randomIndex = Int.random(in: 5...9)
-                let randomMediumQuestion = questionList.remove(at: randomIndex)
-                return randomMediumQuestion
-            default:
-                let randomIndex = Int.random(in: 10...14)
-                let randomHardQuestion = questionList.remove(at: randomIndex)
-                return randomHardQuestion
-            }
-        }
+
+                switch round {
+                    
+                case 1...5:
+                    let randomIndex = Int.random(in: 0...4)
+                    let randomEasyQuestion = questionList.remove(at: randomIndex)
+                    return randomEasyQuestion
+                case 6...10:
+                    let randomIndex = Int.random(in: 5...9)
+                    let randomMediumQuestion = questionList.remove(at: randomIndex)
+                    return randomMediumQuestion
+                default:
+                    let randomIndex = Int.random(in: 10...14)
+                    let randomHardQuestion = questionList.remove(at: randomIndex)
+                    return randomHardQuestion
+                }
+    }
 }

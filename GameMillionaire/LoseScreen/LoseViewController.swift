@@ -2,7 +2,7 @@
 //  LoseViewController.swift
 //  GameMillionaire
 //
-//  Created by Алексей Попроцкий on 07.02.2023.
+//  Created by Эдгар Исаев on 07.02.2023.
 //
 
 import UIKit
@@ -16,6 +16,8 @@ class LoseViewController: UIViewController {
     }
     
 
+    @IBAction func getPlayAgain(_ sender: UIButton) {
+    }
     /*
     // MARK: - Navigation
 

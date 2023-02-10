@@ -18,7 +18,7 @@ class UserModel {
     var score = 0
     
     func  updateScore() {
-        
+        score += 1
     }
 }
 
