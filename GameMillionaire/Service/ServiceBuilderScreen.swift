@@ -9,15 +9,15 @@ import UIKit
 
 protocol ServiceBuilderScreenProtocol {
     func createStartScreen(router: RouterProtocol) -> UIViewController
-    func createRulesGameScreen() -> UIViewController
-    func createGameScreen(router: RouterProtocol) -> UIViewController
-    func createPyramidQuestionScreen() -> UIViewController
-    func createLoseScreen() -> UIViewController
+     func createRulesGameScreen(router: RouterProtocol) -> UIViewController
+     func createGameScreen(router: RouterProtocol) -> UIViewController
+     func createPyramidQuestionScreen(router: RouterProtocol) -> UIViewController
+     func createLoseScreen(router: RouterProtocol) -> UIViewController
 }
 
 
 class ServiceBuilderScreen: ServiceBuilderScreenProtocol {
-    
+
     var timer: ServiceTimerProtocol
     var music: ServiceMusicProtocol
     
@@ -40,12 +40,12 @@ class ServiceBuilderScreen: ServiceBuilderScreenProtocol {
     func createRulesGameScreen() -> UIViewController {
         let storyboard = UIStoryboard(name: "RulesGame", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "RulesGame") as! RulesGameViewController
+        viewController.router = router
         
         return viewController
     }
     
 
-    
     func createGameScreen(router: RouterProtocol) -> UIViewController {
         let storyboard = UIStoryboard(name: "GameMain", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "GameMain") as! GameViewController
@@ -54,25 +54,26 @@ class ServiceBuilderScreen: ServiceBuilderScreenProtocol {
         viewController.music = music
         viewController.timer = timer
         
+        
         return viewController
     }
     
-    
-    
-    func createPyramidQuestionScreen() -> UIViewController {
+
+    func createPyramidQuestionScreen(router: RouterProtocol) -> UIViewController {
         let storyboard = UIStoryboard(name: "PyramidQuestion", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "PyramidQuestion") as! PyramidQuestionViewController
         
         return viewController
     }
     
-    
-    
-    func createLoseScreen() -> UIViewController {
+
+    func createLoseScreen(router: RouterProtocol) -> UIViewController {
         let storyboard = UIStoryboard(name: "Lose", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "Lose") as! LoseViewController
         
         return viewController
     }
+    
+
 }
 

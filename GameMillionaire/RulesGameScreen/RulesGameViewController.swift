@@ -8,12 +8,16 @@
 import UIKit
 
 class RulesGameViewController: UIViewController {
+
+  
+    var router:RouterProtocol!
     
     @IBOutlet weak var rulesTextView: UITextView!
     @IBAction func getBack(_ sender: UIButton) {
     }
     
     let rules = Rules()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
