@@ -48,7 +48,7 @@ class Router: RouterProtocol {
                 let rulesGameViewController = assemblyBuilder?.createRulesGameScreen(router: self)
             else { return }
             
-            navigationController.viewControllers = [rulesGameViewController]
+            navigationController.pushViewController(rulesGameViewController, animated: true)
             
         }
     }
@@ -70,7 +70,7 @@ class Router: RouterProtocol {
                 let PyramidQuestionViewController = assemblyBuilder?.createPyramidQuestionScreen(router: self)
             else { return }
             
-            navigationController.pushViewController(gameScreenViewController, animated: true)
+            navigationController.pushViewController(PyramidQuestionViewController, animated: true)
             
         }
     }
@@ -81,7 +81,7 @@ class Router: RouterProtocol {
                 let loseScreenViewController = assemblyBuilder?.createLoseScreen(router: self)
             else { return }
             
-            navigationController.viewControllers = [loseScreenViewController]
+            navigationController.pushViewController(loseScreenViewController, animated: true)
             
         }
     }

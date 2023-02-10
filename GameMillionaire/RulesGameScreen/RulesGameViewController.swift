@@ -8,7 +8,8 @@
 import UIKit
 
 class RulesGameViewController: UIViewController {
-    
+  
+    var router:RouterProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
