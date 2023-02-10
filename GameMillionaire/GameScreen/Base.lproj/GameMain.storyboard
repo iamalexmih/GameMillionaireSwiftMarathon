@@ -239,6 +239,9 @@
                                                     </attributedString>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="fiftyFiftyHint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nMp-4t-LoE"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -258,12 +261,15 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse 5" translatesAutoresizingMaskIntoConstraints="NO" id="UHo-LT-PXM">
                                                 <rect key="frame" x="0.0" y="0.0" width="119" height="91"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qdl-4a-kU1">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qdl-4a-kU1" userLabel="callFrand">
                                                 <rect key="frame" x="0.0" y="0.0" width="119" height="91"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="Mask group" title="">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="15" scale="medium" weight="medium"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="callAFriendHint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cOj-U3-tLr"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -283,12 +289,15 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse 5" translatesAutoresizingMaskIntoConstraints="NO" id="8US-0i-Yxu">
                                                 <rect key="frame" x="0.0" y="0.0" width="118.5" height="94"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJh-AI-gJS">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJh-AI-gJS" userLabel="askAudience">
                                                 <rect key="frame" x="0.0" y="0.0" width="118.5" height="94"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="Mask group-2" title="">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="15" scale="medium" weight="medium"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="askTheAudienceHint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wmv-Hh-U8w"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -348,7 +357,7 @@
     </scenes>
     <resources>
         <image name="Ellipse 5" width="105" height="81"/>
-        <image name="Frame 2" width="414" height="736"/>
+        <image name="Frame 2" width="748" height="1048"/>
         <image name="Mask group" width="77" height="77"/>
         <image name="Mask group-2" width="80" height="80"/>
         <image name="image 1" width="201" height="201"/>

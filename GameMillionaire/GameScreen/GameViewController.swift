@@ -7,17 +7,6 @@
 
 import UIKit
 
-protocol GameViewControllerProtocol {
-    var timer: ServiceTimerProtocol! { get }
-    var currentQuestion: Question! { get }
-
-    var serviceCheckQuestion: ServiceCheckQuestionProtocol { get }
-    var serviceGetQuestionProtocol: ServiceGetQuestionProtocol!  { get }
-    
-    func setupTitileButton(button: [UIButton], currentQuestion: Question)
-    func setupLabelTextQuestion(label: UILabel, text: String)
-    func setupLabelRoundInfo(label: UILabel, currentQuestion: PyramidQuestionModel)
-}
 
 
 class GameViewController: UIViewController {
@@ -27,6 +16,11 @@ class GameViewController: UIViewController {
     var router: RouterProtocol!
     
     var currentQuestion: Question?
+    
+    var serviceGetQuestionProtocol: ServiceGetQuestionProtocol?
+    var serviceCheckQuestion: ServiceCheckQuestion?
+    var serviceHints: ServiceHints = ServiceHints()
+    
     
     @IBOutlet weak var labelQuestion: UILabel!
     @IBOutlet weak var labelCostQuestion: UILabel!
@@ -49,44 +43,52 @@ class GameViewController: UIViewController {
  
         currentQuestion = QuestionData.nextQuestion(round: UserModel.shared.round)
         setupTitileButton(button: [buttonA, buttonB, buttonC, buttonD], currentQuestion: currentQuestion!)
-//        timer?.startTimer(roundStages: .rightAnswer)
-//        serviceCheckQuestion = ServiceCheckQuestion(timer: timer)
+        timer?.startTimer(roundStages: .rightAnswer)
+        serviceCheckQuestion = ServiceCheckQuestion(timer: timer)
+//        serviceHints = ServiceHints()
         setLabelCurrentQuestion()
         setInfoAboutCurrentRound()
-    
     }
     
     
     @IBAction func buttonPressA(_ sender: UIButton) {
-        
+        answerProcessing(sender)
     }
     
     @IBAction func buttonPressB(_ sender: UIButton) {
-        
+        answerProcessing(sender)
     }
     
     @IBAction func buttonPressC(_ sender: UIButton) {
-        
+        answerProcessing(sender)
     }
     
     @IBAction func buttonPressD(_ sender: UIButton) {
-        
+        answerProcessing(sender)
     }
+    
+    // MARK: - Hint button
+    
+    @IBAction func fiftyFiftyHint(_ sender: UIButton) {
+        serviceHints.getFiftyFifty(buttons: [buttonA, buttonB, buttonC, buttonD],
+                                    currentQuestion: currentQuestion!,
+                                    fiftyFiftyHint: sender)
+    }
+    
+    @IBAction func callAFriendHint(_ sender: UIButton) {
+        presentCallAFriend(sender)
+    }
+    
+    @IBAction func askTheAudienceHint(_ sender: UIButton) {
+        presentAskTheAudience(sender)
+    }
+    
     
     func goToResultViewController() {
         
     }
     
     
-    func setupTitileButton(button: [UIButton], currentQuestion: Question) {
-        var answer = "N/A"
-        var answersArray = currentQuestion.variantsAnswer
-        button.forEach { btn in
-            answer = answersArray.removeFirst()
-            btn.setTitle(answer, for: .normal)
-            
-        }
-    }
     
     func setLabelCurrentQuestion() {
         labelQuestion.text = currentQuestion?.textQuestion
@@ -106,3 +108,44 @@ class GameViewController: UIViewController {
     }
 }
 
+
+extension GameViewController {
+
+    func setupTitileButton(button: [UIButton], currentQuestion: Question) {
+        var answer = "N/A"
+        var answersArray = currentQuestion.variantsAnswer
+        button.forEach { btn in
+            answer = answersArray.removeFirst()
+            btn.setTitle(answer, for: .normal)
+        }
+    }
+
+    
+    func answerProcessing(_ sender: UIButton) {
+        if serviceCheckQuestion?.checkQuestion(question: currentQuestion!, selectedButton: sender) == true {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                self.performSegue(withIdentifier: "segueToPyramid", sender: nil)
+            }
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                self.performSegue(withIdentifier: "segueToLose", sender: nil)
+            }
+        }
+    }
+    
+    
+    func presentAskTheAudience(_ sender: UIButton) {
+        guard let currentQuestion else { return }
+        
+        present(serviceHints.askTheAudience(question: currentQuestion,
+                                            sender: sender), animated: true)
+    }
+    
+    
+    func presentCallAFriend(_ sender: UIButton) {
+        guard let currentQuestion else { return }
+        
+        present(serviceHints.callAFriend(question: currentQuestion,
+                                         sender: sender), animated: true)
+    }
+}
