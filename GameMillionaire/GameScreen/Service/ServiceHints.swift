@@ -5,7 +5,6 @@
 //  Created by Даниил Петров on 08.02.2023.
 //
 
-import Foundation
 import UIKit
 
 protocol ServiceHintsProtocol {
@@ -53,19 +52,21 @@ class ServiceHints {
 \(thirdPos) - 6%
 \(fourthPos) - 5%
 """
-
-        let alertAskTheAudience = UIAlertController(title: "Результаты зрительского голосования:", message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-        }
         
+        let alertAskTheAudience = UIAlertController(title: "Результаты зрительского голосования:",
+                                                    message: message,
+                                                    preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
         alertAskTheAudience.addAction(okAction)
         sender.isEnabled = false
         return alertAskTheAudience
     }
     
+    
+    
     func callAFriend(question: Question, sender: UIButton) -> UIAlertController {
         
-        var options = question.variantsAnswer
+        let options = question.variantsAnswer
         
         func chooseAnswer() -> String {
             let randomNumber = Double.random(in: 0...1)
@@ -79,20 +80,21 @@ class ServiceHints {
             }
         }
 
-        let alertCallAFriend = UIAlertController(title: "Ваш друг считает, что правильный ответ:", message: chooseAnswer(), preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-        }
-        
+        let alertCallAFriend = UIAlertController(title: "Ваш друг считает, что правильный ответ:",
+                                                 message: chooseAnswer(),
+                                                 preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
         alertCallAFriend.addAction(okAction)
         sender.isEnabled = false
         //sender.setImage(<#T##image: UIImage?##UIImage?#>, for: .disabled)
         //Поменять изображение кнопки на использованную подсказку
         return alertCallAFriend
-
     }
     
+    
+    
+    
     func getFiftyFifty(buttons: [UIButton], currentQuestion: Question, fiftyFiftyHint: UIButton) {
-        _ = buttons
         var arrayWrong: [String] = []
         var random = ""
         for button in buttons {
@@ -111,5 +113,4 @@ class ServiceHints {
         
         fiftyFiftyHint.isEnabled = false
     }
-    
 }

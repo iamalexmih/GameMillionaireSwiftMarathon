@@ -17,7 +17,6 @@ class GameViewController: UIViewController {
     
     var currentQuestion: Question?
     
-    var serviceGetQuestionProtocol: ServiceGetQuestionProtocol?
     var serviceCheckQuestion: ServiceCheckQuestion?
     var serviceHints: ServiceHints = ServiceHints()
     
@@ -94,6 +93,7 @@ class GameViewController: UIViewController {
         labelQuestion.text = currentQuestion?.textQuestion
     }
     
+    
     func setInfoAboutCurrentRound() {
         labelCostQuestion.text = "1 000 000 Р"
         labelCurrentRound.text = "Вопрос № \(UserModel.shared.round)"
@@ -123,12 +123,16 @@ extension GameViewController {
     
     func answerProcessing(_ sender: UIButton) {
         if serviceCheckQuestion?.checkQuestion(question: currentQuestion!, selectedButton: sender) == true {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-                self.performSegue(withIdentifier: "segueToPyramid", sender: nil)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4) { [weak self] in
+//                self.performSegue(withIdentifier: "segueToPyramid", sender: nil)
+                guard let self = self else { return }
+                self.router.showPyramidQuestionScreen()
             }
         } else {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-                self.performSegue(withIdentifier: "segueToLose", sender: nil)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4) { [weak self] in
+//                self.performSegue(withIdentifier: "segueToLose", sender: nil)
+                guard let self = self else { return }
+                self.router.showLoseScreen()
             }
         }
     }

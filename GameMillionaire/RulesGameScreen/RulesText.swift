@@ -34,6 +34,6 @@ struct Rules {
                   """)
     
     func getRulesText() -> String {
-        return Rules().rules
+        return rules
     }
 }
