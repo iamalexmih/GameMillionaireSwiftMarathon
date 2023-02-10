@@ -14,7 +14,6 @@ protocol ServiceTimerProtocol {
     func timeIsOver() -> Bool
     func stopTimer()
     
-    
     init(serviceMusic: ServiceMusicProtocol)
 }
 
@@ -29,23 +28,23 @@ class ServiceTimer: ServiceTimerProtocol {
         case .roundStart:
             serviceMusic?.playMusic(roundStages: .roundStart)
             totalTime = 30
-            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: false)
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
         case .rightAnswer:
             serviceMusic?.playMusic(roundStages: .rightAnswer)
             totalTime = 4
-            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: false)
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
         case .wrongAnswer:
             serviceMusic?.playMusic(roundStages: .wrongAnswer)
             totalTime = 4
-            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: false)
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
         case .timeIsOver:
             serviceMusic?.playMusic(roundStages: .timeIsOver)
             totalTime = 5
-            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: false)
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
         case .answerIsBeingCheked:
             serviceMusic?.playMusic(roundStages: .timeIsOver)
             totalTime = 5
-            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: false)
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
         }
     }
     
