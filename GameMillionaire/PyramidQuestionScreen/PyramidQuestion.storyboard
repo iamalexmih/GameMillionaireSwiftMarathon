@@ -549,21 +549,21 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="questionButton1" destination="pYz-rt-Sir" id="o2P-o4-bNh"/>
-                        <outlet property="questionButton10" destination="LmO-fs-8qV" id="49t-fX-7iJ"/>
-                        <outlet property="questionButton11" destination="F76-us-vvE" id="KOL-fe-NTm"/>
-                        <outlet property="questionButton12" destination="IGP-uH-QxP" id="w5B-A0-sBa"/>
-                        <outlet property="questionButton13" destination="8zU-wW-vM3" id="ixH-oF-v0x"/>
-                        <outlet property="questionButton14" destination="hqz-WK-afm" id="RSb-Fa-rom"/>
-                        <outlet property="questionButton15" destination="yFv-nP-c9a" id="FzM-LL-olH"/>
-                        <outlet property="questionButton2" destination="uvp-XE-Uur" id="wq0-4d-att"/>
-                        <outlet property="questionButton3" destination="qXl-mQ-Jgi" id="4m2-Ru-URL"/>
-                        <outlet property="questionButton4" destination="ofi-ia-c6s" id="I6k-bj-pn0"/>
-                        <outlet property="questionButton5" destination="A7i-d8-soN" id="Kqd-sb-GNf"/>
-                        <outlet property="questionButton6" destination="fRO-g3-oyv" id="5sk-jT-e82"/>
-                        <outlet property="questionButton7" destination="Vkk-Uz-ltW" id="PF6-iF-Zua"/>
-                        <outlet property="questionButton8" destination="XTb-J1-ZDt" id="71P-tj-ef1"/>
-                        <outlet property="questionButton9" destination="ZMT-Rh-9fx" id="puc-B3-9NI"/>
+                        <outletCollection property="arrayButtons" destination="pYz-rt-Sir" collectionClass="NSMutableArray" id="Iji-lS-4WG"/>
+                        <outletCollection property="arrayButtons" destination="uvp-XE-Uur" collectionClass="NSMutableArray" id="5B1-ZO-UvO"/>
+                        <outletCollection property="arrayButtons" destination="qXl-mQ-Jgi" collectionClass="NSMutableArray" id="Ghw-Df-KAw"/>
+                        <outletCollection property="arrayButtons" destination="ofi-ia-c6s" collectionClass="NSMutableArray" id="hLq-Ek-QWh"/>
+                        <outletCollection property="arrayButtons" destination="A7i-d8-soN" collectionClass="NSMutableArray" id="ADv-lz-BFL"/>
+                        <outletCollection property="arrayButtons" destination="fRO-g3-oyv" collectionClass="NSMutableArray" id="Pe2-68-lnE"/>
+                        <outletCollection property="arrayButtons" destination="Vkk-Uz-ltW" collectionClass="NSMutableArray" id="JKc-dT-9wf"/>
+                        <outletCollection property="arrayButtons" destination="XTb-J1-ZDt" collectionClass="NSMutableArray" id="wSG-fl-5EJ"/>
+                        <outletCollection property="arrayButtons" destination="ZMT-Rh-9fx" collectionClass="NSMutableArray" id="2i9-ov-bDc"/>
+                        <outletCollection property="arrayButtons" destination="LmO-fs-8qV" collectionClass="NSMutableArray" id="f10-9V-bcy"/>
+                        <outletCollection property="arrayButtons" destination="F76-us-vvE" collectionClass="NSMutableArray" id="oys-VH-WZC"/>
+                        <outletCollection property="arrayButtons" destination="IGP-uH-QxP" collectionClass="NSMutableArray" id="wIZ-y3-T4A"/>
+                        <outletCollection property="arrayButtons" destination="8zU-wW-vM3" collectionClass="NSMutableArray" id="LOj-mp-C3l"/>
+                        <outletCollection property="arrayButtons" destination="hqz-WK-afm" collectionClass="NSMutableArray" id="Yxm-hr-baa"/>
+                        <outletCollection property="arrayButtons" destination="yFv-nP-c9a" collectionClass="NSMutableArray" id="odr-cM-ENY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -572,7 +572,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Frame 2" width="414" height="736"/>
+        <image name="Frame 2" width="748" height="1048"/>
         <image name="image 1" width="201" height="201"/>
         <namedColor name="colorButton">
             <color red="0.3411764705882353" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
