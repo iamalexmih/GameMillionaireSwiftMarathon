@@ -103,9 +103,9 @@ class ServiceHints {
                 random = arrayWrong.randomElement() ?? ""
             }
         }
-        
+        print(random)
         for button in buttons {
-            if button.currentTitle != currentQuestion.rightAnswer || button.currentTitle != random {
+            if button.currentTitle != currentQuestion.rightAnswer && button.currentTitle != random {
                 button.isEnabled = false
                 button.setTitle("", for: .normal)
             }

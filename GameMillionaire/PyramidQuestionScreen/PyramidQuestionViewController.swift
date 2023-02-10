@@ -9,6 +9,9 @@ import UIKit
 
 class PyramidQuestionViewController: UIViewController {
     
+    var router: RouterProtocol!
+    
+    
     @IBOutlet weak var questionButton15: UIButton!
     @IBOutlet weak var questionButton14: UIButton!
     @IBOutlet weak var questionButton13: UIButton!
@@ -48,6 +51,7 @@ class PyramidQuestionViewController: UIViewController {
     
     
     @IBAction func questionButton1Press(sender: UIButton) {
-        print("questionButton1")
+        print("123")
+        router.initialAndGoToGameScreen()
     }
 }

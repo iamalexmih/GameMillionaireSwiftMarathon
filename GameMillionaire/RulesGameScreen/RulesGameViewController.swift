@@ -8,16 +8,12 @@
 import UIKit
 
 class RulesGameViewController: UIViewController {
-
+    
     let rules = Rules()
     var router: RouterProtocol!
     
     @IBOutlet weak var rulesTextView: UITextView!
-    @IBAction func getBack(_ sender: UIButton) {
-        
-    }
     
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,5 +21,9 @@ class RulesGameViewController: UIViewController {
         rulesTextView.isEditable = false
         rulesTextView.text = rules.getRulesText()
     }
-
+    
+    
+    @IBAction func getBack(_ sender: UIButton) {
+        router.goBackOneScreen()
+    }
 }

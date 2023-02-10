@@ -11,9 +11,9 @@ import UIKit
 
 class GameViewController: UIViewController {
     
+    var router: RouterProtocol!
     var timer: ServiceTimerProtocol!
     var music: ServiceMusicProtocol!
-    var router: RouterProtocol!
     
     var currentQuestion: Question?
     

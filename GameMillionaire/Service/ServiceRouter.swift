@@ -16,9 +16,11 @@ protocol RouterMainProtocol: AnyObject {
 
 protocol RouterProtocol: RouterMainProtocol {
     func initialStartScreen()
+    func goBackOneScreen()
     func showsRulesGameScreen()
     func showsGameScreen()
     func showPyramidQuestionScreen()
+    func initialAndGoToGameScreen()
     func showLoseScreen()
     func popToRoot()
 }
@@ -42,15 +44,28 @@ class ServiceRouter: RouterProtocol {
     }
     
     
+    func goBackOneScreen() {
+        if let navigationController = navigationController {
+            navigationController.popViewController(animated: true)
+        }
+    }
+    
+    
     func showsRulesGameScreen() {
         if let navigationController = navigationController {
             guard let rulesGameViewController = builder?.createRulesGameScreen(router: self)
             else { return }
-            
             navigationController.pushViewController(rulesGameViewController, animated: true)
         }
     }
     
+    
+    func initialAndGoToGameScreen() {
+        if let navigationController = navigationController {
+            guard let screenGameScreen = builder?.createGameScreen(router: self) else { return }
+            navigationController.viewControllers = [screenGameScreen]
+        }
+    }
     
     
     func showsGameScreen() {

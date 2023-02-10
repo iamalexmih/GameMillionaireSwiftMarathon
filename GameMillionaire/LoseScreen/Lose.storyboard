@@ -18,10 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Frame 2" translatesAutoresizingMaskIntoConstraints="NO" id="Lun-LR-hBK">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="Lun-LR-hBK" userLabel="bg">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image 1" translatesAutoresizingMaskIntoConstraints="NO" id="BCR-kQ-sdy">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoGame" translatesAutoresizingMaskIntoConstraints="NO" id="BCR-kQ-sdy">
                                 <rect key="frame" x="96" y="89" width="201" height="201"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="201" id="3l2-sa-jGb"/>
@@ -92,8 +92,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Frame 2" width="414" height="736"/>
-        <image name="image 1" width="201" height="201"/>
+        <image name="bg" width="748" height="1048"/>
+        <image name="logoGame" width="201" height="201"/>
         <namedColor name="colorLose">
             <color red="0.96470588235294119" green="0.38823529411764707" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

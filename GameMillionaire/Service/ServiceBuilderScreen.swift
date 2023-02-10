@@ -42,7 +42,6 @@ class ServiceBuilderScreen: ServiceBuilderScreenProtocol {
         let storyboard = UIStoryboard(name: "RulesGame", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "RulesGame") as! RulesGameViewController
         viewController.router = router
-        
         return viewController
     }
     
@@ -50,12 +49,9 @@ class ServiceBuilderScreen: ServiceBuilderScreenProtocol {
     func createGameScreen(router: RouterProtocol) -> UIViewController {
         let storyboard = UIStoryboard(name: "GameMain", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "GameMain") as! GameViewController
-        
         viewController.router = router
         viewController.music = music
         viewController.timer = timer
-        
-        
         return viewController
     }
     
@@ -63,7 +59,7 @@ class ServiceBuilderScreen: ServiceBuilderScreenProtocol {
     func createPyramidQuestionScreen(router: RouterProtocol) -> UIViewController {
         let storyboard = UIStoryboard(name: "PyramidQuestion", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "PyramidQuestion") as! PyramidQuestionViewController
-        
+        viewController.router = router
         return viewController
     }
     
@@ -71,7 +67,7 @@ class ServiceBuilderScreen: ServiceBuilderScreenProtocol {
     func createLoseScreen(router: RouterProtocol) -> UIViewController {
         let storyboard = UIStoryboard(name: "Lose", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "Lose") as! LoseViewController
-        
+        viewController.router = router
         return viewController
     }
 }

@@ -24,21 +24,21 @@ class ServiceCheckQuestion {
         
         timer?.stopTimer()
         timer?.startTimer(roundStages: .answerIsBeingCheked)
-        selectedButton.backgroundColor = .yellow
+        selectedButton.backgroundColor = .yellow.withAlphaComponent(0.4)
         
         if selectedButton.currentTitle == question.rightAnswer {
             
             self.timer?.startTimer(roundStages: .rightAnswer)
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 self.timer?.stopTimer()
-                selectedButton.backgroundColor = .green
+                selectedButton.backgroundColor = .green.withAlphaComponent(0.4)
             }
             return true
         } else {
             self.timer?.startTimer(roundStages: .wrongAnswer)
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 self.timer?.stopTimer()
-                selectedButton.backgroundColor = .red
+                selectedButton.backgroundColor = .red.withAlphaComponent(0.4)
             }
             return false
         }

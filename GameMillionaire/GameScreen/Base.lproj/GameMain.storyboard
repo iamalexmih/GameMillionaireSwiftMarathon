@@ -17,13 +17,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Frame 2" translatesAutoresizingMaskIntoConstraints="NO" id="Yje-hH-4mB" userLabel="background">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="Yje-hH-4mB" userLabel="background">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="mCy-v9-jdW" userLabel="TOP Stack View">
                                 <rect key="frame" x="16" y="58" width="382" height="100"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image 1" translatesAutoresizingMaskIntoConstraints="NO" id="sRW-5V-rXQ">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoGame" translatesAutoresizingMaskIntoConstraints="NO" id="sRW-5V-rXQ">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="EZz-9F-hGm"/>
@@ -220,97 +220,31 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="SPM-MI-w8p" userLabel="Bottom Stack View">
                                 <rect key="frame" x="16" y="544.5" width="382" height="351.5"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJQ-Ay-0VS" userLabel="View Call">
-                                        <rect key="frame" x="0.0" y="135" width="118.5" height="81"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse 5" translatesAutoresizingMaskIntoConstraints="NO" id="GCs-5u-u3r">
-                                                <rect key="frame" x="0.0" y="0.0" width="118.5" height="81"/>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWq-ty-zHn">
-                                                <rect key="frame" x="0.0" y="0.0" width="118.5" height="81"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain">
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="50 : 50">
-                                                            <attributes>
-                                                                <font key="NSFont" size="20" name="Helvetica-Bold"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="fiftyFiftyHint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nMp-4t-LoE"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="pWq-ty-zHn" firstAttribute="top" secondItem="gJQ-Ay-0VS" secondAttribute="top" id="8YL-HN-6kU"/>
-                                            <constraint firstItem="pWq-ty-zHn" firstAttribute="leading" secondItem="gJQ-Ay-0VS" secondAttribute="leading" id="GeB-av-fY1"/>
-                                            <constraint firstAttribute="trailing" secondItem="GCs-5u-u3r" secondAttribute="trailing" id="Gjc-K8-fYP"/>
-                                            <constraint firstAttribute="bottom" secondItem="GCs-5u-u3r" secondAttribute="bottom" id="cPU-lv-raH"/>
-                                            <constraint firstAttribute="trailing" secondItem="pWq-ty-zHn" secondAttribute="trailing" id="jCe-pO-c9Z"/>
-                                            <constraint firstAttribute="bottom" secondItem="pWq-ty-zHn" secondAttribute="bottom" id="oKs-KA-vBi"/>
-                                            <constraint firstItem="GCs-5u-u3r" firstAttribute="top" secondItem="gJQ-Ay-0VS" secondAttribute="top" id="qb2-Uc-DZw"/>
-                                            <constraint firstItem="GCs-5u-u3r" firstAttribute="leading" secondItem="gJQ-Ay-0VS" secondAttribute="leading" id="vyS-p4-oV0"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P44-8B-UsN" userLabel="View Call">
-                                        <rect key="frame" x="131.5" y="130" width="119" height="91"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse 5" translatesAutoresizingMaskIntoConstraints="NO" id="UHo-LT-PXM">
-                                                <rect key="frame" x="0.0" y="0.0" width="119" height="91"/>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qdl-4a-kU1" userLabel="callFrand">
-                                                <rect key="frame" x="0.0" y="0.0" width="119" height="91"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="Mask group" title="">
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="15" scale="medium" weight="medium"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="callAFriendHint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cOj-U3-tLr"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="Qdl-4a-kU1" secondAttribute="bottom" id="6rG-69-FWl"/>
-                                            <constraint firstItem="Qdl-4a-kU1" firstAttribute="leading" secondItem="P44-8B-UsN" secondAttribute="leading" id="99s-9Y-4NM"/>
-                                            <constraint firstItem="UHo-LT-PXM" firstAttribute="leading" secondItem="P44-8B-UsN" secondAttribute="leading" id="Doc-rh-jMG"/>
-                                            <constraint firstAttribute="trailing" secondItem="UHo-LT-PXM" secondAttribute="trailing" id="G05-R9-xa4"/>
-                                            <constraint firstAttribute="trailing" secondItem="Qdl-4a-kU1" secondAttribute="trailing" id="OsE-rE-uGF"/>
-                                            <constraint firstAttribute="bottom" secondItem="UHo-LT-PXM" secondAttribute="bottom" id="TG7-A1-eYN"/>
-                                            <constraint firstItem="Qdl-4a-kU1" firstAttribute="top" secondItem="P44-8B-UsN" secondAttribute="top" id="Wkm-On-ELR"/>
-                                            <constraint firstItem="UHo-LT-PXM" firstAttribute="top" secondItem="P44-8B-UsN" secondAttribute="top" id="xf7-6f-rcn"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hFA-Fg-GyQ" userLabel="View People">
-                                        <rect key="frame" x="263.5" y="128.5" width="118.5" height="94"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse 5" translatesAutoresizingMaskIntoConstraints="NO" id="8US-0i-Yxu">
-                                                <rect key="frame" x="0.0" y="0.0" width="118.5" height="94"/>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJh-AI-gJS" userLabel="askAudience">
-                                                <rect key="frame" x="0.0" y="0.0" width="118.5" height="94"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="Mask group-2" title="">
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="15" scale="medium" weight="medium"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="askTheAudienceHint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wmv-Hh-U8w"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="8US-0i-Yxu" firstAttribute="top" secondItem="hFA-Fg-GyQ" secondAttribute="top" id="Att-mm-FlS"/>
-                                            <constraint firstItem="aJh-AI-gJS" firstAttribute="top" secondItem="hFA-Fg-GyQ" secondAttribute="top" id="B6d-OG-b9L"/>
-                                            <constraint firstItem="8US-0i-Yxu" firstAttribute="leading" secondItem="hFA-Fg-GyQ" secondAttribute="leading" id="Fgf-DA-odE"/>
-                                            <constraint firstAttribute="bottom" secondItem="8US-0i-Yxu" secondAttribute="bottom" id="evo-rH-tqe"/>
-                                            <constraint firstAttribute="trailing" secondItem="aJh-AI-gJS" secondAttribute="trailing" id="iEd-y4-aBy"/>
-                                            <constraint firstAttribute="bottom" secondItem="aJh-AI-gJS" secondAttribute="bottom" id="lZX-Is-JeJ"/>
-                                            <constraint firstItem="aJh-AI-gJS" firstAttribute="leading" secondItem="hFA-Fg-GyQ" secondAttribute="leading" id="vBw-qG-W7T"/>
-                                            <constraint firstAttribute="trailing" secondItem="8US-0i-Yxu" secondAttribute="trailing" id="y83-Cf-SSf"/>
-                                        </constraints>
-                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWq-ty-zHn" userLabel="fiftyFifty">
+                                        <rect key="frame" x="0.0" y="128" width="118.5" height="95"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="fiftyFifty"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="fiftyFifty"/>
+                                        <connections>
+                                            <action selector="fiftyFiftyHint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nMp-4t-LoE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qdl-4a-kU1" userLabel="callFrand">
+                                        <rect key="frame" x="131.5" y="128" width="119" height="95"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="helpFriend" title=""/>
+                                        <connections>
+                                            <action selector="callAFriendHint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cOj-U3-tLr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJh-AI-gJS" userLabel="askAudience">
+                                        <rect key="frame" x="263.5" y="126" width="118.5" height="99"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="askAudience" title=""/>
+                                        <connections>
+                                            <action selector="askTheAudienceHint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wmv-Hh-U8w"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -352,15 +286,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="134.78260869565219" y="3.3482142857142856"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Ellipse 5" width="105" height="81"/>
-        <image name="Frame 2" width="748" height="1048"/>
-        <image name="Mask group" width="77" height="77"/>
-        <image name="Mask group-2" width="80" height="80"/>
-        <image name="image 1" width="201" height="201"/>
+        <image name="askAudience" width="105" height="85"/>
+        <image name="bg" width="748" height="1048"/>
+        <image name="fiftyFifty" width="105" height="81"/>
+        <image name="helpFriend" width="105" height="81"/>
+        <image name="logoGame" width="201" height="201"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

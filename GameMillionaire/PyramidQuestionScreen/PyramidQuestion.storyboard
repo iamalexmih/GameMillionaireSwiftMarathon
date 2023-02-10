@@ -25,13 +25,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Frame 2" translatesAutoresizingMaskIntoConstraints="NO" id="Nna-Tp-G6X">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="Nna-Tp-G6X" userLabel="bg">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="pA8-c0-EaK">
                                 <rect key="frame" x="20" y="59" width="353" height="759"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="image 1" translatesAutoresizingMaskIntoConstraints="NO" id="RZl-MY-BZL">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logoGame" translatesAutoresizingMaskIntoConstraints="NO" id="RZl-MY-BZL">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="44.666666666666664"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YaI-fy-adF">
@@ -572,8 +572,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Frame 2" width="414" height="736"/>
-        <image name="image 1" width="201" height="201"/>
+        <image name="bg" width="748" height="1048"/>
+        <image name="logoGame" width="201" height="201"/>
         <namedColor name="colorButton">
             <color red="0.3411764705882353" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

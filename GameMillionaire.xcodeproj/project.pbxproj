@@ -37,7 +37,6 @@
 		B5F85D9A29923CBE005E829D /* LoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F85D9929923CBE005E829D /* LoseViewController.swift */; };
 		B5F85D9C29923CCC005E829D /* Lose.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5F85D9B29923CCC005E829D /* Lose.storyboard */; };
 		B5F85D9E29923DE7005E829D /* ServiceBuilderScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F85D9D29923DE7005E829D /* ServiceBuilderScreen.swift */; };
-		C54AFC3E2991259A00DCD6B5 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54AFC3D2991259A00DCD6B5 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,7 +72,6 @@
 		B5F85D9929923CBE005E829D /* LoseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoseViewController.swift; sourceTree = "<group>"; };
 		B5F85D9B29923CCC005E829D /* Lose.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lose.storyboard; sourceTree = "<group>"; };
 		B5F85D9D29923DE7005E829D /* ServiceBuilderScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBuilderScreen.swift; sourceTree = "<group>"; };
-		C54AFC3D2991259A00DCD6B5 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +151,6 @@
 			children = (
 				B583966D298FD2690046C484 /* GameMain.storyboard */,
 				B583966B298FD2690046C484 /* GameViewController.swift */,
-				C54AFC3D2991259A00DCD6B5 /* ResultViewController.swift */,
 				B5839698298FE4C60046C484 /* Service */,
 			);
 			path = GameScreen;
@@ -319,7 +316,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5F85D9A29923CBE005E829D /* LoseViewController.swift in Sources */,
-				C54AFC3E2991259A00DCD6B5 /* ResultViewController.swift in Sources */,
 				B5839688298FD8DB0046C484 /* ServiceCheckQuestion.swift in Sources */,
 				B5F85D9E29923DE7005E829D /* ServiceBuilderScreen.swift in Sources */,
 				B5070FDF2996D62A0025A8B5 /* ServiceHints.swift in Sources */,
