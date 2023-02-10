@@ -53,6 +53,7 @@ class QuestionData {
     var questionNumber = 0
     var score = 0
     
+    
     static var questionList: [Question] = [
         Question(textQuestion: "Какая кошка самая большая на планете?",
                  difficultyIssue: .lite,

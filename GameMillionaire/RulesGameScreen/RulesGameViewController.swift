@@ -20,8 +20,6 @@ class RulesGameViewController: UIViewController {
         
         rulesTextView.isEditable = false
         rulesTextView.text = Rules.getRulesText(rules)()
-    
-        // Do any additional setup after loading the view.
     }
 
 }
