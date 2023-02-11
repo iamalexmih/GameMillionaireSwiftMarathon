@@ -11,6 +11,7 @@ class PyramidQuestionViewController: UIViewController {
     
     var router: RouterProtocol!
     @IBOutlet var arrayButtons: [UIButton]!
+    @IBOutlet var buttonTakeMoney: UIButton!
     let pyramidQuestionDataService = PyramidQuestionDataService()
     var listProgress: [PyramidQuestionModel] = []
 
@@ -25,9 +26,18 @@ class PyramidQuestionViewController: UIViewController {
         disableButtons(user: UserModel.shared)
     }
     
+    
+    @IBAction func buttonTakeMoneyPress(_ sender: UIButton) {
+        UserModel.shared.isLose = false
+        router.showLoseScreen()
+    }
+    
+    
     func cornerRadius() {
         arrayButtons.forEach { $0.layer.cornerRadius = 20 }
+        buttonTakeMoney.layer.cornerRadius = 10
     }
+    
     
     func setBorderForCurrentQuestion(user: UserModel) {
         switch user.round {

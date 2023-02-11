@@ -31,9 +31,25 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="pA8-c0-EaK">
                                 <rect key="frame" x="20" y="59" width="353" height="759"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logoGame" translatesAutoresizingMaskIntoConstraints="NO" id="RZl-MY-BZL">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tpg-lD-g1c">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="44.666666666666664"/>
-                                    </imageView>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logoGame" translatesAutoresizingMaskIntoConstraints="NO" id="RZl-MY-BZL">
+                                                <rect key="frame" x="0.0" y="0.0" width="176.66666666666666" height="44.666666666666664"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdO-kk-vsz">
+                                                <rect key="frame" x="176.66666666666663" y="7.3333333333333286" width="176.33333333333337" height="30"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Забрать деньги">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonTakeMoneyPress:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Lz7-0h-gLP"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YaI-fy-adF">
                                         <rect key="frame" x="0.0" y="47.666666666666671" width="353" height="44.666666666666671"/>
                                         <subviews>
@@ -591,6 +607,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonTakeMoney" destination="fdO-kk-vsz" id="fIr-LR-FIt"/>
                         <outletCollection property="arrayButtons" destination="pYz-rt-Sir" collectionClass="NSMutableArray" id="Iji-lS-4WG"/>
                         <outletCollection property="arrayButtons" destination="uvp-XE-Uur" collectionClass="NSMutableArray" id="5B1-ZO-UvO"/>
                         <outletCollection property="arrayButtons" destination="qXl-mQ-Jgi" collectionClass="NSMutableArray" id="Ghw-Df-KAw"/>
@@ -616,6 +633,9 @@
     <resources>
         <image name="bg" width="748" height="1048"/>
         <image name="logoGame" width="201" height="201"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="colorButton">
             <color red="0.3411764705882353" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

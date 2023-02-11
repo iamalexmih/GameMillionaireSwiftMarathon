@@ -142,17 +142,36 @@ static var questionList: [Question] = [
                 switch round {
                     
                 case 1...5:
-                    let randomIndex = Int.random(in: 0...4)
-                    let randomEasyQuestion = questionList.remove(at: randomIndex)
-                    return randomEasyQuestion
+//                    let randomIndex = Int.random(in: 0...4)
+                    let randomEasyQuestion = questionList.filter({ question in
+                        question.difficultyIssue == .lite
+                    })
+                    let randomLiteQuestion = randomEasyQuestion.randomElement()
+                    let indexForDel = questionList.firstIndex { question in
+                        question.textQuestion == randomLiteQuestion!.textQuestion
+                    }
+                    questionList.remove(at: indexForDel!)
+                    return randomLiteQuestion!
                 case 6...10:
-                    let randomIndex = Int.random(in: 5...9)
-                    let randomMediumQuestion = questionList.remove(at: randomIndex)
-                    return randomMediumQuestion
+                    let randomEasyQuestion = questionList.filter({ question in
+                        question.difficultyIssue == .medium
+                    })
+                    let randomMediumQuestion = randomEasyQuestion.randomElement()
+                    let indexForDel = questionList.firstIndex { question in
+                        question.textQuestion == randomMediumQuestion!.textQuestion
+                    }
+                    questionList.remove(at: indexForDel!)
+                    return randomMediumQuestion!
                 default:
-                    let randomIndex = Int.random(in: 10...14)
-                    let randomHardQuestion = questionList.remove(at: randomIndex)
-                    return randomHardQuestion
+                    let randomEasyQuestion = questionList.filter({ question in
+                        question.difficultyIssue == .hard
+                    })
+                    let randomHardQuestion = randomEasyQuestion.randomElement()
+                    let indexForDel = questionList.firstIndex { question in
+                        question.textQuestion == randomHardQuestion!.textQuestion
+                    }
+                    questionList.remove(at: indexForDel!)
+                    return randomHardQuestion!
                 }
     }
 }

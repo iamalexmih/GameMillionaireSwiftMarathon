@@ -15,17 +15,33 @@ class LoseViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var labelStatusLoseOrTakeMoney: UILabel!
     @IBOutlet weak var buttonPlayAgain: UIButton!
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         buttonPlayAgain.layer.cornerRadius = 20
-        label.text = "Игра закончена, вы выиграли \(user.moneyWon) ₽"
         isLose = user.isLose
+        calculateMoney()
         setLabelLose()
     }
 
+    func calculateMoney() {
+        if isLose {
+            switch user.round {
+            case 6...10:
+                label.text = "Игра закончена, вы выиграли 1000 ₽"
+            case 11...15:
+                label.text = "Игра закончена, вы выиграли 32000 ₽"
+            default:
+                label.text = "Игра закончена, вы выиграли 0 ₽"
+            }
+        } else {
+            label.text = "Игра закончена, вы выиграли \(user.moneyWon) ₽"
+        }
+    }
+    
     
     func setLabelLose() {
         if isLose {

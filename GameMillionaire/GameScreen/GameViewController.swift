@@ -60,8 +60,8 @@ class GameViewController: UIViewController {
             if !self.wasPressButtonQuestion {
                 self.labelTimer.text = "\(timeCounter)"
                 if timeCounter == 0 {
-//                    self.timer?.startTimer(roundStages: .wrongAnswer)
-//                    self.music?.playMusic(roundStages: .timeIsOver)
+                    //                    self.timer?.startTimer(roundStages: .wrongAnswer)
+                    //                    self.music?.playMusic(roundStages: .timeIsOver)
                     self.showAlertMessage()
                     self.timer.stopTimer()
                 }
@@ -122,7 +122,7 @@ class GameViewController: UIViewController {
         UserModel.shared.hintAskAudience = false
     }
     
-
+    
     // MARK: - func for config UI
     
     func setLabelCurrentQuestion() {
@@ -174,14 +174,20 @@ extension GameViewController {
         disableAllButtons()
         if serviceCheckQuestion?.checkQuestion(question: currentQuestion!, selectedButton: sender) == true {
             DispatchQueue.main.asyncAfter(deadline: .now() + 10) { [weak self] in
-
                 guard let self = self else { return }
-                self.router.showPyramidQuestionScreen()
+                
+                if UserModel.shared.round == 15 {
+                    UserModel.shared.isLose = false
+                    self.router.showLoseScreen()
+                } else {
+                    self.router.showPyramidQuestionScreen()
+                }
             }
         } else {
             DispatchQueue.main.asyncAfter(deadline: .now() + 10) { [weak self] in
 
                 guard let self = self else { return }
+                UserModel.shared.isLose = true
                 self.router.showLoseScreen()
             }
         }
