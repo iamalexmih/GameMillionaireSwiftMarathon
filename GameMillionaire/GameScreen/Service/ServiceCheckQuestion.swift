@@ -36,10 +36,11 @@ class ServiceCheckQuestion {
             }
             return true
         } else {
-            self.timer?.startTimer(roundStages: .wrongAnswer)
+            
             DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
-                
                 self.timer?.stopTimer()
+                self.timer?.startTimer(roundStages: .wrongAnswer)
+                
                 selectedButton.backgroundColor = .red.withAlphaComponent(0.4)
             }
             return false
