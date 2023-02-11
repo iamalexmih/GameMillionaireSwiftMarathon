@@ -38,6 +38,9 @@ class GameViewController: UIViewController {
         
         currentQuestion = QuestionData.nextQuestion(round: UserModel.shared.round)
         setupTitileButton(button: [buttonA, buttonB, buttonC, buttonD], currentQuestion: currentQuestion!)
+        if UserModel.shared.round != 1 {
+            timer.stopTimer()
+        }
         timer?.startTimer(roundStages: .roundStart)
         serviceCheckQuestion = ServiceCheckQuestion(timer: timer)
         setLabelCurrentQuestion()

@@ -11,9 +11,17 @@ class StartScreenViewController: UIViewController {
     
     var router: RouterProtocol!
     
+    @IBOutlet weak var startBtn: UIButton!
+    @IBOutlet weak var rulesBtn: UIButton!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        startBtn.layer.cornerRadius = 15
+        rulesBtn.layer.cornerRadius = 15
     }
     
     override func viewWillAppear(_ animated: Bool) {

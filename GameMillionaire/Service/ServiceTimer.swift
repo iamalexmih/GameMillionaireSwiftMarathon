@@ -47,8 +47,8 @@ class ServiceTimer: ServiceTimerProtocol {
             totalTime = 5
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
         case .answerIsBeingCheked:
-            serviceMusic?.playMusic(roundStages: .timeIsOver)
-            totalTime = 5
+            serviceMusic?.playMusic(roundStages: .answerIsBeingCheked)
+            totalTime = 10
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
         }
     }
