@@ -56,11 +56,9 @@ class PyramidQuestionViewController: UIViewController {
         for button in arrayButtons {
             if button.tag < user.round {
                 if button.tag == 5 || button.tag == 10 {
-                    print("Tag для 5 и 10", button.tag)
                     button.backgroundColor = UIColor.blue.withAlphaComponent(0.4)
                     button.isEnabled = false
                 } else {
-                    print("Tag", button.tag)
                     button.backgroundColor = UIColor.green.withAlphaComponent(0.4)
                     button.isEnabled = false
                 }
