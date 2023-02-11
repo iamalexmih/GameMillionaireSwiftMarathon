@@ -55,6 +55,8 @@ class GameViewController: UIViewController {
             if !self.wasPressButton {
                 self.labelTimer.text = "\(timeCounter)"
                 if timeCounter == 0 {
+//                    self.timer?.startTimer(roundStages: .wrongAnswer)
+//                    self.music?.playMusic(roundStages: .timeIsOver)
                     self.showAlertMessage()
                     self.timer.stopTimer()
                 }
@@ -139,14 +141,14 @@ extension GameViewController {
     
     func answerProcessing(_ sender: UIButton) {
         if serviceCheckQuestion?.checkQuestion(question: currentQuestion!, selectedButton: sender) == true {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 4) { [weak self] in
-                //                self.performSegue(withIdentifier: "segueToPyramid", sender: nil)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 10) { [weak self] in
+
                 guard let self = self else { return }
                 self.router.showPyramidQuestionScreen()
             }
         } else {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 4) { [weak self] in
-                //                self.performSegue(withIdentifier: "segueToLose", sender: nil)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 10) { [weak self] in
+
                 guard let self = self else { return }
                 self.router.showLoseScreen()
             }
@@ -203,5 +205,4 @@ extension GameViewController {
         alert.addAction(okAction)
         present(alert, animated: true)
     }
-    
 }

@@ -27,18 +27,20 @@ class ServiceCheckQuestion {
         selectedButton.backgroundColor = .yellow.withAlphaComponent(0.4)
         
         if selectedButton.currentTitle == question.rightAnswer {
-            
-            self.timer?.startTimer(roundStages: .rightAnswer)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
+                
                 self.timer?.stopTimer()
+                self.timer?.startTimer(roundStages: .rightAnswer)
                 UserModel.shared.updateRound()
                 selectedButton.backgroundColor = .green.withAlphaComponent(0.4)
             }
             return true
         } else {
-            self.timer?.startTimer(roundStages: .wrongAnswer)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
                 self.timer?.stopTimer()
+                self.timer?.startTimer(roundStages: .wrongAnswer)
+                
                 selectedButton.backgroundColor = .red.withAlphaComponent(0.4)
             }
             return false
