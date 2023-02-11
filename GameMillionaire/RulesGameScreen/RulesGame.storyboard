@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,19 +22,21 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HuE-2s-qxM">
-                                <rect key="frame" x="16" y="59" width="361" height="724"/>
+                                <rect key="frame" x="16" y="69" width="361" height="694"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6YW-M2-CZO">
-                                <rect key="frame" x="132.66666666666666" y="784" width="127.99999999999997" height="43"/>
+                                <rect key="frame" x="132.66666666666666" y="778" width="127.99999999999997" height="30"/>
+                                <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="128" id="Icp-BB-sKE"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Назад"/>
+                                <state key="normal" title="Назад">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="getBack:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="MKG-UN-Fkj"/>
                                 </connections>
@@ -42,20 +45,21 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="724-QL-0Sl" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="2xw-8V-wVQ"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="HuE-2s-qxM" secondAttribute="trailing" constant="16" id="ImN-9i-J7M"/>
-                            <constraint firstItem="HuE-2s-qxM" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" constant="-35" id="KFo-Du-5Lb"/>
-                            <constraint firstItem="6YW-M2-CZO" firstAttribute="top" secondItem="HuE-2s-qxM" secondAttribute="bottom" constant="1" id="QeG-qY-E7q"/>
-                            <constraint firstAttribute="bottom" secondItem="724-QL-0Sl" secondAttribute="bottom" id="RmM-xr-L7R"/>
-                            <constraint firstItem="HuE-2s-qxM" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Z40-1J-fEw"/>
-                            <constraint firstItem="724-QL-0Sl" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="cDS-jF-esv"/>
-                            <constraint firstAttribute="trailing" secondItem="724-QL-0Sl" secondAttribute="trailing" id="fxh-nO-vLw"/>
-                            <constraint firstItem="HuE-2s-qxM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="qPK-NQ-FqW"/>
-                            <constraint firstAttribute="bottom" secondItem="6YW-M2-CZO" secondAttribute="bottom" constant="25" id="s28-rn-o9Q"/>
-                            <constraint firstItem="6YW-M2-CZO" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="tFK-ON-Mnw"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="HuE-2s-qxM" secondAttribute="trailing" constant="16" id="EJA-7G-h0M"/>
+                            <constraint firstItem="6YW-M2-CZO" firstAttribute="top" secondItem="HuE-2s-qxM" secondAttribute="bottom" constant="15" id="FID-gR-LVP"/>
+                            <constraint firstItem="724-QL-0Sl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="L4N-wN-Ae6"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="6YW-M2-CZO" secondAttribute="bottom" constant="10" id="VDN-1g-3Qi"/>
+                            <constraint firstAttribute="bottom" secondItem="724-QL-0Sl" secondAttribute="bottom" id="mfS-GX-Acb"/>
+                            <constraint firstItem="724-QL-0Sl" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="odj-N9-9RC"/>
+                            <constraint firstItem="6YW-M2-CZO" firstAttribute="centerX" secondItem="724-QL-0Sl" secondAttribute="centerX" id="p0E-cc-VQD"/>
+                            <constraint firstItem="HuE-2s-qxM" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="sKa-0c-Kw0"/>
+                            <constraint firstItem="724-QL-0Sl" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="sgV-7w-9n7"/>
+                            <constraint firstItem="HuE-2s-qxM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="uuc-no-QWu"/>
+                            <constraint firstItem="6YW-M2-CZO" firstAttribute="centerX" secondItem="HuE-2s-qxM" secondAttribute="centerX" id="yRQ-mB-tDM"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="6YW-M2-CZO" id="SIb-Ng-1GD"/>
                         <outlet property="rulesTextView" destination="HuE-2s-qxM" id="TgC-2U-nlQ"/>
                     </connections>
                 </viewController>
@@ -66,6 +70,9 @@
     </scenes>
     <resources>
         <image name="bg" width="748" height="1048"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

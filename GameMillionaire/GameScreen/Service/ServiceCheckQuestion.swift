@@ -31,6 +31,7 @@ class ServiceCheckQuestion {
             self.timer?.startTimer(roundStages: .rightAnswer)
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 self.timer?.stopTimer()
+                UserModel.shared.updateRound()
                 selectedButton.backgroundColor = .green.withAlphaComponent(0.4)
             }
             return true

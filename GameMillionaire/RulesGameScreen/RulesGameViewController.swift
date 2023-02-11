@@ -13,13 +13,14 @@ class RulesGameViewController: UIViewController {
     var router: RouterProtocol!
     
     @IBOutlet weak var rulesTextView: UITextView!
-    
+    @IBOutlet weak var backButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         rulesTextView.isEditable = false
         rulesTextView.text = rules.getRulesText()
+        backButton.layer.cornerRadius = 15
     }
     
     

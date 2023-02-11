@@ -51,7 +51,6 @@ class PyramidQuestionViewController: UIViewController {
     
     
     @IBAction func questionButton1Press(sender: UIButton) {
-        print("123")
         router.initialAndGoToGameScreen()
     }
 }

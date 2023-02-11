@@ -19,7 +19,7 @@ class GameViewController: UIViewController {
     
     var serviceCheckQuestion: ServiceCheckQuestion?
     var serviceHints: ServiceHints = ServiceHints()
-    
+    var wasPressButton: Bool = false
     
     @IBOutlet weak var labelQuestion: UILabel!
     @IBOutlet weak var labelCostQuestion: UILabel!
@@ -42,22 +42,39 @@ class GameViewController: UIViewController {
         serviceCheckQuestion = ServiceCheckQuestion(timer: timer)
         setLabelCurrentQuestion()
         setInfoAboutCurrentRound()
+
+        timer.totalTimeNow = { [weak self] timeCounter in
+            guard let self = self else { return }
+            if !self.wasPressButton {
+                self.labelTimer.text = "\(timeCounter)"
+                if timeCounter == 0 {
+                    self.showAlertMessage()
+                    self.timer.stopTimer()
+                }
+            } else {
+                self.labelTimer.text = "\(0)"
+            }
+        }
     }
     
     
     @IBAction func buttonPressA(_ sender: UIButton) {
+        wasPressButton = true
         answerProcessing(sender)
     }
     
     @IBAction func buttonPressB(_ sender: UIButton) {
+        wasPressButton = true
         answerProcessing(sender)
     }
     
     @IBAction func buttonPressC(_ sender: UIButton) {
+        wasPressButton = true
         answerProcessing(sender)
     }
     
     @IBAction func buttonPressD(_ sender: UIButton) {
+        wasPressButton = true
         answerProcessing(sender)
     }
     
@@ -78,19 +95,13 @@ class GameViewController: UIViewController {
     }
     
     
-    func goToResultViewController() {
-        
-    }
-    
-    
-    
     func setLabelCurrentQuestion() {
         labelQuestion.text = currentQuestion?.textQuestion
     }
     
     
     func setInfoAboutCurrentRound() {
-        labelCostQuestion.text = "1 000 000 Р"
+        labelCostQuestion.text = "Цена вопроса \(UserModel.shared.score) ₽"
         labelCurrentRound.text = "Вопрос № \(UserModel.shared.round)"
     }
     
@@ -147,4 +158,20 @@ extension GameViewController {
         present(serviceHints.callAFriend(question: currentQuestion,
                                          sender: sender), animated: true)
     }
+}
+
+// MARK: - Alert Messege
+extension GameViewController {
+    func showAlertMessage() {
+        let alert = UIAlertController(title: "Вы проиграли",
+                                      message: "Время вышло",
+                                      preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { [weak self] _ in
+            guard let self = self else { return }
+            self.router.showLoseScreen()
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+    
 }
