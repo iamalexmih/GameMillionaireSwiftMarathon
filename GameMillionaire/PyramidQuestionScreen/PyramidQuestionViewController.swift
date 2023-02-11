@@ -18,29 +18,17 @@ class PyramidQuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        cornetRadius()
-        currentQuestion(user: .shared)
+        cornerRadius()
+        setBorderForCurrentQuestion(user: UserModel.shared)
+        changedColorQuestion(user: UserModel.shared)
+        disableButtons(user: UserModel.shared)
     }
     
-    func cornetRadius() {
-        arrayButtons[0].layer.cornerRadius = 20
-        arrayButtons[1].layer.cornerRadius = 20
-        arrayButtons[2].layer.cornerRadius = 20
-        arrayButtons[3].layer.cornerRadius = 20
-        arrayButtons[4].layer.cornerRadius = 20
-        arrayButtons[5].layer.cornerRadius = 20
-        arrayButtons[6].layer.cornerRadius = 20
-        arrayButtons[7].layer.cornerRadius = 20
-        arrayButtons[8].layer.cornerRadius = 20
-        arrayButtons[9].layer.cornerRadius = 20
-        arrayButtons[10].layer.cornerRadius = 20
-        arrayButtons[11].layer.cornerRadius = 20
-        arrayButtons[12].layer.cornerRadius = 20
-        arrayButtons[13].layer.cornerRadius = 20
-        arrayButtons[14].layer.cornerRadius = 20
+    func cornerRadius() {
+        arrayButtons.forEach { $0.layer.cornerRadius = 20 }
     }
     
-    func currentQuestion(user: UserModel) {
+    func setBorderForCurrentQuestion(user: UserModel) {
         switch user.round {
         case 1: arrayButtons[0].layer.borderWidth = 4; arrayButtons[0].layer.borderColor = UIColor.white.cgColor
         case 2: arrayButtons[1].layer.borderWidth = 4; arrayButtons[1].layer.borderColor = UIColor.white.cgColor
@@ -62,19 +50,34 @@ class PyramidQuestionViewController: UIViewController {
         }
     }
     
+    
     func changedColorQuestion(user: UserModel) {
         for button in arrayButtons {
             if button.tag < user.round {
                 if button.tag == 5 || button.tag == 10 {
-                    button.backgroundColor = UIColor.blue
+                    print("Tag для 5 и 10", button.tag)
+                    button.backgroundColor = UIColor.blue.withAlphaComponent(0.4)
+                    button.isEnabled = false
                 } else {
-                    button.backgroundColor = UIColor.green
+                    print("Tag", button.tag)
+                    button.backgroundColor = UIColor.green.withAlphaComponent(0.4)
+                    button.isEnabled = false
                 }
             }
         }
     }
     
-    @IBAction func questionButton1Press(sender: UIButton) {
+    
+    func disableButtons(user: UserModel) {
+        for button in arrayButtons {
+            button.isEnabled = true
+            if button.tag != user.round {
+                button.isEnabled = false
+            }
+        }
+    }
+    
+    @IBAction func questionButtonsPress(sender: UIButton) {
         router.initialAndGoToGameScreen()
     }
 }

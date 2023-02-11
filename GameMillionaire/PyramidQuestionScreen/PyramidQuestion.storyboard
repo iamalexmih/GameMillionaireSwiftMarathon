@@ -37,11 +37,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YaI-fy-adF">
                                         <rect key="frame" x="0.0" y="47.666666666666671" width="353" height="44.666666666666671"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFv-nP-c9a">
+                                            <button opaque="NO" clipsSubviews="YES" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFv-nP-c9a">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="44.666666666666664"/>
                                                 <color key="backgroundColor" name="colorWatingResult"/>
                                                 <color key="tintColor" name="colorPyramidaQuestion"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="questionButtonsPressWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SZ2-UT-Y0P"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Миллион" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnX-K1-YZz">
                                                 <rect key="frame" x="253.33333333333329" y="11.999999999999998" width="84.666666666666657" height="20.333333333333329"/>
@@ -70,11 +73,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ffc-6k-gV9">
                                         <rect key="frame" x="0.0" y="95.333333333333343" width="353" height="44.666666666666657"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqz-WK-afm">
+                                            <button opaque="NO" clipsSubviews="YES" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqz-WK-afm">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="44.666666666666664"/>
                                                 <color key="backgroundColor" name="colorPyramidaQuestion"/>
                                                 <color key="tintColor" name="colorPyramidaQuestion"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="questionButtonsPressWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tEK-D0-8fQ"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос 14" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PhL-1m-MFC">
                                                 <rect key="frame" x="15" y="11.999999999999998" width="82" height="20.333333333333329"/>
@@ -103,11 +109,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2BT-ac-sep">
                                         <rect key="frame" x="0.0" y="143" width="353" height="44.666666666666657"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8zU-wW-vM3">
+                                            <button opaque="NO" clipsSubviews="YES" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8zU-wW-vM3">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="44.666666666666664"/>
                                                 <color key="backgroundColor" name="colorPyramidaQuestion"/>
                                                 <color key="tintColor" name="colorPyramidaQuestion"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="questionButtonsPressWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="B5x-gX-KEI"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="250000 RUB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fr1-S1-iNI">
                                                 <rect key="frame" x="239" y="11.999999999999998" width="99" height="20.333333333333329"/>
@@ -136,11 +145,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h90-uQ-ULy">
                                         <rect key="frame" x="0.0" y="190.66666666666666" width="353" height="44.333333333333343"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGP-uH-QxP">
+                                            <button opaque="NO" clipsSubviews="YES" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGP-uH-QxP">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="44.333333333333336"/>
                                                 <color key="backgroundColor" name="colorPyramidaQuestion"/>
                                                 <color key="tintColor" name="colorPyramidaQuestion"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="questionButtonsPressWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="LXK-BX-sgJ"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос 12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AyS-Tq-dtJ" userLabel="Вопрос 12">
                                                 <rect key="frame" x="15" y="12.000000000000027" width="81.333333333333329" height="20.333333333333329"/>
@@ -169,11 +181,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="18F-wP-5im">
                                         <rect key="frame" x="0.0" y="237.99999999999997" width="353" height="44.666666666666657"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F76-us-vvE">
+                                            <button opaque="NO" clipsSubviews="YES" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F76-us-vvE">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="44.666666666666664"/>
                                                 <color key="backgroundColor" name="colorPyramidaQuestion"/>
                                                 <color key="tintColor" name="colorPyramidaQuestion"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="questionButtonsPressWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="k4e-hy-5Sy"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос 11" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYu-Ud-FEm" userLabel="Вопрос 11">
                                                 <rect key="frame" x="15" y="12.333333333333313" width="79" height="20.333333333333329"/>
@@ -202,11 +217,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ofx-bX-2ft">
                                         <rect key="frame" x="0.0" y="285.66666666666669" width="353" height="44.666666666666686"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LmO-fs-8qV">
+                                            <button opaque="NO" clipsSubviews="YES" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LmO-fs-8qV">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="44.666666666666664"/>
                                                 <color key="backgroundColor" name="colorButton"/>
                                                 <color key="tintColor" name="colorPyramidaQuestion"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="questionButtonsPressWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qmr-wc-YTN"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hde-5y-tpo" userLabel="Вопрос 10">
                                                 <rect key="frame" x="15" y="12.333333333333313" width="81.666666666666671" height="20.333333333333329"/>
@@ -235,11 +253,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RCn-8v-HKu">
                                         <rect key="frame" x="0.0" y="333.33333333333331" width="353" height="44.666666666666686"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMT-Rh-9fx">
+                                            <button opaque="NO" clipsSubviews="YES" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMT-Rh-9fx">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="44.666666666666664"/>
                                                 <color key="backgroundColor" name="colorPyramidaQuestion"/>
                                                 <color key="tintColor" name="colorPyramidaQuestion"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="questionButtonsPressWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ONP-Gy-UOx"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос 9" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roI-zz-QlN" userLabel="Вопрос 9">
                                                 <rect key="frame" x="15" y="12.333333333333369" width="74.333333333333329" height="20.333333333333329"/>
@@ -268,11 +289,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aw6-Sw-eUM">
                                         <rect key="frame" x="0.0" y="381" width="353" height="44.666666666666686"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTb-J1-ZDt">
+                                            <button opaque="NO" clipsSubviews="YES" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTb-J1-ZDt">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="44.666666666666664"/>
                                                 <color key="backgroundColor" name="colorPyramidaQuestion"/>
                                                 <color key="tintColor" name="colorPyramidaQuestion"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="questionButtonsPressWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tWU-8E-6eC"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос 8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQy-ma-0Hg" userLabel="Вопрос 8">
                                                 <rect key="frame" x="15" y="11.999999999999998" width="74.333333333333329" height="20.333333333333329"/>
@@ -301,11 +325,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5P3-DG-JvV">
                                         <rect key="frame" x="0.0" y="428.66666666666669" width="353" height="44.666666666666686"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vkk-Uz-ltW">
+                                            <button opaque="NO" clipsSubviews="YES" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vkk-Uz-ltW">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="44.666666666666664"/>
                                                 <color key="backgroundColor" name="colorPyramidaQuestion"/>
                                                 <color key="tintColor" name="colorPyramidaQuestion"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="questionButtonsPressWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="cxI-9E-h76"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос 7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h23-PT-uFQ" userLabel="Вопрос 7">
                                                 <rect key="frame" x="15" y="11.999999999999998" width="73.333333333333329" height="20.333333333333329"/>
@@ -334,11 +361,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wNd-DE-wfw">
                                         <rect key="frame" x="0.0" y="476.33333333333337" width="353" height="44.666666666666629"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRO-g3-oyv">
+                                            <button opaque="NO" clipsSubviews="YES" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRO-g3-oyv">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="44.666666666666664"/>
                                                 <color key="backgroundColor" name="colorPyramidaQuestion"/>
                                                 <color key="tintColor" name="colorPyramidaQuestion"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="questionButtonsPressWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="nJg-Y0-v7R"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос 6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpf-gz-xxU" userLabel="Вопрос 6">
                                                 <rect key="frame" x="15" y="11.999999999999998" width="74.333333333333329" height="20.333333333333329"/>
@@ -367,11 +397,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mbf-Ot-DJ6">
                                         <rect key="frame" x="0.0" y="524" width="353" height="44.666666666666629"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7i-d8-soN">
+                                            <button opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7i-d8-soN">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="44.666666666666664"/>
                                                 <color key="backgroundColor" name="colorButton"/>
                                                 <color key="tintColor" name="colorPyramidaQuestion"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="questionButtonsPressWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="odA-Pw-Hnx"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtE-1l-5Bo" userLabel="Вопрос 5">
                                                 <rect key="frame" x="15" y="11.999999999999998" width="74" height="20.333333333333329"/>
@@ -400,11 +433,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sOR-hj-nSk">
                                         <rect key="frame" x="0.0" y="571.66666666666663" width="353" height="44.333333333333371"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofi-ia-c6s">
+                                            <button opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofi-ia-c6s">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="44.333333333333336"/>
                                                 <color key="backgroundColor" name="colorPyramidaQuestion"/>
                                                 <color key="tintColor" name="colorPyramidaQuestion"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="questionButtonsPressWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="K4O-uq-ECw"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jcx-fY-cyQ" userLabel="Вопрос 4">
                                                 <rect key="frame" x="15" y="11.999999999999998" width="74.333333333333329" height="20.333333333333329"/>
@@ -433,11 +469,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="keQ-7R-beD">
                                         <rect key="frame" x="0.0" y="619" width="353" height="44.666666666666629"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXl-mQ-Jgi">
+                                            <button opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXl-mQ-Jgi">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="44.666666666666664"/>
                                                 <color key="backgroundColor" name="colorPyramidaQuestion"/>
                                                 <color key="tintColor" name="colorPyramidaQuestion"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="questionButtonsPressWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="AmR-Sl-4ld"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ZV-cf-iPT" userLabel="Вопрос 3">
                                                 <rect key="frame" x="15" y="12.333333333333369" width="74.333333333333329" height="20.333333333333329"/>
@@ -466,11 +505,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lou-IQ-J4P">
                                         <rect key="frame" x="0.0" y="666.66666666666663" width="353" height="44.666666666666629"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvp-XE-Uur">
+                                            <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvp-XE-Uur">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="44.666666666666664"/>
                                                 <color key="backgroundColor" name="colorPyramidaQuestion"/>
                                                 <color key="tintColor" name="colorPyramidaQuestion"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="questionButtonsPressWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="T5q-di-ina"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKp-WL-Ws0" userLabel="Вопрос 2">
                                                 <rect key="frame" x="15" y="12.333333333333369" width="73.666666666666671" height="20.333333333333329"/>
@@ -499,13 +541,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eV3-4F-8gU">
                                         <rect key="frame" x="0.0" y="714.33333333333337" width="353" height="44.666666666666629"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYz-rt-Sir">
+                                            <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYz-rt-Sir">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="44.666666666666664"/>
                                                 <color key="backgroundColor" name="colorPyramidaQuestion"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <connections>
-                                                    <action selector="questionButton1PressWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7b4-bm-oVS"/>
+                                                    <action selector="questionButtonsPressWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="TcR-26-U9I"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fa3-FA-dwS" userLabel="Вопрос 1">
@@ -572,10 +614,8 @@
         </scene>
     </scenes>
     <resources>
-
         <image name="bg" width="748" height="1048"/>
         <image name="logoGame" width="201" height="201"/>
-
         <namedColor name="colorButton">
             <color red="0.3411764705882353" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
