@@ -13,6 +13,7 @@
 		5FC081B9299167BF00F76CE8 /* waitingMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5FC081B4299167BE00F76CE8 /* waitingMusic.mp3 */; };
 		5FC081BA299167BF00F76CE8 /* answerWrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5FC081B5299167BE00F76CE8 /* answerWrong.mp3 */; };
 		5FE9B3F7299586B200329716 /* RulesText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE9B3F6299586B200329716 /* RulesText.swift */; };
+		B5070FDF2996D62A0025A8B5 /* ServiceHints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5070FDE2996D62A0025A8B5 /* ServiceHints.swift */; };
 		B5839668298FD2690046C484 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5839667298FD2690046C484 /* AppDelegate.swift */; };
 		B583966A298FD2690046C484 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5839669298FD2690046C484 /* SceneDelegate.swift */; };
 		B583966C298FD2690046C484 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B583966B298FD2690046C484 /* GameViewController.swift */; };
@@ -25,7 +26,6 @@
 		B583968B298FD9B40046C484 /* RoundStages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B583968A298FD9B40046C484 /* RoundStages.swift */; };
 		B583968D298FDD070046C484 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = B583968C298FDD070046C484 /* Question.swift */; };
 		B5839693298FDF4D0046C484 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5839692298FDF4D0046C484 /* UserModel.swift */; };
-		B5839695298FE11C0046C484 /* ServiceGetQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5839694298FE11C0046C484 /* ServiceGetQuestion.swift */; };
 		B5839697298FE1F90046C484 /* PyramidQuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5839696298FE1F90046C484 /* PyramidQuestionModel.swift */; };
 		B5F402792995714200B93057 /* ServiceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F402782995714200B93057 /* ServiceRouter.swift */; };
 		B5F85D8A2992394F005E829D /* StartScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5F85D892992394F005E829D /* StartScreen.storyboard */; };
@@ -37,7 +37,6 @@
 		B5F85D9A29923CBE005E829D /* LoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F85D9929923CBE005E829D /* LoseViewController.swift */; };
 		B5F85D9C29923CCC005E829D /* Lose.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5F85D9B29923CCC005E829D /* Lose.storyboard */; };
 		B5F85D9E29923DE7005E829D /* ServiceBuilderScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F85D9D29923DE7005E829D /* ServiceBuilderScreen.swift */; };
-		C54AFC3E2991259A00DCD6B5 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54AFC3D2991259A00DCD6B5 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +46,7 @@
 		5FC081B4299167BE00F76CE8 /* waitingMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = waitingMusic.mp3; sourceTree = "<group>"; };
 		5FC081B5299167BE00F76CE8 /* answerWrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = answerWrong.mp3; sourceTree = "<group>"; };
 		5FE9B3F6299586B200329716 /* RulesText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesText.swift; sourceTree = "<group>"; };
+		B5070FDE2996D62A0025A8B5 /* ServiceHints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHints.swift; sourceTree = "<group>"; };
 		B5839664298FD2690046C484 /* GameMillionaire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameMillionaire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5839667298FD2690046C484 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5839669298FD2690046C484 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,7 +61,6 @@
 		B583968A298FD9B40046C484 /* RoundStages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundStages.swift; sourceTree = "<group>"; };
 		B583968C298FDD070046C484 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		B5839692298FDF4D0046C484 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		B5839694298FE11C0046C484 /* ServiceGetQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceGetQuestion.swift; sourceTree = "<group>"; };
 		B5839696298FE1F90046C484 /* PyramidQuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PyramidQuestionModel.swift; sourceTree = "<group>"; };
 		B5F402782995714200B93057 /* ServiceRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRouter.swift; sourceTree = "<group>"; };
 		B5F85D892992394F005E829D /* StartScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartScreen.storyboard; sourceTree = "<group>"; };
@@ -73,7 +72,6 @@
 		B5F85D9929923CBE005E829D /* LoseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoseViewController.swift; sourceTree = "<group>"; };
 		B5F85D9B29923CCC005E829D /* Lose.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lose.storyboard; sourceTree = "<group>"; };
 		B5F85D9D29923DE7005E829D /* ServiceBuilderScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBuilderScreen.swift; sourceTree = "<group>"; };
-		C54AFC3D2991259A00DCD6B5 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +151,6 @@
 			children = (
 				B583966D298FD2690046C484 /* GameMain.storyboard */,
 				B583966B298FD2690046C484 /* GameViewController.swift */,
-				C54AFC3D2991259A00DCD6B5 /* ResultViewController.swift */,
 				B5839698298FE4C60046C484 /* Service */,
 			);
 			path = GameScreen;
@@ -223,7 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				B5839687298FD8DB0046C484 /* ServiceCheckQuestion.swift */,
-				B5839694298FE11C0046C484 /* ServiceGetQuestion.swift */,
+				B5070FDE2996D62A0025A8B5 /* ServiceHints.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -319,11 +316,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5F85D9A29923CBE005E829D /* LoseViewController.swift in Sources */,
-				C54AFC3E2991259A00DCD6B5 /* ResultViewController.swift in Sources */,
 				B5839688298FD8DB0046C484 /* ServiceCheckQuestion.swift in Sources */,
 				B5F85D9E29923DE7005E829D /* ServiceBuilderScreen.swift in Sources */,
+				B5070FDF2996D62A0025A8B5 /* ServiceHints.swift in Sources */,
 				B5F402792995714200B93057 /* ServiceRouter.swift in Sources */,
-				B5839695298FE11C0046C484 /* ServiceGetQuestion.swift in Sources */,
 				B5F85D9629923C94005E829D /* PyramidQuestionViewController.swift in Sources */,
 				B583968D298FDD070046C484 /* Question.swift in Sources */,
 				B583966C298FD2690046C484 /* GameViewController.swift in Sources */,

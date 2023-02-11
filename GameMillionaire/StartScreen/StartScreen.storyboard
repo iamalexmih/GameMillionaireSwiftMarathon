@@ -17,27 +17,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Frame 2" translatesAutoresizingMaskIntoConstraints="NO" id="TnF-Gs-0zB" userLabel="background">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="TnF-Gs-0zB" userLabel="background">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="CUX-XW-Y0p">
-                                <rect key="frame" x="61" y="69" width="271" height="340.66666666666669"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="CUX-XW-Y0p">
+                                <rect key="frame" x="61" y="69.000000000000028" width="271" height="404.66666666666674"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image 1" translatesAutoresizingMaskIntoConstraints="NO" id="CMU-VN-Dpe" userLabel="logo">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoGame" translatesAutoresizingMaskIntoConstraints="NO" id="CMU-VN-Dpe" userLabel="logo">
                                         <rect key="frame" x="35" y="0.0" width="201" height="201"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="201" id="8xI-8s-Faf"/>
                                             <constraint firstAttribute="height" constant="201" id="gCb-aD-6GQ"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXw-Sk-P18">
-                                        <rect key="frame" x="87.333333333333343" y="213" width="96.666666666666657" height="28.666666666666657"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добро пожаловать" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXw-Sk-P18">
+                                        <rect key="frame" x="32" y="216" width="207" height="28.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to Who Wants to be a Millionaire" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="e3Q-IM-LNh">
-                                        <rect key="frame" x="0.0" y="253.66666666666669" width="271" height="87"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Игра" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46x-Kg-7BO">
+                                        <rect key="frame" x="93.666666666666657" y="259.66666666666669" width="83.666666666666657" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="кто хочет стать МИЛЛИОНЕРОМ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="e3Q-IM-LNh">
+                                        <rect key="frame" x="0.0" y="317.66666666666669" width="271" height="87"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="87" id="MwV-Vj-lcu"/>
                                             <constraint firstAttribute="width" constant="271" id="cwA-X8-UcK"/>
@@ -48,46 +54,32 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="mOg-0z-QEd">
-                                <rect key="frame" x="94" y="622.33333333333337" width="205" height="125.66666666666663"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="mOg-0z-QEd">
+                                <rect key="frame" x="60" y="617" width="273" height="131"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CXd-eh-SqA">
-                                        <rect key="frame" x="0.0" y="0.0" width="205" height="50.333333333333336"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Hf-bH-27p">
+                                        <rect key="frame" x="0.0" y="0.0" width="273" height="51"/>
+                                        <color key="backgroundColor" red="0.48627454040000001" green="0.87058818339999999" blue="0.66274511810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Button">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Правила игры">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.49019610879999997" green="0.87058818339999999" blue="0.66274511810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <font key="NSFont" metaFont="system" size="32"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        <integer key="NSUnderline" value="1"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                            <color key="titleColor" name="colorStartScreenButtons"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="getToRules:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qtH-Nn-27w"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Hf-bH-27p">
-                                        <rect key="frame" x="27" y="75.333333333333258" width="151" height="50.333333333333343"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Button">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Start game">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.49019610879999997" green="0.87058818339999999" blue="0.66274511810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <font key="NSFont" metaFont="system" size="32"/>
-                                                        <integer key="NSUnderline" value="1"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                            <color key="titleColor" name="colorStartScreenButtons"/>
+                                        <state key="normal" title="Начать Игру">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="getToStart:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mMx-5O-ASi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXd-eh-SqA">
+                                        <rect key="frame" x="0.0" y="91" width="273" height="40"/>
+                                        <color key="backgroundColor" red="0.48627454040000001" green="0.87058818339999999" blue="0.66274511810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Правила игры">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="getToRules:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qtH-Nn-27w"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -97,7 +89,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="TnF-Gs-0zB" secondAttribute="trailing" id="3eh-eK-gjw"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mOg-0z-QEd" secondAttribute="trailing" constant="60" id="42c-Fe-ZJr"/>
                             <constraint firstItem="TnF-Gs-0zB" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="6c6-Aa-zpd"/>
+                            <constraint firstItem="mOg-0z-QEd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="60" id="9dC-Ob-ijm"/>
                             <constraint firstItem="TnF-Gs-0zB" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="9ji-US-fQl"/>
                             <constraint firstItem="CUX-XW-Y0p" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="BPO-5f-3mb"/>
                             <constraint firstItem="CUX-XW-Y0p" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="IIm-jh-nHA"/>
@@ -106,6 +100,10 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="mOg-0z-QEd" secondAttribute="bottom" constant="70" id="fVC-NG-CrL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="rulesBtn" destination="CXd-eh-SqA" id="bGw-kO-LXf"/>
+                        <outlet property="startBtn" destination="4Hf-bH-27p" id="Mlc-MV-2Kx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -113,11 +111,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Frame 2" width="414" height="736"/>
-        <image name="image 1" width="201" height="201"/>
-        <namedColor name="colorStartScreenButtons">
-            <color red="0.32549019607843138" green="0.88235294117647056" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <image name="bg" width="748" height="1048"/>
+        <image name="logoGame" width="201" height="201"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

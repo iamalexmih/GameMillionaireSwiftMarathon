@@ -15,10 +15,14 @@ protocol RouterMainProtocol: AnyObject {
 
 
 protocol RouterProtocol: RouterMainProtocol {
-    func popToRoot()
     func initialStartScreen()
-    func showsGameScreen()
+    func goBackOneScreen()
     func showsRulesGameScreen()
+    func showsGameScreen()
+    func showPyramidQuestionScreen()
+    func initialAndGoToGameScreen()
+    func showLoseScreen()
+    func popToRoot()
 }
 
 class ServiceRouter: RouterProtocol {
@@ -40,6 +44,30 @@ class ServiceRouter: RouterProtocol {
     }
     
     
+    func goBackOneScreen() {
+        if let navigationController = navigationController {
+            navigationController.popViewController(animated: true)
+        }
+    }
+    
+    
+    func showsRulesGameScreen() {
+        if let navigationController = navigationController {
+            guard let rulesGameViewController = builder?.createRulesGameScreen(router: self)
+            else { return }
+            navigationController.pushViewController(rulesGameViewController, animated: true)
+        }
+    }
+    
+    
+    func initialAndGoToGameScreen() {
+        if let navigationController = navigationController {
+            guard let screenGameScreen = builder?.createGameScreen(router: self) else { return }
+            navigationController.viewControllers = [screenGameScreen]
+        }
+    }
+    
+    
     func showsGameScreen() {
         if let navigationController = navigationController {
             guard let screenGameScreen = builder?.createGameScreen(router: self) else { return }
@@ -47,9 +75,31 @@ class ServiceRouter: RouterProtocol {
         }
     }
     
-    func showsRulesGameScreen() {
-        
+    
+    
+    func showPyramidQuestionScreen() {
+        if let navigationController = navigationController {
+            guard
+                let PyramidQuestionViewController = builder?.createPyramidQuestionScreen(router: self)
+            else { return }
+            
+            navigationController.pushViewController(PyramidQuestionViewController, animated: true)
+        }
     }
+    
+    
+    
+    func showLoseScreen() {
+        if let navigationController = navigationController {
+            guard
+                let loseScreenViewController = builder?.createLoseScreen(router: self)
+            else { return }
+            
+            navigationController.pushViewController(loseScreenViewController, animated: true)
+        }
+    }
+    
+    
     
     func popToRoot() {
         if let navigationController = navigationController {

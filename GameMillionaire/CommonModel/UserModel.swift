@@ -13,12 +13,16 @@ class UserModel {
     static let shared = UserModel()
     private init() { }
     
-    let login: String? = ""
-    let round: Int = 1
-    var score = 0
+    var login: String? = ""
+    var round: Int = 1
+    var score = 100
     
-    func  updateScore() {
-        score += 1
+    var hintFiftyFifty: Bool = true
+    var hintCallFriend: Bool = true
+    var hintAskAudience: Bool = true
+    
+    func  updateRound() {
+        round += 1
     }
 }
 

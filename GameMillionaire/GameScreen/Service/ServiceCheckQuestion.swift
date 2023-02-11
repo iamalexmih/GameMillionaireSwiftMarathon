@@ -9,34 +9,39 @@ import Foundation
 import UIKit
 
 protocol ServiceCheckQuestionProtocol {
-    static func checkQuestion(question: Question, selectedButton: UIButton, timer: ServiceTimerProtocol, music: ServiceMusicProtocol, user: UserModel)
+    static func checkQuestion(question: Question, selectedButton: UIButton, timer: ServiceTimerProtocol)
 }
 
-class ServiceCheckQuestion: ServiceCheckQuestionProtocol {
-    static func checkQuestion(question: Question, selectedButton: UIButton, timer: ServiceTimerProtocol, music: ServiceMusicProtocol, user: UserModel){
+class ServiceCheckQuestion {
+    
+    var timer: ServiceTimerProtocol?
+    
+    init(timer: ServiceTimerProtocol?) {
+        self.timer = timer
+    }
+    
+    func checkQuestion(question: Question, selectedButton: UIButton) -> Bool {
         
-        timer.stopTimer()
-        selectedButton.backgroundColor = .yellow //попробовать другие цвета
-        //сделать кастомную кнопку для изменения шрифта, мб добавить границы
+        timer?.stopTimer()
+        timer?.startTimer(roundStages: .answerIsBeingCheked)
+        selectedButton.backgroundColor = .yellow.withAlphaComponent(0.4)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            music.playMusic(roundStages: .answerIsBeingCheked)
-        }
         if selectedButton.currentTitle == question.rightAnswer {
-            music.playMusic(roundStages: .rightAnswer)
-            user.updateScore()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                //переход на экран c полным списком вопросов
-                //вью последнего вопроса меняет цвет на зеленый
-            }
             
-        } else {
-            music.playMusic(roundStages: .wrongAnswer)
-            selectedButton.backgroundColor = .red
+            self.timer?.startTimer(roundStages: .rightAnswer)
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                //переход на экран c полным списком вопросов
-                //цвет вью последней несгораемой суммы меняется на желтый
+                self.timer?.stopTimer()
+                UserModel.shared.updateRound()
+                selectedButton.backgroundColor = .green.withAlphaComponent(0.4)
             }
+            return true
+        } else {
+            self.timer?.startTimer(roundStages: .wrongAnswer)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                self.timer?.stopTimer()
+                selectedButton.backgroundColor = .red.withAlphaComponent(0.4)
+            }
+            return false
         }
     }
 }

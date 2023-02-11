@@ -9,23 +9,16 @@ import UIKit
 
 class LoseViewController: UIViewController {
 
+    var router: RouterProtocol!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        UserModel.shared.round = 1
+        UserModel.shared.score = 100
     }
-    
 
     @IBAction func getPlayAgain(_ sender: UIButton) {
+        router.initialStartScreen()
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

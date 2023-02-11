@@ -7,93 +7,111 @@
 
 import UIKit
 
-protocol GameViewControllerProtocol {
-    var timer: ServiceTimerProtocol! { get }
-    var currentQuestion: Question! { get }
-
-    var serviceCheckQuestion: ServiceCheckQuestionProtocol { get }
-    var serviceGetQuestionProtocol: ServiceGetQuestionProtocol!  { get }
-    
-    func setupTitileButton(button: [UIButton], currentQuestion: Question)
-    func setupLabelTextQuestion(label: UILabel, text: String)
-    func setupLabelRoundInfo(label: UILabel, currentQuestion: PyramidQuestionModel)
-}
 
 
 class GameViewController: UIViewController {
     
+    var router: RouterProtocol!
     var timer: ServiceTimerProtocol!
     var music: ServiceMusicProtocol!
-    var router: RouterProtocol!
     
     var currentQuestion: Question?
+    
+    var serviceCheckQuestion: ServiceCheckQuestion?
+    var serviceHints: ServiceHints = ServiceHints()
+    var wasPressButton: Bool = false
     
     @IBOutlet weak var labelQuestion: UILabel!
     @IBOutlet weak var labelCostQuestion: UILabel!
     @IBOutlet weak var labelCurrentRound: UILabel!
-    
-    @IBOutlet weak var labelA: UILabel!
-    @IBOutlet weak var labelB: UILabel!
-    @IBOutlet weak var labelC: UILabel!
-    @IBOutlet weak var labelD: UILabel!
+    @IBOutlet weak var labelTimer: UILabel!
     
     @IBOutlet weak var buttonA: UIButton!
     @IBOutlet weak var buttonB: UIButton!
     @IBOutlet weak var buttonC: UIButton!
     @IBOutlet weak var buttonD: UIButton!
     
+    @IBOutlet weak var hintFiftyFifty: UIButton!
+    @IBOutlet weak var hintCallFriend: UIButton!
+    @IBOutlet weak var hintAskAudience: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setButtonCornerRadius()
- 
+        
         currentQuestion = QuestionData.nextQuestion(round: UserModel.shared.round)
         setupTitileButton(button: [buttonA, buttonB, buttonC, buttonD], currentQuestion: currentQuestion!)
-//        timer?.startTimer(roundStages: .rightAnswer)
-//        serviceCheckQuestion = ServiceCheckQuestion(timer: timer)
+        if UserModel.shared.round != 1 {
+            timer.stopTimer()
+        }
+        timer?.startTimer(roundStages: .roundStart)
+        serviceCheckQuestion = ServiceCheckQuestion(timer: timer)
         setLabelCurrentQuestion()
         setInfoAboutCurrentRound()
-    
+        setHintButton()
+
+        timer.totalTimeNow = { [weak self] timeCounter in
+            guard let self = self else { return }
+            if !self.wasPressButton {
+                self.labelTimer.text = "\(timeCounter)"
+                if timeCounter == 0 {
+                    self.showAlertMessage()
+                    self.timer.stopTimer()
+                }
+            } else {
+                self.labelTimer.text = "\(0)"
+            }
+        }
     }
     
     
     @IBAction func buttonPressA(_ sender: UIButton) {
-        
+        wasPressButton = true
+        answerProcessing(sender)
     }
     
     @IBAction func buttonPressB(_ sender: UIButton) {
-        
+        wasPressButton = true
+        answerProcessing(sender)
     }
     
     @IBAction func buttonPressC(_ sender: UIButton) {
-        
+        wasPressButton = true
+        answerProcessing(sender)
     }
     
     @IBAction func buttonPressD(_ sender: UIButton) {
-        
+        wasPressButton = true
+        answerProcessing(sender)
     }
     
-    func goToResultViewController() {
-        
+    // MARK: - Hint button
+    
+    @IBAction func fiftyFiftyHint(_ sender: UIButton) {
+        serviceHints.getFiftyFifty(buttons: [buttonA, buttonB, buttonC, buttonD],
+                                   currentQuestion: currentQuestion!,
+                                   sender: sender)
+        UserModel.shared.hintFiftyFifty = false
     }
     
-    
-    func setupTitileButton(button: [UIButton], currentQuestion: Question) {
-        var answer = "N/A"
-        var answersArray = currentQuestion.variantsAnswer
-        button.forEach { btn in
-            answer = answersArray.removeFirst()
-            btn.setTitle(answer, for: .normal)
-            
-        }
+    @IBAction func callAFriendHint(_ sender: UIButton) {
+        presentCallAFriend(sender)
+        UserModel.shared.hintCallFriend = false
     }
+    
+    @IBAction func askTheAudienceHint(_ sender: UIButton) {
+        presentAskTheAudience(sender)
+        UserModel.shared.hintAskAudience = false
+    }
+    
     
     func setLabelCurrentQuestion() {
         labelQuestion.text = currentQuestion?.textQuestion
     }
     
+    
     func setInfoAboutCurrentRound() {
-        labelCostQuestion.text = "1 000 000 Р"
+        labelCostQuestion.text = "Цена вопроса \(UserModel.shared.score) ₽"
         labelCurrentRound.text = "Вопрос № \(UserModel.shared.round)"
     }
     
@@ -106,3 +124,84 @@ class GameViewController: UIViewController {
     }
 }
 
+
+extension GameViewController {
+    
+    func setupTitileButton(button: [UIButton], currentQuestion: Question) {
+        var answer = "N/A"
+        var answersArray = currentQuestion.variantsAnswer
+        button.forEach { btn in
+            answer = answersArray.removeFirst()
+            btn.setTitle(answer, for: .normal)
+        }
+    }
+    
+    
+    func answerProcessing(_ sender: UIButton) {
+        if serviceCheckQuestion?.checkQuestion(question: currentQuestion!, selectedButton: sender) == true {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4) { [weak self] in
+                //                self.performSegue(withIdentifier: "segueToPyramid", sender: nil)
+                guard let self = self else { return }
+                self.router.showPyramidQuestionScreen()
+            }
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4) { [weak self] in
+                //                self.performSegue(withIdentifier: "segueToLose", sender: nil)
+                guard let self = self else { return }
+                self.router.showLoseScreen()
+            }
+        }
+    }
+    
+    
+    func presentAskTheAudience(_ sender: UIButton) {
+        guard let currentQuestion else { return }
+        
+        present(serviceHints.askTheAudience(question: currentQuestion,
+                                            sender: sender), animated: true)
+    }
+    
+    
+    func presentCallAFriend(_ sender: UIButton) {
+        guard let currentQuestion else { return }
+        
+        present(serviceHints.callAFriend(question: currentQuestion,
+                                         sender: sender), animated: true)
+    }
+    
+    
+    func setHintButton() {
+        hintCallFriend.isEnabled = UserModel.shared.hintCallFriend
+        hintFiftyFifty.isEnabled = UserModel.shared.hintFiftyFifty
+        hintAskAudience.isEnabled = UserModel.shared.hintAskAudience
+        
+        if !UserModel.shared.hintCallFriend {
+            let btnImage = UIImage(named: "helpFriendFalse")
+            hintCallFriend.setImage(btnImage, for: .disabled)
+        }
+        if !UserModel.shared.hintFiftyFifty {
+            let btnImage = UIImage(named: "fiftyFiftyFalse")
+            hintFiftyFifty.setImage(btnImage, for: .disabled)
+        }
+        if !UserModel.shared.hintAskAudience {
+            let btnImage = UIImage(named: "askAudienceFalse")
+            hintAskAudience.setImage(btnImage, for: .disabled)
+        }
+    }
+}
+
+// MARK: - Alert Messege
+extension GameViewController {
+    func showAlertMessage() {
+        let alert = UIAlertController(title: "Вы проиграли",
+                                      message: "Время вышло",
+                                      preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { [weak self] _ in
+            guard let self = self else { return }
+            self.router.showLoseScreen()
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+    
+}

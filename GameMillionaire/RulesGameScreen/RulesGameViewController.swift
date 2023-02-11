@@ -9,17 +9,22 @@ import UIKit
 
 class RulesGameViewController: UIViewController {
     
-    @IBOutlet weak var rulesTextView: UITextView!
-    @IBAction func getBack(_ sender: UIButton) {
-    }
-    
     let rules = Rules()
+    var router: RouterProtocol!
+    
+    @IBOutlet weak var rulesTextView: UITextView!
+    @IBOutlet weak var backButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         rulesTextView.isEditable = false
-        rulesTextView.text = Rules.getRulesText(rules)()
+        rulesTextView.text = rules.getRulesText()
+        backButton.layer.cornerRadius = 15
     }
-
+    
+    
+    @IBAction func getBack(_ sender: UIButton) {
+        router.goBackOneScreen()
+    }
 }

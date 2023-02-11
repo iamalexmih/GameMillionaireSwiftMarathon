@@ -53,8 +53,7 @@ class QuestionData {
     var questionNumber = 0
     var score = 0
     
-    
-    static var questionList: [Question] = [
+static var questionList: [Question] = [
         Question(textQuestion: "Какая кошка самая большая на планете?",
                  difficultyIssue: .lite,
                  variantsAnswer: ["Лев", "Тигр", "Гепард", "Барс"],
@@ -100,6 +99,7 @@ class QuestionData {
                  difficultyIssue: .medium,
                  variantsAnswer: ["Диаметр", "Радиус", "Окружность", "Площадь"],
                  rightAnswer: "Окружность"),
+
         
         Question(textQuestion: "Где самая быстрая мышца в теле?",
                  difficultyIssue: .medium,
@@ -155,6 +155,4 @@ class QuestionData {
                     return randomHardQuestion
                 }
     }
-    
-    
 }
