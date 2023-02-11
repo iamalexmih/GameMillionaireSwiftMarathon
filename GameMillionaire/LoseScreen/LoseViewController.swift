@@ -10,7 +10,6 @@ import UIKit
 class LoseViewController: UIViewController {
 
     var router: RouterProtocol!
-    let user = UserModel.shared
     var isLose: Bool = true
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var labelStatusLoseOrTakeMoney: UILabel!
@@ -22,23 +21,30 @@ class LoseViewController: UIViewController {
         super.viewDidLoad()
 
         buttonPlayAgain.layer.cornerRadius = 20
-        isLose = user.isLose
+        isLose = UserModel.shared.isLose
         calculateMoney()
         setLabelLose()
     }
 
     func calculateMoney() {
         if isLose {
-            switch user.round {
+            switch UserModel.shared.round {
             case 6...10:
                 label.text = "Игра закончена, вы выиграли 1000 ₽"
-            case 11...15:
+                return
+            case 11...16:
                 label.text = "Игра закончена, вы выиграли 32000 ₽"
+                return
             default:
                 label.text = "Игра закончена, вы выиграли 0 ₽"
+                return
             }
         } else {
-            label.text = "Игра закончена, вы выиграли \(user.moneyWon) ₽"
+            if UserModel.shared.round == 16 {
+                label.text = "Игра закончена, вы выиграли МИЛЛИОН РУБЛЕЙ"
+                return
+            }
+            label.text = "Игра закончена, вы выиграли \(UserModel.shared.moneyWon) ₽"
         }
     }
     
@@ -54,13 +60,13 @@ class LoseViewController: UIViewController {
     
     @IBAction func getPlayAgain(_ sender: UIButton) {
         router.initialStartScreen()
-        user.round = 1
-        user.costQuestion = 100
-        user.moneyWon = 0
-        user.hintAskAudience = true
-        user.hintFiftyFifty = true
-        user.hintCallFriend = true
-        user.isLose = true
+        UserModel.shared.round = 1
+        UserModel.shared.costQuestion = 100
+        UserModel.shared.moneyWon = 0
+        UserModel.shared.hintAskAudience = true
+        UserModel.shared.hintFiftyFifty = true
+        UserModel.shared.hintCallFriend = true
+        UserModel.shared.isLose = true
         
         QuestionData.questionList = QuestionStorage.questionList
     }

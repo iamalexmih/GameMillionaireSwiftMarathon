@@ -60,8 +60,6 @@ class GameViewController: UIViewController {
             if !self.wasPressButtonQuestion {
                 self.labelTimer.text = "\(timeCounter)"
                 if timeCounter == 0 {
-                    //                    self.timer?.startTimer(roundStages: .wrongAnswer)
-                    //                    self.music?.playMusic(roundStages: .timeIsOver)
                     self.showAlertMessage()
                     self.timer.stopTimer()
                 }
@@ -73,24 +71,28 @@ class GameViewController: UIViewController {
     
     
     @IBAction func buttonPressA(_ sender: UIButton) {
+        self.labelTimer.isHidden = true
         wasPressButtonQuestion = true
         answerProcessing(sender)
     }
     
     
     @IBAction func buttonPressB(_ sender: UIButton) {
+        self.labelTimer.isHidden = true
         wasPressButtonQuestion = true
         answerProcessing(sender)
     }
     
     
     @IBAction func buttonPressC(_ sender: UIButton) {
+        self.labelTimer.isHidden = true
         wasPressButtonQuestion = true
         answerProcessing(sender)
     }
     
     
     @IBAction func buttonPressD(_ sender: UIButton) {
+        self.labelTimer.isHidden = true
         wasPressButtonQuestion = true
         answerProcessing(sender)
     }
@@ -172,11 +174,12 @@ extension GameViewController {
     
     private func answerProcessing(_ sender: UIButton) {
         disableAllButtons()
+        print(UserModel.shared.round, "v gameVC")
         if serviceCheckQuestion?.checkQuestion(question: currentQuestion!, selectedButton: sender) == true {
             DispatchQueue.main.asyncAfter(deadline: .now() + 10) { [weak self] in
                 guard let self = self else { return }
                 
-                if UserModel.shared.round == 15 {
+                if UserModel.shared.round > 15 {
                     UserModel.shared.isLose = false
                     self.router.showLoseScreen()
                 } else {
