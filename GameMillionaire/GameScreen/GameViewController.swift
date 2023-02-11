@@ -19,7 +19,7 @@ class GameViewController: UIViewController {
     
     var serviceCheckQuestion: ServiceCheckQuestion?
     var serviceHints: ServiceHints = ServiceHints()
-    var wasPressButton: Bool = false
+    var wasPressButtonQuestion: Bool = false
     
     @IBOutlet weak var labelQuestion: UILabel!
     @IBOutlet weak var labelCostQuestion: UILabel!
@@ -31,9 +31,13 @@ class GameViewController: UIViewController {
     @IBOutlet weak var buttonC: UIButton!
     @IBOutlet weak var buttonD: UIButton!
     
+    @IBOutlet weak var buttonTakeMoney: UIButton!
+    
     @IBOutlet weak var hintFiftyFifty: UIButton!
     @IBOutlet weak var hintCallFriend: UIButton!
     @IBOutlet weak var hintAskAudience: UIButton!
+    
+    var arrayAllButton: [UIButton] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,10 +53,11 @@ class GameViewController: UIViewController {
         setLabelCurrentQuestion()
         setInfoAboutCurrentRound()
         setHintButton()
-
+        makeArrayForAllButton()
+        
         timer.totalTimeNow = { [weak self] timeCounter in
             guard let self = self else { return }
-            if !self.wasPressButton {
+            if !self.wasPressButtonQuestion {
                 self.labelTimer.text = "\(timeCounter)"
                 if timeCounter == 0 {
 //                    self.timer?.startTimer(roundStages: .wrongAnswer)
@@ -68,24 +73,35 @@ class GameViewController: UIViewController {
     
     
     @IBAction func buttonPressA(_ sender: UIButton) {
-        wasPressButton = true
+        wasPressButtonQuestion = true
         answerProcessing(sender)
     }
+    
     
     @IBAction func buttonPressB(_ sender: UIButton) {
-        wasPressButton = true
+        wasPressButtonQuestion = true
         answerProcessing(sender)
     }
+    
     
     @IBAction func buttonPressC(_ sender: UIButton) {
-        wasPressButton = true
+        wasPressButtonQuestion = true
         answerProcessing(sender)
     }
     
+    
     @IBAction func buttonPressD(_ sender: UIButton) {
-        wasPressButton = true
+        wasPressButtonQuestion = true
         answerProcessing(sender)
     }
+    
+    
+    @IBAction func buttonTakeMoneyPress(_ sender: UIButton) {
+        timer.stopTimer()
+        UserModel.shared.isLose = false
+        router.showLoseScreen()
+    }
+    
     
     // MARK: - Hint button
     
@@ -106,6 +122,8 @@ class GameViewController: UIViewController {
         UserModel.shared.hintAskAudience = false
     }
     
+
+    // MARK: - func for config UI
     
     func setLabelCurrentQuestion() {
         labelQuestion.text = currentQuestion?.textQuestion
@@ -123,9 +141,22 @@ class GameViewController: UIViewController {
         buttonB.layer.cornerRadius = 20
         buttonC.layer.cornerRadius = 20
         buttonD.layer.cornerRadius = 20
+        buttonTakeMoney.layer.cornerRadius = 20
+    }
+    
+    // MARK: - func for disable All Buttons
+    
+    func makeArrayForAllButton() {
+        arrayAllButton = [buttonA, buttonB, buttonC, buttonD, buttonTakeMoney,
+                          hintCallFriend, hintFiftyFifty, hintAskAudience]
+    }
+    
+    func disableAllButtons() {
+        arrayAllButton.forEach { $0.isEnabled = false }
     }
 }
 
+// MARK: - Logic
 
 extension GameViewController {
     
@@ -140,6 +171,7 @@ extension GameViewController {
     
     
     func answerProcessing(_ sender: UIButton) {
+        disableAllButtons()
         if serviceCheckQuestion?.checkQuestion(question: currentQuestion!, selectedButton: sender) == true {
             DispatchQueue.main.asyncAfter(deadline: .now() + 10) { [weak self] in
 

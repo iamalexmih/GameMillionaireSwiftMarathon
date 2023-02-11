@@ -17,6 +17,7 @@ class UserModel {
     var round: Int = 1
     var costQuestion = 100
     var moneyWon = 0
+    var isLose = true
     
     var hintFiftyFifty: Bool = true
     var hintCallFriend: Bool = true

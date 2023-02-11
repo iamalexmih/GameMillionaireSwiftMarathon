@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -228,55 +229,80 @@
                                     <constraint firstAttribute="height" constant="286.33333333333326" id="acL-oh-BFJ"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="SPM-MI-w8p" userLabel="Bottom Stack View">
-                                <rect key="frame" x="16" y="544.5" width="382" height="351.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Q5g-QM-eqO">
+                                <rect key="frame" x="16" y="574.5" width="382" height="267.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWq-ty-zHn" userLabel="fiftyFifty">
-                                        <rect key="frame" x="0.0" y="128" width="118.5" height="95"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHa-Ti-d0G">
+                                        <rect key="frame" x="50" y="0.0" width="282" height="50"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="7VS-XA-guI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="fiftyFifty"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="fiftyFifty"/>
+                                        <state key="normal" title="Забрать деньги">
+                                            <color key="titleColor" systemColor="systemGray5Color"/>
+                                        </state>
                                         <connections>
-                                            <action selector="fiftyFiftyHint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nMp-4t-LoE"/>
+                                            <action selector="buttonTakeMoneyPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PVZ-aP-59i"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qdl-4a-kU1" userLabel="callFrand">
-                                        <rect key="frame" x="131.5" y="128" width="119" height="95"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="helpFriend" title=""/>
-                                        <connections>
-                                            <action selector="callAFriendHint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cOj-U3-tLr"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJh-AI-gJS" userLabel="askAudience">
-                                        <rect key="frame" x="263.5" y="126" width="118.5" height="99"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="askAudience" title=""/>
-                                        <connections>
-                                            <action selector="askTheAudienceHint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wmv-Hh-U8w"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="SPM-MI-w8p" userLabel="Bottom Stack View">
+                                        <rect key="frame" x="0.0" y="60" width="382" height="207.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWq-ty-zHn" userLabel="fiftyFifty">
+                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="207.5"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="fiftyFifty"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="fiftyFifty"/>
+                                                <connections>
+                                                    <action selector="fiftyFiftyHint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nMp-4t-LoE"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qdl-4a-kU1" userLabel="callFrand">
+                                                <rect key="frame" x="132.5" y="0.0" width="119" height="207.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="helpFriend" title=""/>
+                                                <connections>
+                                                    <action selector="callAFriendHint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cOj-U3-tLr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJh-AI-gJS" userLabel="askAudience">
+                                                <rect key="frame" x="264.5" y="0.0" width="117.5" height="207.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="askAudience" title=""/>
+                                                <connections>
+                                                    <action selector="askTheAudienceHint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wmv-Hh-U8w"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="wHa-Ti-d0G" firstAttribute="leading" secondItem="Q5g-QM-eqO" secondAttribute="leading" constant="50" id="P1c-lq-IZQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="wHa-Ti-d0G" secondAttribute="trailing" constant="50" id="fL7-L0-S6q"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Yje-hH-4mB" secondAttribute="bottom" id="0XZ-2u-fMH"/>
-                            <constraint firstItem="SPM-MI-w8p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="0mc-lV-fbB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mCy-v9-jdW" secondAttribute="trailing" constant="16" id="14l-Rv-a0K"/>
                             <constraint firstItem="Yje-hH-4mB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3M0-dW-fvU"/>
                             <constraint firstItem="j9b-jc-vDp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="85r-tm-uV6"/>
+                            <constraint firstAttribute="trailing" secondItem="Q5g-QM-eqO" secondAttribute="trailing" constant="16" id="8Il-85-4lD"/>
                             <constraint firstItem="Yje-hH-4mB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="HQK-RN-wi4"/>
                             <constraint firstItem="Yje-hH-4mB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Oia-vv-0y5"/>
                             <constraint firstItem="j9b-jc-vDp" firstAttribute="top" secondItem="tPv-sf-JoT" secondAttribute="bottom" constant="20" id="WNd-ct-Hae"/>
-                            <constraint firstItem="SPM-MI-w8p" firstAttribute="top" secondItem="j9b-jc-vDp" secondAttribute="bottom" constant="20" id="Wck-uQ-A0X"/>
                             <constraint firstItem="mCy-v9-jdW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Xja-on-HWp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Q5g-QM-eqO" secondAttribute="bottom" constant="20" id="ZQx-YH-pBG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j9b-jc-vDp" secondAttribute="trailing" constant="16" id="a3c-aB-A2E"/>
                             <constraint firstItem="tPv-sf-JoT" firstAttribute="top" secondItem="mCy-v9-jdW" secondAttribute="bottom" constant="10" id="cXO-co-4ke"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SPM-MI-w8p" secondAttribute="trailing" constant="16" id="ewN-s2-8Z6"/>
+                            <constraint firstItem="Q5g-QM-eqO" firstAttribute="top" secondItem="j9b-jc-vDp" secondAttribute="bottom" constant="50" id="gjY-Ga-wgE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tPv-sf-JoT" secondAttribute="trailing" constant="16" id="kfK-vD-qCN"/>
-                            <constraint firstAttribute="bottom" secondItem="SPM-MI-w8p" secondAttribute="bottom" id="mVv-s3-r0f"/>
+                            <constraint firstItem="Q5g-QM-eqO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="sts-PI-ZUP"/>
                             <constraint firstItem="tPv-sf-JoT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="wcV-l5-GgW"/>
                             <constraint firstItem="mCy-v9-jdW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="xOt-bu-2Xp"/>
                         </constraints>
@@ -286,6 +312,7 @@
                         <outlet property="buttonB" destination="VSa-Cp-aXZ" id="YyP-iR-ixI"/>
                         <outlet property="buttonC" destination="wav-Wj-u2i" id="d90-sf-3Yk"/>
                         <outlet property="buttonD" destination="MWt-bf-aTS" id="NEx-y0-EPh"/>
+                        <outlet property="buttonTakeMoney" destination="wHa-Ti-d0G" id="FCS-vc-box"/>
                         <outlet property="hintAskAudience" destination="aJh-AI-gJS" id="zZ2-1k-rzr"/>
                         <outlet property="hintCallFriend" destination="Qdl-4a-kU1" id="jfd-zU-dzU"/>
                         <outlet property="hintFiftyFifty" destination="pWq-ty-zHn" id="ByB-Nx-z2k"/>
@@ -306,8 +333,14 @@
         <image name="fiftyFifty" width="105" height="81"/>
         <image name="helpFriend" width="105" height="81"/>
         <image name="logoGame" width="201" height="201"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

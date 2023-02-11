@@ -34,14 +34,15 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOSE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="RY3-wV-9Oj">
-                                <rect key="frame" x="136.66666666666666" y="377.33333333333331" width="119.99999999999997" height="60"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😔 LOSE 😔" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="RY3-wV-9Oj">
+                                <rect key="frame" x="69.666666666666671" y="377.33333333333331" width="253.66666666666663" height="60"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                 <color key="textColor" name="colorLose"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8T-b1-UjJ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u8T-b1-UjJ">
                                 <rect key="frame" x="46.666666666666657" y="648" width="300" height="100"/>
+                                <color key="backgroundColor" red="0.48627454040000001" green="0.87058818339999999" blue="0.66274511810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="sz0-Vf-yWk"/>
                                     <constraint firstAttribute="width" constant="300" id="wew-C4-RrF"/>
@@ -49,10 +50,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="PLAY AGAIN">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" name="colorPlayAgain"/>
-                                </state>
-                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Новая Игра">
                                             <attributes>
@@ -62,9 +59,9 @@
                                             </attributes>
                                         </fragment>
                                     </attributedString>
-                                    <color key="baseForegroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="baseBackgroundColor" name="colorPlayAgain"/>
-                                </buttonConfiguration>
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" name="colorPlayAgain"/>
+                                </state>
                                 <connections>
                                     <action selector="getPlayAgain:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="FMs-oW-BRx"/>
                                 </connections>
@@ -90,7 +87,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="label" destination="NLd-Cp-HX3" id="vKm-yG-Pxc"/>
+                        <outlet property="buttonPlayAgain" destination="u8T-b1-UjJ" id="779-ab-0ng"/>
+                        <outlet property="label" destination="NLd-Cp-HX3" id="xBD-9c-Eaz"/>
+                        <outlet property="labelStatusLoseOrTakeMoney" destination="RY3-wV-9Oj" id="B4z-aW-Z8j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
