@@ -61,5 +61,7 @@ class LoseViewController: UIViewController {
         user.hintFiftyFifty = true
         user.hintCallFriend = true
         user.isLose = true
+        
+        QuestionData.questionList = QuestionStorage.questionList
     }
 }
