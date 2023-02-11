@@ -15,7 +15,8 @@ class UserModel {
     
     var login: String? = ""
     var round: Int = 1
-    var score = 100
+    var costQuestion = 100
+    var moneyWon = 0
     
     var hintFiftyFifty: Bool = true
     var hintCallFriend: Bool = true

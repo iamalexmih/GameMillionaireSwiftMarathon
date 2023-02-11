@@ -113,7 +113,7 @@ class GameViewController: UIViewController {
     
     
     func setInfoAboutCurrentRound() {
-        labelCostQuestion.text = "Цена вопроса \(UserModel.shared.score) ₽"
+        labelCostQuestion.text = "Цена вопроса \(UserModel.shared.costQuestion) ₽"
         labelCurrentRound.text = "Вопрос № \(UserModel.shared.round)"
     }
     

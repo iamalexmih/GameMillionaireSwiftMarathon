@@ -9,15 +9,16 @@ import UIKit
 
 class PyramidQuestionViewController: UIViewController {
     
-
-    
-    @IBOutlet var arrayButtons: [UIButton]!
-
     var router: RouterProtocol!
+    @IBOutlet var arrayButtons: [UIButton]!
+    let pyramidQuestionDataService = PyramidQuestionDataService()
+    var listProgress: [PyramidQuestionModel] = []
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        listProgress = pyramidQuestionDataService.getListProgress()
         cornerRadius()
         setBorderForCurrentQuestion(user: UserModel.shared)
         changedColorQuestion(user: UserModel.shared)
@@ -79,5 +80,7 @@ class PyramidQuestionViewController: UIViewController {
     
     @IBAction func questionButtonsPress(sender: UIButton) {
         router.initialAndGoToGameScreen()
+        UserModel.shared.costQuestion = listProgress[UserModel.shared.round - 1].money
+        UserModel.shared.moneyWon = listProgress[UserModel.shared.round - 2].money
     }
 }

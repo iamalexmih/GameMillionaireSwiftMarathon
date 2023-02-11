@@ -89,6 +89,9 @@
                             <constraint firstItem="BCR-kQ-sdy" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="z77-Yz-OrN"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="NLd-Cp-HX3" id="vKm-yG-Pxc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,9 +7,17 @@
 
 import Foundation
 
- 
-class PyramidQuestionList {
-    let pyramidQuestionList: [PyramidQuestionModel] = [
+
+
+struct PyramidQuestionModel {
+    let idQuestion: Int
+    let money: Int
+}
+
+
+
+class PyramidQuestionDataService {
+    private let pyramidQuestionList: [PyramidQuestionModel] = [
         PyramidQuestionModel(idQuestion: 1, money: 100),
         PyramidQuestionModel(idQuestion: 2, money: 200),
         PyramidQuestionModel(idQuestion: 3, money: 300),
@@ -25,11 +33,11 @@ class PyramidQuestionList {
         PyramidQuestionModel(idQuestion: 13, money: 250000),
         PyramidQuestionModel(idQuestion: 14, money: 500000),
         PyramidQuestionModel(idQuestion: 15, money: 1000000),
-        
     ]
+    
+    func getListProgress() -> [PyramidQuestionModel] {
+        return pyramidQuestionList
+    }
 }
 
-struct PyramidQuestionModel {
-    let idQuestion: Int
-    let money: Int
-}
+
