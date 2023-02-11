@@ -125,18 +125,18 @@ class GameViewController: UIViewController {
     
     // MARK: - func for config UI
     
-    func setLabelCurrentQuestion() {
+    private func setLabelCurrentQuestion() {
         labelQuestion.text = currentQuestion?.textQuestion
     }
     
     
-    func setInfoAboutCurrentRound() {
+    private func setInfoAboutCurrentRound() {
         labelCostQuestion.text = "Цена вопроса \(UserModel.shared.costQuestion) ₽"
         labelCurrentRound.text = "Вопрос № \(UserModel.shared.round)"
     }
     
     
-    func setButtonCornerRadius() {
+    private func setButtonCornerRadius() {
         buttonA.layer.cornerRadius = 20
         buttonB.layer.cornerRadius = 20
         buttonC.layer.cornerRadius = 20
@@ -146,12 +146,12 @@ class GameViewController: UIViewController {
     
     // MARK: - func for disable All Buttons
     
-    func makeArrayForAllButton() {
+    private func makeArrayForAllButton() {
         arrayAllButton = [buttonA, buttonB, buttonC, buttonD, buttonTakeMoney,
                           hintCallFriend, hintFiftyFifty, hintAskAudience]
     }
     
-    func disableAllButtons() {
+    private func disableAllButtons() {
         arrayAllButton.forEach { $0.isEnabled = false }
     }
 }
@@ -160,7 +160,7 @@ class GameViewController: UIViewController {
 
 extension GameViewController {
     
-    func setupTitileButton(button: [UIButton], currentQuestion: Question) {
+    private func setupTitileButton(button: [UIButton], currentQuestion: Question) {
         var answer = "N/A"
         var answersArray = currentQuestion.variantsAnswer
         button.forEach { btn in
@@ -170,7 +170,7 @@ extension GameViewController {
     }
     
     
-    func answerProcessing(_ sender: UIButton) {
+    private func answerProcessing(_ sender: UIButton) {
         disableAllButtons()
         if serviceCheckQuestion?.checkQuestion(question: currentQuestion!, selectedButton: sender) == true {
             DispatchQueue.main.asyncAfter(deadline: .now() + 10) { [weak self] in
@@ -194,7 +194,7 @@ extension GameViewController {
     }
     
     
-    func presentAskTheAudience(_ sender: UIButton) {
+    private func presentAskTheAudience(_ sender: UIButton) {
         guard let currentQuestion else { return }
         
         present(serviceHints.askTheAudience(question: currentQuestion,
@@ -202,7 +202,7 @@ extension GameViewController {
     }
     
     
-    func presentCallAFriend(_ sender: UIButton) {
+    private func presentCallAFriend(_ sender: UIButton) {
         guard let currentQuestion else { return }
         
         present(serviceHints.callAFriend(question: currentQuestion,
@@ -210,7 +210,7 @@ extension GameViewController {
     }
     
     
-    func setHintButton() {
+     private func setHintButton() {
         hintCallFriend.isEnabled = UserModel.shared.hintCallFriend
         hintFiftyFifty.isEnabled = UserModel.shared.hintFiftyFifty
         hintAskAudience.isEnabled = UserModel.shared.hintAskAudience
