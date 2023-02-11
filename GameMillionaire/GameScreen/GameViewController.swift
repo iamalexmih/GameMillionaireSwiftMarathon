@@ -31,6 +31,9 @@ class GameViewController: UIViewController {
     @IBOutlet weak var buttonC: UIButton!
     @IBOutlet weak var buttonD: UIButton!
     
+    @IBOutlet weak var hintFiftyFifty: UIButton!
+    @IBOutlet weak var hintCallFriend: UIButton!
+    @IBOutlet weak var hintAskAudience: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +48,7 @@ class GameViewController: UIViewController {
         serviceCheckQuestion = ServiceCheckQuestion(timer: timer)
         setLabelCurrentQuestion()
         setInfoAboutCurrentRound()
+        setHintButton()
 
         timer.totalTimeNow = { [weak self] timeCounter in
             guard let self = self else { return }
@@ -87,14 +91,17 @@ class GameViewController: UIViewController {
         serviceHints.getFiftyFifty(buttons: [buttonA, buttonB, buttonC, buttonD],
                                    currentQuestion: currentQuestion!,
                                    sender: sender)
+        UserModel.shared.hintFiftyFifty = false
     }
     
     @IBAction func callAFriendHint(_ sender: UIButton) {
         presentCallAFriend(sender)
+        UserModel.shared.hintCallFriend = false
     }
     
     @IBAction func askTheAudienceHint(_ sender: UIButton) {
         presentAskTheAudience(sender)
+        UserModel.shared.hintAskAudience = false
     }
     
     
@@ -160,6 +167,26 @@ extension GameViewController {
         
         present(serviceHints.callAFriend(question: currentQuestion,
                                          sender: sender), animated: true)
+    }
+    
+    
+    func setHintButton() {
+        hintCallFriend.isEnabled = UserModel.shared.hintCallFriend
+        hintFiftyFifty.isEnabled = UserModel.shared.hintFiftyFifty
+        hintAskAudience.isEnabled = UserModel.shared.hintAskAudience
+        
+        if !UserModel.shared.hintCallFriend {
+            let btnImage = UIImage(named: "helpFriendFalse")
+            hintCallFriend.setImage(btnImage, for: .disabled)
+        }
+        if !UserModel.shared.hintFiftyFifty {
+            let btnImage = UIImage(named: "fiftyFiftyFalse")
+            hintFiftyFifty.setImage(btnImage, for: .disabled)
+        }
+        if !UserModel.shared.hintAskAudience {
+            let btnImage = UIImage(named: "askAudienceFalse")
+            hintAskAudience.setImage(btnImage, for: .disabled)
+        }
     }
 }
 

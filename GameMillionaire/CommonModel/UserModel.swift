@@ -17,6 +17,10 @@ class UserModel {
     var round: Int = 1
     var score = 100
     
+    var hintFiftyFifty: Bool = true
+    var hintCallFriend: Bool = true
+    var hintAskAudience: Bool = true
+    
     func  updateRound() {
         round += 1
     }

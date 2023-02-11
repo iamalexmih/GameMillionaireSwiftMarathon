@@ -286,6 +286,9 @@
                         <outlet property="buttonB" destination="VSa-Cp-aXZ" id="YyP-iR-ixI"/>
                         <outlet property="buttonC" destination="wav-Wj-u2i" id="d90-sf-3Yk"/>
                         <outlet property="buttonD" destination="MWt-bf-aTS" id="NEx-y0-EPh"/>
+                        <outlet property="hintAskAudience" destination="aJh-AI-gJS" id="zZ2-1k-rzr"/>
+                        <outlet property="hintCallFriend" destination="Qdl-4a-kU1" id="jfd-zU-dzU"/>
+                        <outlet property="hintFiftyFifty" destination="pWq-ty-zHn" id="ByB-Nx-z2k"/>
                         <outlet property="labelCostQuestion" destination="x3P-NC-kdU" id="18G-SV-u7J"/>
                         <outlet property="labelCurrentRound" destination="3RO-JH-SH8" id="hAu-PY-gch"/>
                         <outlet property="labelQuestion" destination="DL1-eA-EDt" id="OCr-NF-aef"/>
