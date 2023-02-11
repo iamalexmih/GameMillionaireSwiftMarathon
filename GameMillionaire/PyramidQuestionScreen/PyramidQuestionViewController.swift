@@ -20,7 +20,6 @@ class PyramidQuestionViewController: UIViewController {
         super.viewDidLoad()
         cornetRadius()
         currentQuestion(user: .shared)
-        
     }
     
     func cornetRadius() {

@@ -16,6 +16,9 @@ class LoseViewController: UIViewController {
 
         UserModel.shared.round = 1
         UserModel.shared.score = 100
+        UserModel.shared.hintAskAudience = true
+        UserModel.shared.hintFiftyFifty = true
+        UserModel.shared.hintCallFriend = true
     }
 
     @IBAction func getPlayAgain(_ sender: UIButton) {
