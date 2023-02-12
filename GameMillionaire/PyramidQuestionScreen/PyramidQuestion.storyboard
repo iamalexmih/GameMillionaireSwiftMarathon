@@ -53,15 +53,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YaI-fy-adF">
                                         <rect key="frame" x="0.0" y="47.666666666666671" width="353" height="44.666666666666671"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFv-nP-c9a">
-                                                <rect key="frame" x="0.0" y="0.0" width="353" height="44.666666666666664"/>
-                                                <color key="backgroundColor" name="colorWatingResult"/>
-                                                <color key="tintColor" name="colorPyramidaQuestion"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <connections>
-                                                    <action selector="questionButtonsPressWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SZ2-UT-Y0P"/>
-                                                </connections>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Миллион" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnX-K1-YZz">
                                                 <rect key="frame" x="253.33333333333329" y="11.999999999999998" width="84.666666666666657" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -76,14 +67,10 @@
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="yFv-nP-c9a" firstAttribute="top" secondItem="YaI-fy-adF" secondAttribute="top" id="6hz-DW-rhm"/>
                                             <constraint firstItem="IoC-qr-Eo5" firstAttribute="centerY" secondItem="YaI-fy-adF" secondAttribute="centerY" id="9Jf-3y-pDK"/>
-                                            <constraint firstAttribute="bottom" secondItem="yFv-nP-c9a" secondAttribute="bottom" id="Aan-bM-yS5"/>
                                             <constraint firstAttribute="trailing" secondItem="cnX-K1-YZz" secondAttribute="trailing" constant="15" id="Pp1-Y5-U1S"/>
                                             <constraint firstItem="cnX-K1-YZz" firstAttribute="centerY" secondItem="YaI-fy-adF" secondAttribute="centerY" id="RLs-Hg-FUl"/>
                                             <constraint firstItem="IoC-qr-Eo5" firstAttribute="leading" secondItem="YaI-fy-adF" secondAttribute="leading" constant="15" id="ego-eY-Aip"/>
-                                            <constraint firstItem="yFv-nP-c9a" firstAttribute="leading" secondItem="YaI-fy-adF" secondAttribute="leading" id="u8e-iL-XSh"/>
-                                            <constraint firstAttribute="trailing" secondItem="yFv-nP-c9a" secondAttribute="trailing" id="xsi-VO-hA1"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ffc-6k-gV9">
@@ -622,7 +609,6 @@
                         <outletCollection property="arrayButtons" destination="IGP-uH-QxP" collectionClass="NSMutableArray" id="wIZ-y3-T4A"/>
                         <outletCollection property="arrayButtons" destination="8zU-wW-vM3" collectionClass="NSMutableArray" id="LOj-mp-C3l"/>
                         <outletCollection property="arrayButtons" destination="hqz-WK-afm" collectionClass="NSMutableArray" id="Yxm-hr-baa"/>
-                        <outletCollection property="arrayButtons" destination="yFv-nP-c9a" collectionClass="NSMutableArray" id="odr-cM-ENY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -641,9 +627,6 @@
         </namedColor>
         <namedColor name="colorPyramidaQuestion">
             <color red="0.50588235294117645" green="0.36862745098039218" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="colorWatingResult">
-            <color red="0.99607843137254903" green="0.80392156862745101" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
