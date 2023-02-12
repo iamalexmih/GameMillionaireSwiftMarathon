@@ -15,7 +15,6 @@ class PyramidQuestionViewController: UIViewController {
     let pyramidQuestionDataService = PyramidQuestionDataService()
     var listProgress: [PyramidQuestionModel] = []
 
-    print("2 = \(2)")
     override func viewDidLoad() {
         super.viewDidLoad()
         
