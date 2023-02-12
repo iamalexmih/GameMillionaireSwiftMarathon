@@ -45,7 +45,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="buttonTakeMoneyPress:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Lz7-0h-gLP"/>
+                                                    <action selector="buttonTakeMoneyPress:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="i05-5e-fh5"/>
                                                 </connections>
                                             </button>
                                         </subviews>

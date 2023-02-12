@@ -20,6 +20,8 @@ class PyramidQuestionViewController: UIViewController {
         super.viewDidLoad()
         
         listProgress = pyramidQuestionDataService.getListProgress()
+        UserModel.shared.moneyWon = listProgress[UserModel.shared.round - 2].money
+        UserModel.shared.costQuestion = listProgress[UserModel.shared.round - 1].money
         cornerRadius()
         setBorderForCurrentQuestion(user: UserModel.shared)
         changedColorQuestion(user: UserModel.shared)
@@ -86,9 +88,10 @@ class PyramidQuestionViewController: UIViewController {
         }
     }
     
+    
+    
     @IBAction func questionButtonsPress(sender: UIButton) {
         router.initialAndGoToGameScreen()
-        UserModel.shared.costQuestion = listProgress[UserModel.shared.round - 1].money
-        UserModel.shared.moneyWon = listProgress[UserModel.shared.round - 2].money
+        UserModel.shared.isLose = false
     }
 }

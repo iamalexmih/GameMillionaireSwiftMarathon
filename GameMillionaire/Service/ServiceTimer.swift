@@ -56,7 +56,6 @@ class ServiceTimer: ServiceTimerProtocol {
     @objc func updateTimer() {
         if totalTime > 0 {
             totalTime -= 1
-            print(totalTime)
             totalTimeNow?(totalTime)
         }
         if totalTime == 0 {
