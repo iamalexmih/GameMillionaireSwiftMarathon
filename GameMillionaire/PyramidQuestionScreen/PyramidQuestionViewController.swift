@@ -35,6 +35,10 @@ class PyramidQuestionViewController: UIViewController {
         router.showLoseScreen()
     }
     
+    func backgroundColor() {
+        buttonTakeMoney.layer.backgroundColor = UIColor.black.cgColor
+    }
+    
     
     func cornerRadius() {
         arrayButtons.forEach { $0.layer.cornerRadius = 20 }
