@@ -13,30 +13,6 @@ struct Question {
     let difficultyIssue: DifficultyIssue
     let variantsAnswer: [String]
     let rightAnswer: String
-    
-    //    var price: Int {
-    //        if currentQuestion < 11 {
-    //            return currentQuestion * 100
-    //        } else {
-    //            return ???
-    //        }
-    /*
-     15    2000
-     14    1800
-     13    1600
-     12    1400
-     11    1200
-     10    1000
-     9     900
-     8     800
-     7     700
-     6     600
-     5     500
-     4     400
-     
-     
-     //      */
-    //    }
 }
 
 
