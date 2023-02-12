@@ -400,17 +400,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mbf-Ot-DJ6">
                                         <rect key="frame" x="0.0" y="524" width="353" height="44.666666666666629"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7i-d8-soN">
-                                                <rect key="frame" x="0.0" y="0.0" width="353" height="44.666666666666664"/>
-                                                <color key="backgroundColor" name="colorButton"/>
-                                                <color key="tintColor" name="colorPyramidaQuestion"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <connections>
-                                                    <action selector="questionButtonsPressWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="odA-Pw-Hnx"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtE-1l-5Bo" userLabel="Вопрос 5">
-                                                <rect key="frame" x="15" y="11.999999999999998" width="74" height="20.333333333333329"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtE-1l-5Bo" userLabel="Вопрос 5">
+                                                <rect key="frame" x="14.999999999999998" y="11.999999999999998" width="29.333333333333329" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -423,14 +414,10 @@
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="A7i-d8-soN" firstAttribute="leading" secondItem="mbf-Ot-DJ6" secondAttribute="leading" id="2G8-16-w8x"/>
-                                            <constraint firstAttribute="trailing" secondItem="A7i-d8-soN" secondAttribute="trailing" id="3a7-za-v2B"/>
                                             <constraint firstItem="HtE-1l-5Bo" firstAttribute="centerY" secondItem="mbf-Ot-DJ6" secondAttribute="centerY" id="EGd-Ow-W1y"/>
                                             <constraint firstItem="v64-NX-GoO" firstAttribute="centerY" secondItem="mbf-Ot-DJ6" secondAttribute="centerY" id="MFy-QJ-E4T"/>
                                             <constraint firstItem="HtE-1l-5Bo" firstAttribute="leading" secondItem="mbf-Ot-DJ6" secondAttribute="leading" constant="15" id="N8A-9O-Yo2"/>
                                             <constraint firstAttribute="trailing" secondItem="v64-NX-GoO" secondAttribute="trailing" constant="15" id="Rsr-CD-TAt"/>
-                                            <constraint firstItem="A7i-d8-soN" firstAttribute="top" secondItem="mbf-Ot-DJ6" secondAttribute="top" id="WQp-rj-oUO"/>
-                                            <constraint firstAttribute="bottom" secondItem="A7i-d8-soN" secondAttribute="bottom" id="neC-cN-aCf"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sOR-hj-nSk">
@@ -599,7 +586,6 @@
                         <outletCollection property="arrayButtons" destination="uvp-XE-Uur" collectionClass="NSMutableArray" id="5B1-ZO-UvO"/>
                         <outletCollection property="arrayButtons" destination="qXl-mQ-Jgi" collectionClass="NSMutableArray" id="Ghw-Df-KAw"/>
                         <outletCollection property="arrayButtons" destination="ofi-ia-c6s" collectionClass="NSMutableArray" id="hLq-Ek-QWh"/>
-                        <outletCollection property="arrayButtons" destination="A7i-d8-soN" collectionClass="NSMutableArray" id="ADv-lz-BFL"/>
                         <outletCollection property="arrayButtons" destination="fRO-g3-oyv" collectionClass="NSMutableArray" id="Pe2-68-lnE"/>
                         <outletCollection property="arrayButtons" destination="Vkk-Uz-ltW" collectionClass="NSMutableArray" id="JKc-dT-9wf"/>
                         <outletCollection property="arrayButtons" destination="XTb-J1-ZDt" collectionClass="NSMutableArray" id="wSG-fl-5EJ"/>
