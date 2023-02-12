@@ -268,39 +268,6 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RCn-8v-HKu">
                                         <rect key="frame" x="0.0" y="333.33333333333331" width="353" height="44.666666666666686"/>
-                                        <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMT-Rh-9fx">
-                                                <rect key="frame" x="0.0" y="0.0" width="353" height="44.666666666666664"/>
-                                                <color key="backgroundColor" name="colorPyramidaQuestion"/>
-                                                <color key="tintColor" name="colorPyramidaQuestion"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <connections>
-                                                    <action selector="questionButtonsPressWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ONP-Gy-UOx"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос 9" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roI-zz-QlN" userLabel="Вопрос 9">
-                                                <rect key="frame" x="15" y="12.333333333333369" width="74.333333333333329" height="20.333333333333329"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16000 RUB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5i9-up-FFt">
-                                                <rect key="frame" x="251.33333333333329" y="12.333333333333369" width="86.666666666666657" height="20.333333333333329"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="5i9-up-FFt" firstAttribute="centerY" secondItem="RCn-8v-HKu" secondAttribute="centerY" id="EAb-r0-R9E"/>
-                                            <constraint firstItem="ZMT-Rh-9fx" firstAttribute="top" secondItem="RCn-8v-HKu" secondAttribute="top" id="M2h-5w-9kS"/>
-                                            <constraint firstAttribute="trailing" secondItem="5i9-up-FFt" secondAttribute="trailing" constant="15" id="YCj-LQ-nx9"/>
-                                            <constraint firstItem="roI-zz-QlN" firstAttribute="centerY" secondItem="RCn-8v-HKu" secondAttribute="centerY" id="cOJ-Kr-1mn"/>
-                                            <constraint firstAttribute="trailing" secondItem="ZMT-Rh-9fx" secondAttribute="trailing" id="oy8-b9-nns"/>
-                                            <constraint firstItem="roI-zz-QlN" firstAttribute="leading" secondItem="RCn-8v-HKu" secondAttribute="leading" constant="15" id="vcu-YT-SQK"/>
-                                            <constraint firstAttribute="bottom" secondItem="ZMT-Rh-9fx" secondAttribute="bottom" id="xat-oe-FhI"/>
-                                            <constraint firstItem="ZMT-Rh-9fx" firstAttribute="leading" secondItem="RCn-8v-HKu" secondAttribute="leading" id="xcH-PE-9HX"/>
-                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aw6-Sw-eUM">
                                         <rect key="frame" x="0.0" y="381" width="353" height="44.666666666666686"/>
@@ -616,7 +583,6 @@
                         <outletCollection property="arrayButtons" destination="fRO-g3-oyv" collectionClass="NSMutableArray" id="Pe2-68-lnE"/>
                         <outletCollection property="arrayButtons" destination="Vkk-Uz-ltW" collectionClass="NSMutableArray" id="JKc-dT-9wf"/>
                         <outletCollection property="arrayButtons" destination="XTb-J1-ZDt" collectionClass="NSMutableArray" id="wSG-fl-5EJ"/>
-                        <outletCollection property="arrayButtons" destination="ZMT-Rh-9fx" collectionClass="NSMutableArray" id="2i9-ov-bDc"/>
                         <outletCollection property="arrayButtons" destination="LmO-fs-8qV" collectionClass="NSMutableArray" id="f10-9V-bcy"/>
                         <outletCollection property="arrayButtons" destination="F76-us-vvE" collectionClass="NSMutableArray" id="oys-VH-WZC"/>
                         <outletCollection property="arrayButtons" destination="IGP-uH-QxP" collectionClass="NSMutableArray" id="wIZ-y3-T4A"/>
