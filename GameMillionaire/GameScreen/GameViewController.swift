@@ -55,11 +55,11 @@ class GameViewController: UIViewController {
         setHintButton()
         makeArrayForAllButton()
         
-        timer.totalTimeNow = { [weak self] timeCounter in
+        timer.totalTimeNow = { [weak self] timerCounter in
             guard let self = self else { return }
             if !self.wasPressButtonQuestion {
-                self.labelTimer.text = "\(timeCounter)"
-                if timeCounter == 0 {
+                self.labelTimer.text = "\(timerCounter)"
+                if timerCounter == 0 {
                     self.showAlertMessage()
                     self.timer.stopTimer()
                 }
