@@ -60,8 +60,6 @@ class GameViewController: UIViewController {
             if !self.wasPressButtonQuestion {
                 self.labelTimer.text = "\(timeCounter)"
                 if timeCounter == 0 {
-                    //                    self.timer?.startTimer(roundStages: .wrongAnswer)
-                    //                    self.music?.playMusic(roundStages: .timeIsOver)
                     self.showAlertMessage()
                     self.timer.stopTimer()
                 }
@@ -73,24 +71,28 @@ class GameViewController: UIViewController {
     
     
     @IBAction func buttonPressA(_ sender: UIButton) {
+        self.labelTimer.isHidden = true
         wasPressButtonQuestion = true
         answerProcessing(sender)
     }
     
     
     @IBAction func buttonPressB(_ sender: UIButton) {
+        self.labelTimer.isHidden = true
         wasPressButtonQuestion = true
         answerProcessing(sender)
     }
     
     
     @IBAction func buttonPressC(_ sender: UIButton) {
+        self.labelTimer.isHidden = true
         wasPressButtonQuestion = true
         answerProcessing(sender)
     }
     
     
     @IBAction func buttonPressD(_ sender: UIButton) {
+        self.labelTimer.isHidden = true
         wasPressButtonQuestion = true
         answerProcessing(sender)
     }
@@ -125,18 +127,18 @@ class GameViewController: UIViewController {
     
     // MARK: - func for config UI
     
-    func setLabelCurrentQuestion() {
+    private func setLabelCurrentQuestion() {
         labelQuestion.text = currentQuestion?.textQuestion
     }
     
     
-    func setInfoAboutCurrentRound() {
+    private func setInfoAboutCurrentRound() {
         labelCostQuestion.text = "Цена вопроса \(UserModel.shared.costQuestion) ₽"
         labelCurrentRound.text = "Вопрос № \(UserModel.shared.round)"
     }
     
     
-    func setButtonCornerRadius() {
+    private func setButtonCornerRadius() {
         buttonA.layer.cornerRadius = 20
         buttonB.layer.cornerRadius = 20
         buttonC.layer.cornerRadius = 20
@@ -146,12 +148,12 @@ class GameViewController: UIViewController {
     
     // MARK: - func for disable All Buttons
     
-    func makeArrayForAllButton() {
+    private func makeArrayForAllButton() {
         arrayAllButton = [buttonA, buttonB, buttonC, buttonD, buttonTakeMoney,
                           hintCallFriend, hintFiftyFifty, hintAskAudience]
     }
     
-    func disableAllButtons() {
+    private func disableAllButtons() {
         arrayAllButton.forEach { $0.isEnabled = false }
     }
 }
@@ -160,7 +162,7 @@ class GameViewController: UIViewController {
 
 extension GameViewController {
     
-    func setupTitileButton(button: [UIButton], currentQuestion: Question) {
+    private func setupTitileButton(button: [UIButton], currentQuestion: Question) {
         var answer = "N/A"
         var answersArray = currentQuestion.variantsAnswer
         button.forEach { btn in
@@ -170,13 +172,14 @@ extension GameViewController {
     }
     
     
-    func answerProcessing(_ sender: UIButton) {
+    private func answerProcessing(_ sender: UIButton) {
         disableAllButtons()
+        print(UserModel.shared.round, "v gameVC")
         if serviceCheckQuestion?.checkQuestion(question: currentQuestion!, selectedButton: sender) == true {
             DispatchQueue.main.asyncAfter(deadline: .now() + 10) { [weak self] in
                 guard let self = self else { return }
                 
-                if UserModel.shared.round == 15 {
+                if UserModel.shared.round > 15 {
                     UserModel.shared.isLose = false
                     self.router.showLoseScreen()
                 } else {
@@ -194,7 +197,7 @@ extension GameViewController {
     }
     
     
-    func presentAskTheAudience(_ sender: UIButton) {
+    private func presentAskTheAudience(_ sender: UIButton) {
         guard let currentQuestion else { return }
         
         present(serviceHints.askTheAudience(question: currentQuestion,
@@ -202,7 +205,7 @@ extension GameViewController {
     }
     
     
-    func presentCallAFriend(_ sender: UIButton) {
+    private func presentCallAFriend(_ sender: UIButton) {
         guard let currentQuestion else { return }
         
         present(serviceHints.callAFriend(question: currentQuestion,
@@ -210,7 +213,7 @@ extension GameViewController {
     }
     
     
-    func setHintButton() {
+     private func setHintButton() {
         hintCallFriend.isEnabled = UserModel.shared.hintCallFriend
         hintFiftyFifty.isEnabled = UserModel.shared.hintFiftyFifty
         hintAskAudience.isEnabled = UserModel.shared.hintAskAudience

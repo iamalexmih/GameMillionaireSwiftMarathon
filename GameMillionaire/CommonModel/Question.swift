@@ -208,7 +208,7 @@ class QuestionStorage {
                  variantsAnswer: ["12.04.1961", "19.03.1965", "12.06.1956", "10.09.1973"],
                  rightAnswer: "12.04.1961"),
         
-        Question(textQuestion: "самый сильный символ в китайской культуре?",
+        Question(textQuestion: "Самый сильный символ в китайской культуре?",
                  difficultyIssue: .medium,
                  variantsAnswer: ["Собака", "Крыса", "Обезьяна", "Дракон"],
                  rightAnswer: "Дракон"),
@@ -253,11 +253,9 @@ class QuestionStorage {
                  variantsAnswer: ["Пабло Пикассо", "Леонардо Да Винчи", "Микеланджело", "Винсент Ван Гог"],
                  rightAnswer: "Микеланджело"),
         
-        Question(textQuestion: "трехзначное число: вторая цифра в четыре раза больше третьей, первая – на три меньше второй?",
+        Question(textQuestion: "Трехзначное число: вторая цифра в четыре раза больше третьей, первая – на три меньше второй?",
                  difficultyIssue: .hard,
                  variantsAnswer: ["282", "693", "141", "241"],
                  rightAnswer: "141"),
     ]
-    
-    
 }

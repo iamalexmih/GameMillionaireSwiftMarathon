@@ -24,6 +24,9 @@ class PyramidQuestionViewController: UIViewController {
         setBorderForCurrentQuestion(user: UserModel.shared)
         changedColorQuestion(user: UserModel.shared)
         disableButtons(user: UserModel.shared)
+        
+        UserModel.shared.costQuestion = listProgress[UserModel.shared.round - 1].money
+        UserModel.shared.moneyWon = listProgress[UserModel.shared.round - 2].money
     }
     
     
