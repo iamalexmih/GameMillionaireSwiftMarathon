@@ -11,6 +11,10 @@ import UIKit
 
 class GameViewController: UIViewController {
     
+    func testFunc(){
+        
+    }
+    
     var router: RouterProtocol!
     var timer: ServiceTimerProtocol!
     var music: ServiceMusicProtocol!
