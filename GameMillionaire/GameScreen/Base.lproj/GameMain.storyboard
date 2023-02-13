@@ -232,24 +232,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Q5g-QM-eqO">
                                 <rect key="frame" x="16" y="574.5" width="382" height="267.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHa-Ti-d0G">
-                                        <rect key="frame" x="50" y="0.0" width="282" height="50"/>
-                                        <color key="backgroundColor" name="AccentColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="7VS-XA-guI"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="конфликт">
-                                            <color key="titleColor" systemColor="systemGray5Color"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="buttonTakeMoneyPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PVZ-aP-59i"/>
-                                        </connections>
-                                    </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="SPM-MI-w8p" userLabel="Bottom Stack View">
-                                        <rect key="frame" x="0.0" y="60" width="382" height="207.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="207.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWq-ty-zHn" userLabel="fiftyFifty">
                                                 <rect key="frame" x="0.0" y="0.0" width="119.5" height="207.5"/>
@@ -278,6 +262,22 @@
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHa-Ti-d0G">
+                                        <rect key="frame" x="50" y="217.5" width="282" height="50"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="7VS-XA-guI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Забрать деньги">
+                                            <color key="titleColor" systemColor="systemGray5Color"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTakeMoneyPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PVZ-aP-59i"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="wHa-Ti-d0G" firstAttribute="leading" secondItem="Q5g-QM-eqO" secondAttribute="leading" constant="50" id="P1c-lq-IZQ"/>

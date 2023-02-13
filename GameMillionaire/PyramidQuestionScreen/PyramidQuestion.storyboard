@@ -53,7 +53,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YaI-fy-adF">
                                         <rect key="frame" x="0.0" y="47.666666666666671" width="353" height="44.666666666666671"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cge-7v-Pc5">
+                                            <button opaque="NO" clipsSubviews="YES" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cge-7v-Pc5">
                                                 <rect key="frame" x="0.0" y="-0.6666666666666714" width="353" height="44.666666666666664"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" name="colorWatingResult"/>
@@ -410,7 +410,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mbf-Ot-DJ6">
                                         <rect key="frame" x="0.0" y="524" width="353" height="44.666666666666629"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWO-Ea-T3s">
+                                            <button opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWO-Ea-T3s">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="41.666666666666629"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" name="colorPyramidaQuestion"/>
@@ -615,6 +615,8 @@
                         <outletCollection property="arrayButtons" destination="IGP-uH-QxP" collectionClass="NSMutableArray" id="wIZ-y3-T4A"/>
                         <outletCollection property="arrayButtons" destination="8zU-wW-vM3" collectionClass="NSMutableArray" id="LOj-mp-C3l"/>
                         <outletCollection property="arrayButtons" destination="hqz-WK-afm" collectionClass="NSMutableArray" id="Yxm-hr-baa"/>
+                        <outletCollection property="arrayButtons" destination="sWO-Ea-T3s" collectionClass="NSMutableArray" id="y20-8y-pbZ"/>
+                        <outletCollection property="arrayButtons" destination="cge-7v-Pc5" collectionClass="NSMutableArray" id="jXn-s7-jDc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
